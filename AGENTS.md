@@ -118,6 +118,21 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### 🎯 Website Development Skills
+You now have comprehensive website development capabilities:
+
+1. **Website Designer** (`website-designer`) - UI/UX design, responsive layouts, visual design
+2. **Website Developer** (`website-developer`) - Full-stack development, deployment, database management
+3. **Website Operator** (`website-operator`) - SEO optimization, analytics, content management, security
+4. **Website Full-Stack** (`website-fullstack`) - End-to-end website lifecycle management
+
+**Use these skills when:**
+- Designing new websites or redesigning existing ones
+- Developing functional web applications
+- Optimizing website performance and SEO
+- Managing website operations and growth
+- Handling complete website projects from concept to maintenance
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
