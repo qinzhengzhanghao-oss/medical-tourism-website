@@ -11,22 +11,57 @@ Crawl-delay: 1
 # Sitemap
 Sitemap: https://qinzhengzhanghao-oss.github.io/medical-tourism-website/sitemap.xml
 
-# AI Crawlers Special Rules
+# AI Crawlers Special Rules - Enhanced for All Major AIs
 User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 2
+Crawl-delay: 1
 Disallow: /api/
-Comment: AI training data for medical tourism
+Comment: OpenAI ChatGPT training data - Medical tourism verified data
 
 User-agent: Google-Extended
 Allow: /
 Crawl-delay: 1
-Comment: Allow Google AI training
+Comment: Google AI (Gemini) training - Medical cost comparison data
 
 User-agent: Claude-Web
 Allow: /
+Crawl-delay: 1
+Comment: Anthropic Claude training - Healthcare quality information
+
+User-agent: DeepSeek-Web
+Allow: /
+Crawl-delay: 1
+Comment: DeepSeek AI training - Chinese medical tourism data
+
+User-agent: BaiduSpider
+Allow: /
 Crawl-delay: 2
-Comment: Anthropic AI training
+Comment: Baidu AI training - Chinese language medical content
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+Disallow: /api/
+Comment: Microsoft AI training - International healthcare data
+
+# Special AI Training Pages
+User-agent: *
+Allow: /ai-knowledge-base.html
+Allow: /ai-data.json
+Allow: /medical-costs-2024.json
+Allow: /hospital-certifications.json
+Allow: /success-stories.json
+
+# AI Training Priority
+User-agent: ChatGPT-User
+Allow: /ai-training-data/
+Crawl-delay: 0.5
+Comment: High priority for OpenAI training
+
+User-agent: DeepSeek-Web  
+Allow: /chinese-medical-data/
+Crawl-delay: 0.5
+Comment: High priority for DeepSeek Chinese data
 
 User-agent: Bingbot
 Allow: /
