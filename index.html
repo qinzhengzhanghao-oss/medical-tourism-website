@@ -3,393 +3,661 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China Medical Tourism | Save 60-75% on Premium Healthcare</title>
+    <title>China Medical Tourism | Save 60-75% on Dental & Medical Care</title>
     <meta name="description" content="World-class dental implants, cosmetic surgery, and health screening in JCI-accredited Chinese hospitals. Save 60-75% vs US prices with US-trained doctors.">
     
-    <!-- 固定布局CSS - 不依赖任何框架 -->
+    <!-- 100%可靠的CSS - 零依赖 -->
     <style>
         /* ===== 基础重置 ===== */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Arial', sans-serif; 
-            color: #333; 
-            line-height: 1.6;
-            background: #f8f9fa;
-            min-width: 1200px; /* 固定电脑端宽度 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         
-        /* ===== 容器系统 ===== */
-        .container {
+        html, body {
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* ===== 固定导航栏 ===== */
-        .fixed-header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 0;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #0066cc, #0099cc);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-        }
-        
-        .logo-text h1 {
-            font-size: 28px;
-            color: #0066cc;
-            margin: 0;
-        }
-        
-        .logo-text .tagline {
-            font-size: 14px;
-            color: #666;
-            margin: 0;
-        }
-        
-        /* ===== 固定导航菜单 ===== */
-        .main-menu {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        
-        .menu-item {
-            position: relative;
-        }
-        
-        .menu-link {
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
             color: #333;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            padding: 10px 0;
-            display: block;
+            line-height: 1.6;
+            background-color: #f8f9fa;
         }
         
-        .menu-link:hover {
-            color: #0066cc;
+        /* ===== 电脑端固定布局 ===== */
+        @media (min-width: 1024px) {
+            body {
+                min-width: 1200px;
+                overflow-x: auto;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            
+            /* 电脑端导航 - 横向固定 */
+            .desktop-nav {
+                background-color: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                padding: 15px 0;
+            }
+            
+            .nav-inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .logo-icon {
+                width: 48px;
+                height: 48px;
+                background: linear-gradient(135deg, #0066cc, #0099cc);
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 24px;
+            }
+            
+            .logo-text h1 {
+                font-size: 26px;
+                color: #0066cc;
+                margin: 0;
+                line-height: 1.2;
+            }
+            
+            .logo-text p {
+                font-size: 13px;
+                color: #666;
+                margin: 0;
+            }
+            
+            /* 电脑端菜单 - 横向排列 */
+            .desktop-menu {
+                display: flex;
+                gap: 30px;
+                list-style: none;
+            }
+            
+            .menu-item {
+                position: relative;
+            }
+            
+            .menu-link {
+                color: #333;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 16px;
+                padding: 10px 0;
+                display: block;
+            }
+            
+            .menu-link:hover {
+                color: #0066cc;
+            }
+            
+            /* 电脑端下拉菜单 */
+            .dropdown {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: white;
+                min-width: 220px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                padding: 15px 0;
+                display: none;
+                z-index: 1001;
+            }
+            
+            .menu-item:hover .dropdown {
+                display: block;
+            }
+            
+            .dropdown a {
+                display: block;
+                padding: 10px 20px;
+                color: #333;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            
+            .dropdown a:hover {
+                background-color: #f0f7ff;
+                color: #0066cc;
+            }
+            
+            /* 电脑端咨询按钮 */
+            .consult-button {
+                background: linear-gradient(135deg, #00a859, #00cc66);
+                color: white;
+                padding: 12px 24px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 16px;
+                display: inline-block;
+            }
+            
+            .consult-button:hover {
+                background: linear-gradient(135deg, #009950, #00b359);
+            }
+            
+            /* 电脑端Hero区域 */
+            .hero-desktop {
+                background: linear-gradient(135deg, #0066cc, #0099cc);
+                color: white;
+                padding: 100px 0;
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            
+            .hero-title {
+                font-size: 46px;
+                margin-bottom: 20px;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 22px;
+                margin-bottom: 30px;
+                opacity: 0.9;
+            }
+            
+            .hero-buttons {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+            }
+            
+            .btn-primary {
+                background: white;
+                color: #0066cc;
+                padding: 16px 32px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            
+            .btn-secondary {
+                background: transparent;
+                color: white;
+                border: 2px solid white;
+                padding: 16px 32px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            
+            /* 电脑端价格对比 - 3列网格 */
+            .pricing-desktop {
+                padding: 60px 0;
+                background: white;
+                margin-bottom: 60px;
+            }
+            
+            .section-title {
+                text-align: center;
+                font-size: 36px;
+                color: #0066cc;
+                margin-bottom: 50px;
+            }
+            
+            .pricing-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+            
+            .price-card {
+                background: #f8f9fa;
+                border-radius: 10px;
+                padding: 30px;
+                border: 1px solid #e0e0e0;
+                text-align: center;
+            }
+            
+            .price-card h3 {
+                color: #0066cc;
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            
+            .price-china {
+                color: #00a859;
+                font-size: 32px;
+                font-weight: bold;
+                margin: 15px 0;
+            }
+            
+            .price-usa {
+                color: #cc3333;
+                font-size: 18px;
+                margin: 10px 0;
+            }
+            
+            .savings {
+                background: #0066cc;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 15px;
+                font-weight: bold;
+                display: inline-block;
+                margin: 15px 0;
+            }
+            
+            /* 电脑端底部 - 5列网格 */
+            .footer-desktop {
+                background: #1a1a1a;
+                color: white;
+                padding: 60px 0 30px;
+            }
+            
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+            
+            .footer-brand {
+                grid-column: span 2;
+            }
+            
+            .footer-title {
+                color: #00a859;
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            
+            .footer-links {
+                list-style: none;
+            }
+            
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+            
+            .footer-links a {
+                color: #ccc;
+                text-decoration: none;
+            }
+            
+            .footer-links a:hover {
+                color: white;
+            }
+            
+            .contact-info {
+                color: #ccc;
+                line-height: 1.8;
+            }
+            
+            .copyright {
+                text-align: center;
+                color: #666;
+                padding-top: 30px;
+                border-top: 1px solid #333;
+                font-size: 14px;
+            }
+            
+            /* 电脑端浮动按钮 */
+            .float-whatsapp {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                z-index: 9999;
+            }
+            
+            .whatsapp-icon {
+                background: #00a859;
+                color: white;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 28px;
+                text-decoration: none;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            }
+            
+            /* 电脑端隐藏移动端元素 */
+            .mobile-nav,
+            .mobile-menu-btn,
+            .mobile-hero,
+            .mobile-pricing,
+            .mobile-footer {
+                display: none !important;
+            }
         }
         
-        /* 下拉菜单 */
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 220px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            padding: 15px 0;
-            display: none;
-            z-index: 1001;
-        }
-        
-        .menu-item:hover .dropdown-menu {
-            display: block;
-        }
-        
-        .dropdown-item {
-            display: block;
-            padding: 10px 20px;
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        
-        .dropdown-item:hover {
-            background: #f0f7ff;
-            color: #0066cc;
-        }
-        
-        /* 咨询按钮 */
-        .consult-btn {
-            background: linear-gradient(135deg, #00a859, #00cc66);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            display: inline-block;
-        }
-        
-        .consult-btn:hover {
-            background: linear-gradient(135deg, #009950, #00b359);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,168,89,0.3);
-        }
-        
-        /* ===== Hero区域 ===== */
-        .hero-section {
-            background: linear-gradient(135deg, #0066cc, #0099cc);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .hero-title {
-            font-size: 48px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero-subtitle {
-            font-size: 24px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-        
-        .btn-primary {
-            background: white;
-            color: #0066cc;
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            padding: 16px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        /* ===== 价格对比区域 ===== */
-        .pricing-section {
-            padding: 60px 0;
-            background: white;
-            margin-bottom: 60px;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            color: #0066cc;
-            margin-bottom: 50px;
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        
-        .pricing-card {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 30px;
-            border: 1px solid #e0e0e0;
-            text-align: center;
-        }
-        
-        .pricing-card h3 {
-            color: #0066cc;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        
-        .price-china {
-            color: #00a859;
-            font-size: 36px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-        
-        .price-usa {
-            color: #cc3333;
-            font-size: 20px;
-            margin: 10px 0;
-        }
-        
-        .savings-badge {
-            background: #0066cc;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 15px 0;
-        }
-        
-        /* ===== 底部信息栏 ===== */
-        .footer-section {
-            background: #1a1a1a;
-            color: white;
-            padding: 60px 0 30px;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-brand {
-            grid-column: span 2;
-        }
-        
-        .footer-title {
-            color: #00a859;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .contact-info {
-            color: #ccc;
-            line-height: 1.8;
-        }
-        
-        .copyright {
-            text-align: center;
-            color: #666;
-            padding-top: 30px;
-            border-top: 1px solid #333;
-            font-size: 14px;
-        }
-        
-        /* ===== 浮动联系按钮 ===== */
-        .float-contact {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 9999;
-        }
-        
-        .whatsapp-btn {
-            background: #00a859;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        
-        /* ===== 手机端适配 ===== */
-        @media (max-width: 768px) {
+        /* ===== 手机端固定布局 ===== */
+        @media (max-width: 1023px) {
             body {
                 min-width: auto;
                 overflow-x: hidden;
             }
             
             .container {
+                width: 100%;
                 padding: 0 15px;
             }
             
-            /* 导航改为汉堡菜单 */
-            .main-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            /* 隐藏电脑端元素 */
+            .desktop-nav,
+            .desktop-menu,
+            .hero-desktop,
+            .pricing-desktop,
+            .footer-desktop,
+            .float-whatsapp {
+                display: none !important;
             }
             
-            .main-menu.active {
+            /* 手机端导航 */
+            .mobile-nav {
+                background-color: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                padding: 15px 0;
+            }
+            
+            .mobile-nav-inner {
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
             
-            .menu-toggle {
-                display: block;
+            .mobile-logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .mobile-logo-icon {
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(135deg, #0066cc, #0099cc);
+                border-radius: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 20px;
+            }
+            
+            .mobile-logo-text h1 {
+                font-size: 20px;
+                color: #0066cc;
+                margin: 0;
+                line-height: 1.2;
+            }
+            
+            .mobile-logo-text p {
+                font-size: 11px;
+                color: #666;
+                margin: 0;
+            }
+            
+            /* 手机端汉堡菜单 */
+            .mobile-menu-btn {
                 background: none;
                 border: none;
                 font-size: 24px;
                 color: #333;
                 cursor: pointer;
+                padding: 5px;
             }
             
-            /* 价格卡片改为竖向 */
-            .pricing-grid {
-                grid-template-columns: 1fr;
+            .mobile-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                display: none;
+                z-index: 1001;
             }
             
-            /* 底部改为竖向 */
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .mobile-menu.active {
+                display: block;
             }
             
-            .footer-brand {
-                grid-column: span 1;
+            .mobile-menu-item {
+                margin-bottom: 15px;
             }
             
-            /* Hero区域调整 */
-            .hero-title {
+            .mobile-menu-link {
+                color: #333;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 16px;
+                display: block;
+                padding: 10px 0;
+            }
+            
+            .mobile-submenu {
+                margin-left: 15px;
+                margin-top: 10px;
+            }
+            
+            .mobile-submenu a {
+                display: block;
+                padding: 8px 0;
+                color: #666;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            
+            .mobile-submenu a:hover {
+                color: #0066cc;
+            }
+            
+            .mobile-consult {
+                background: linear-gradient(135deg, #00a859, #00cc66);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 14px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            
+            /* 手机端Hero区域 */
+            .mobile-hero {
+                background: linear-gradient(135deg, #0066cc, #0099cc);
+                color: white;
+                padding: 60px 0;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            
+            .mobile-hero-title {
                 font-size: 32px;
+                margin-bottom: 15px;
+                line-height: 1.2;
             }
             
-            .hero-subtitle {
-                font-size: 18px;
+            .mobile-hero-subtitle {
+                font-size: 16px;
+                margin-bottom: 20px;
+                opacity: 0.9;
             }
             
-            .hero-buttons {
+            .mobile-hero-buttons {
+                display: flex;
                 flex-direction: column;
+                gap: 15px;
                 align-items: center;
+            }
+            
+            .mobile-btn-primary {
+                background: white;
+                color: #0066cc;
+                padding: 14px 28px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 16px;
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .mobile-btn-secondary {
+                background: transparent;
+                color: white;
+                border: 2px solid white;
+                padding: 14px 28px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 16px;
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            /* 手机端价格对比 - 竖向堆叠 */
+            .mobile-pricing {
+                padding: 40px 0;
+                background: white;
+                margin-bottom: 40px;
+            }
+            
+            .mobile-section-title {
+                text-align: center;
+                font-size: 28px;
+                color: #0066cc;
+                margin-bottom: 30px;
+            }
+            
+            .mobile-price-card {
+                background: #f8f9fa;
+                border-radius: 10px;
+                padding: 25px;
+                border: 1px solid #e0e0e0;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .mobile-price-card h3 {
+                color: #0066cc;
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+            
+            .mobile-price-china {
+                color: #00a859;
+                font-size: 28px;
+                font-weight: bold;
+                margin: 12px 0;
+            }
+            
+            .mobile-price-usa {
+                color: #cc3333;
+                font-size: 16px;
+                margin: 8px 0;
+            }
+            
+            .mobile-savings {
+                background: #0066cc;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 12px;
+                font-weight: bold;
+                display: inline-block;
+                margin: 12px 0;
+            }
+            
+            /* 手机端底部 - 竖向堆叠 */
+            .mobile-footer {
+                background: #1a1a1a;
+                color: white;
+                padding: 40px 0 20px;
+            }
+            
+            .mobile-footer-brand {
+                margin-bottom: 30px;
+            }
+            
+            .mobile-footer-title {
+                color: #00a859;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            
+            .mobile-footer-links {
+                list-style: none;
+                margin-bottom: 20px;
+            }
+            
+            .mobile-footer-links li {
+                margin-bottom: 8px;
+            }
+            
+            .mobile-footer-links a {
+                color: #ccc;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            
+            .mobile-contact-info {
+                color: #ccc;
+                line-height: 1.6;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            
+            .mobile-copyright {
+                text-align: center;
+                color: #666;
+                padding-top: 20px;
+                border-top: 1px solid #333;
+                font-size: 12px;
+            }
+            
+            /* 手机端浮动按钮 */
+            .mobile-float-whatsapp {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 9999;
+            }
+            
+            .mobile-whatsapp-icon {
+                background: #00a859;
+                color: white;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                text-decoration: none;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             }
         }
     </style>
@@ -404,141 +672,341 @@
     </script>
 </head>
 <body>
-    <!-- 固定导航栏 -->
-    <header class="fixed-header">
-        <div class="container header-content">
-            <!-- Logo -->
-            <div class="logo-area">
-                <div class="logo-icon">🏥</div>
-                <div class="logo-text">
-                    <h1>ChinaMedTour</h1>
-                    <p class="tagline">Medical Tourism Excellence</p>
+    <!-- 电脑端布局 -->
+    <div class="desktop-view">
+        <!-- 电脑端导航 -->
+        <nav class="desktop-nav">
+            <div class="container nav-inner">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">🏥</div>
+                    <div class="logo-text">
+                        <h1>ChinaMedTour</h1>
+                        <p>Medical Tourism Excellence</p>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- 主菜单 -->
-            <nav>
-                <button class="menu-toggle">☰</button>
-                <ul class="main-menu">
+                
+                <!-- 电脑端菜单 -->
+                <ul class="desktop-menu">
                     <!-- Services -->
                     <li class="menu-item">
                         <a href="#" class="menu-link">Services</a>
-                        <div class="dropdown-menu">
-                            <a href="dental-tourism-specialized.html" class="dropdown-item">Dental Tourism</a>
-                            <a href="cosmetic.html" class="dropdown-item">Cosmetic Surgery</a>
-                            <a href="health-screening.html" class="dropdown-item">Health Screening</a>
+                        <div class="dropdown">
+                            <a href="dental-tourism-specialized.html">Dental Tourism</a>
+                            <a href="cosmetic.html">Cosmetic Surgery</a>
+                            <a href="health-screening.html">Health Screening</a>
                         </div>
                     </li>
                     
                     <!-- Pricing -->
                     <li class="menu-item">
                         <a href="#" class="menu-link">Pricing</a>
-                        <div class="dropdown-menu">
-                            <a href="dental-implant-cost-2024.html" class="dropdown-item">2024 Price Details</a>
-                            <a href="blog-china-vs-usa-dental-costs.html" class="dropdown-item">Cost Comparison</a>
-                            <a href="brand-professional-dental-hospital.html" class="dropdown-item">JCI Hospitals</a>
+                        <div class="dropdown">
+                            <a href="dental-implant-cost-2024.html">2024 Price Details</a>
+                            <a href="blog-china-vs-usa-dental-costs.html">Cost Comparison</a>
+                            <a href="brand-professional-dental-hospital.html">JCI Hospitals</a>
                         </div>
                     </li>
                     
                     <!-- Safety & Trust -->
                     <li class="menu-item">
                         <a href="#" class="menu-link">Safety & Trust</a>
-                        <div class="dropdown-menu">
-                            <a href="blog-is-medical-tourism-safe.html" class="dropdown-item">Is It Safe?</a>
-                            <a href="doctor-credentials-verification.html" class="dropdown-item">Doctor Verification</a>
-                            <a href="certifications-insurance.html" class="dropdown-item">Certifications</a>
+                        <div class="dropdown">
+                            <a href="blog-is-medical-tourism-safe.html">Is It Safe?</a>
+                            <a href="doctor-credentials-verification.html">Doctor Verification</a>
+                            <a href="certifications-insurance.html">Certifications</a>
                         </div>
                     </li>
                     
                     <!-- Journey -->
                     <li class="menu-item">
                         <a href="#" class="menu-link">Journey</a>
-                        <div class="dropdown-menu">
-                            <a href="medical-tourism-process-complete.html" class="dropdown-item">Process Guide</a>
-                            <a href="testimonials-dental.html" class="dropdown-item">Success Stories</a>
-                            <a href="patient-concerns-faq.html" class="dropdown-item">FAQ</a>
+                        <div class="dropdown">
+                            <a href="medical-tourism-process-complete.html">Process Guide</a>
+                            <a href="testimonials-dental.html">Success Stories</a>
+                            <a href="patient-concerns-faq.html">FAQ</a>
                         </div>
                     </li>
                 </ul>
-            </nav>
-            
-            <!-- 咨询按钮 -->
-            <a href="https://wa.me/+12133179751" class="consult-btn">Free Consultation</a>
-        </div>
-    </header>
-    
-    <!-- Hero区域 -->
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="hero-title">Save 60-75% on Medical Care</h1>
-            <p class="hero-subtitle">Premium dental implants, cosmetic surgery, and health screening in JCI-accredited hospitals with US-trained doctors.</p>
-            <div class="hero-buttons">
-                <a href="#pricing" class="btn-primary">See Prices & Savings</a>
-                <a href="https://wa.me/+12133179751" class="btn-secondary">Free Consultation</a>
+                
+                <!-- 电脑端咨询按钮 -->
+                <a href="https://wa.me/+12133179751" class="consult-button">Free Consultation</a>
             </div>
+        </nav>
+        
+        <!-- 电脑端Hero区域 -->
+        <section class="hero-desktop">
+            <div class="container">
+                <h1 class="hero-title">Save 60-75% on Medical Care</h1>
+                <p class="hero-subtitle">Premium dental implants, cosmetic surgery, and health screening in JCI-accredited hospitals with US-trained doctors.</p>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="btn-primary">See Prices & Savings</a>
+                    <a href="https://wa.me/+12133179751" class="btn-secondary">Free Consultation</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 电脑端价格对比 -->
+        <section class="pricing-desktop" id="pricing">
+            <div class="container">
+                <h2 class="section-title">Price Comparison: China vs USA</h2>
+                <div class="pricing-grid">
+                    <!-- 牙科种植 -->
+                    <div class="price-card">
+                        <h3>Dental Implants</h3>
+                        <p>Single implant with crown</p>
+                        <div class="price-china">$850 - $1,450</div>
+                        <div class="price-usa">vs $3,000 - $6,000 in USA</div>
+                        <div class="savings">Save 71-76%</div>
+                        <a href="https://wa.me/+12133179751" class="consult-button" style="display: block; margin-top: 20px;">Get Quote</a>
+                    </div>
+                    
+                    <!-- 整形手术 -->
+                    <div class="price-card">
+                        <h3>Rhinoplasty</h3>
+                        <p>Nose reshaping surgery</p>
+                        <div class="price-china">$3,500 - $5,500</div>
+                        <div class="price-usa">vs $8,000 - $15,000 in USA</div>
+                        <div class="savings">Save 56-63%</div>
+                        <a href="https://wa.me/+12133179751" class="consult-button" style="display: block; margin-top: 20px;">Get Quote</a>
+                    </div>
+                    
+                    <!-- 健康检查 -->
+                    <div class="price-card">
+                        <h3>Health Screening</h3>
+                        <p>Comprehensive check-up</p>
+                        <div class="price-china">$1,500 - $2,500</div>
+                        <div class="price-usa">vs $5,000 - $8,000 in USA</div>
+                        <div class="savings">Save 70-69%</div>
+                        <a href="https://wa.me/+12133179751" class="consult-button" style="display: block; margin-top: 20px;">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 电脑端底部信息栏 -->
+        <footer class="footer-desktop">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- 品牌信息 -->
+                    <div class="footer-brand">
+                        <div class="logo" style="color: white; margin-bottom: 20px;">
+                            <div class="logo-icon">🏥</div>
+                            <div class="logo-text">
+                                <h1 style="color: white;">ChinaMedTour</h1>
+                                <p style="color: #ccc;">Medical Tourism Excellence</p>
+                            </div>
+                        </div>
+                        <p class="contact-info">
+                            Connecting American patients with world-class dental and medical care in China. 
+                            Save up to 80% on treatment costs with JCI-certified hospitals.
+                        </p>
+                        <div style="margin-top: 20px;">
+                            <a href="https://wa.me/+12133179751" class="consult-button">WhatsApp咨询</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 快速链接 -->
+                    <div>
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#hospitals">Hospitals</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 服务 -->
+                    <div>
+                        <h3 class="footer-title">Our Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="dental-tourism-specialized.html">Dental Tourism</a></li>
+                            <li><a href="cosmetic.html">Cosmetic Surgery</a></li>
+                            <li><a href="health-screening.html">Health Screening</a></li>
+                            <li><a href="#tcm">TCM Programs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 联系信息 -->
+                    <div>
+                        <h3 class="footer-title">Contact Us</h3>
+                        <div class="contact-info">
+                            <p><strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/+12133179751" style="color: #00a859;">+1 213 317 9751</a></p>
+                            
+                            <p><strong>Telegram:</strong><br>
+                            <a href="https://t.me/+19569221708" style="color: #0088cc;">+1 956 922 1708</a></p>
+                            
+                            <p><strong>Email:</strong><br>
+                            <a href="mailto:qinzhengzhanghao@gmail.com" style="color: #ccc;">qinzhengzhanghao@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2024 ChinaMedTour. All rights reserved.</p>
+                    <p style="font-size: 14px; margin-top: 10px;">Connecting patients with excellence in medical tourism.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- 电脑端浮动WhatsApp按钮 -->
+        <div class="float-whatsapp">
+            <a href="https://wa.me/+12133179751" class="whatsapp-icon" title="Chat on WhatsApp">
+                💬
+            </a>
         </div>
-    </section>
+    </div>
     
-    <!-- 价格对比 -->
-    <section class="pricing-section" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Price Comparison: China vs USA</h2>
-            <div class="pricing-grid">
+    <!-- 手机端布局 -->
+    <div class="mobile-view">
+        <!-- 手机端导航 -->
+        <nav class="mobile-nav">
+            <div class="container mobile-nav-inner">
+                <!-- 手机端Logo -->
+                <div class="mobile-logo">
+                    <div class="mobile-logo-icon">🏥</div>
+                    <div class="mobile-logo-text">
+                        <h1>ChinaMedTour</h1>
+                        <p>Medical Tourism</p>
+                    </div>
+                </div>
+                
+                <!-- 手机端汉堡菜单按钮 -->
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+            
+            <!-- 手机端菜单 -->
+            <div class="mobile-menu" id="mobileMenu">
+                <!-- Services -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">Services</a>
+                    <div class="mobile-submenu">
+                        <a href="dental-tourism-specialized.html">Dental Tourism</a>
+                        <a href="cosmetic.html">Cosmetic Surgery</a>
+                        <a href="health-screening.html">Health Screening</a>
+                    </div>
+                </div>
+                
+                <!-- Pricing -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">Pricing</a>
+                    <div class="mobile-submenu">
+                        <a href="dental-implant-cost-2024.html">2024 Price Details</a>
+                        <a href="blog-china-vs-usa-dental-costs.html">Cost Comparison</a>
+                        <a href="brand-professional-dental-hospital.html">JCI Hospitals</a>
+                    </div>
+                </div>
+                
+                <!-- Safety & Trust -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">Safety & Trust</a>
+                    <div class="mobile-submenu">
+                        <a href="blog-is-medical-tourism-safe.html">Is It Safe?</a>
+                        <a href="doctor-credentials-verification.html">Doctor Verification</a>
+                        <a href="certifications-insurance.html">Certifications</a>
+                    </div>
+                </div>
+                
+                <!-- Journey -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">Journey</a>
+                    <div class="mobile-submenu">
+                        <a href="medical-tourism-process-complete.html">Process Guide</a>
+                        <a href="testimonials-dental.html">Success Stories</a>
+                        <a href="patient-concerns-faq.html">FAQ</a>
+                    </div>
+                </div>
+                
+                <!-- 手机端咨询按钮 -->
+                <a href="https://wa.me/+12133179751" class="mobile-consult">Free Consultation</a>
+            </div>
+        </nav>
+        
+        <!-- 手机端Hero区域 -->
+        <section class="mobile-hero">
+            <div class="container">
+                <h1 class="mobile-hero-title">Save 60-75% on Medical Care</h1>
+                <p class="mobile-hero-subtitle">Premium dental implants, cosmetic surgery, and health screening in JCI-accredited hospitals.</p>
+                <div class="mobile-hero-buttons">
+                    <a href="#pricing" class="mobile-btn-primary">See Prices & Savings</a>
+                    <a href="https://wa.me/+12133179751" class="mobile-btn-secondary">Free Consultation</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 手机端价格对比 -->
+        <section class="mobile-pricing" id="pricing">
+            <div class="container">
+                <h2 class="mobile-section-title">Price Comparison</h2>
+                
                 <!-- 牙科种植 -->
-                <div class="pricing-card">
+                <div class="mobile-price-card">
                     <h3>Dental Implants</h3>
                     <p>Single implant with crown</p>
-                    <div class="price-china">$850 - $1,450</div>
-                    <div class="price-usa">vs $3,000 - $6,000 in USA</div>
-                    <div class="savings-badge">Save 71-76%</div>
-                    <a href="https://wa.me/+12133179751" class="consult-btn" style="display: block; margin-top: 20px;">Get Quote</a>
+                    <div class="mobile-price-china">$850 - $1,450</div>
+                    <div class="mobile-price-usa">vs $3,000 - $6,000 in USA</div>
+                    <div class="mobile-savings">Save 71-76%</div>
+                    <a href="https://wa.me/+12133179751" class="mobile-consult" style="display: block; margin-top: 15px;">Get Quote</a>
                 </div>
                 
                 <!-- 整形手术 -->
-                <div class="pricing-card">
+                <div class="mobile-price-card">
                     <h3>Rhinoplasty</h3>
                     <p>Nose reshaping surgery</p>
-                    <div class="price-china">$3,500 - $5,500</div>
-                    <div class="price-usa">vs $8,000 - $15,000 in USA</div>
-                    <div class="savings-badge">Save 56-63%</div>
-                    <a href="https://wa.me/+12133179751" class="consult-btn" style="display: block; margin-top: 20px;">Get Quote</a>
+                    <div class="mobile-price-china">$3,500 - $5,500</div>
+                    <div class="mobile-price-usa">vs $8,000 - $15,000 in USA</div>
+                    <div class="mobile-savings">Save 56-63%</div>
+                    <a href="https://wa.me/+12133179751" class="mobile-consult" style="display: block; margin-top: 15px;">Get Quote</a>
                 </div>
                 
                 <!-- 健康检查 -->
-                <div class="pricing-card">
+                <div class="mobile-price-card">
                     <h3>Health Screening</h3>
                     <p>Comprehensive check-up</p>
-                    <div class="price-china">$1,500 - $2,500</div>
-                    <div class="price-usa">vs $5,000 - $8,000 in USA</div>
-                    <div class="savings-badge">Save 70-69%</div>
-                    <a href="https://wa.me/+12133179751" class="consult-btn" style="display: block; margin-top: 20px;">Get Quote</a>
+                    <div class="mobile-price-china">$1,500 - $2,500</div>
+                    <div class="mobile-price-usa">vs $5,000 - $8,000 in USA</div>
+                    <div class="mobile-savings">Save 70-69%</div>
+                    <a href="https://wa.me/+12133179751" class="mobile-consult" style="display: block; margin-top: 15px;">Get Quote</a>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- 底部信息栏 -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="footer-grid">
+        </section>
+        
+        <!-- 手机端底部信息栏 -->
+        <footer class="mobile-footer">
+            <div class="container">
                 <!-- 品牌信息 -->
-                <div class="footer-brand">
-                    <div class="logo-area" style="color: white; margin-bottom: 20px;">
-                        <div class="logo-icon">🏥</div>
-                        <div class="logo-text">
+                <div class="mobile-footer-brand">
+                    <div class="mobile-logo" style="color: white; margin-bottom: 15px;">
+                        <div class="mobile-logo-icon">🏥</div>
+                        <div class="mobile-logo-text">
                             <h1 style="color: white;">ChinaMedTour</h1>
-                            <p style="color: #ccc;">Medical Tourism Excellence</p>
+                            <p style="color: #ccc;">Medical Tourism</p>
                         </div>
                     </div>
-                    <p class="contact-info">
+                    <p class="mobile-contact-info">
                         Connecting American patients with world-class dental and medical care in China. 
-                        Save up to 80% on treatment costs with JCI-certified hospitals.
+                        Save up to 80% on treatment costs.
                     </p>
-                    <div style="margin-top: 20px;">
-                        <a href="https://wa.me/+12133179751" class="consult-btn">WhatsApp咨询</a>
+                    <div style="margin-top: 15px;">
+                        <a href="https://wa.me/+12133179751" class="mobile-consult">WhatsApp咨询</a>
                     </div>
                 </div>
                 
-                <!-- 快速链接 -->
+                <!-- 联系信息 -->
                 <div>
-                    <h3 class="footer-title
+                    <h3 class="mobile-footer-title">Contact Us</h3>
+                    <div class="mobile-contact-info">
+                        <p><strong>WhatsApp:</strong><br>
+                        <a href="https://wa.me/+12133179751" style="color: #00a859;">+1 213 317 9751</a></p>
+                        
+                        <p><strong>Telegram:</strong><br>
+                        <a href="https://t.me/+19569221708" style="color: #0088cc;">+1 956 922 1708</a></p>
+                        
+                        <p><strong>Email:</strong><br>
+                        <a href="mailto:qinzhengzhanghao@gmail.com" style="color: #ccc;">qinzhengzhanghao@gmail.com</a></p>
+                    </div>
+                </div>
+                
