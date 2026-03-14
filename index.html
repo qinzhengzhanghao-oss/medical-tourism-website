@@ -303,6 +303,63 @@
             }
         }
     </style>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- 简单访问计数器（临时方案） -->
+    <script>
+        // 简单访问计数
+        if (typeof localStorage !== 'undefined') {
+            let visitCount = localStorage.getItem('visitCount') || 0;
+            visitCount = parseInt(visitCount) + 1;
+            localStorage.setItem('visitCount', visitCount);
+            localStorage.setItem('lastVisit', new Date().toISOString());
+            
+            // 记录国家（通过IP API）
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    localStorage.setItem('country', data.country_name);
+                    localStorage.setItem('countryCode', data.country_code);
+                })
+                .catch(() => {
+                    // 如果API失败，使用默认
+                    localStorage.setItem('country', 'Unknown');
+                    localStorage.setItem('countryCode', 'XX');
+                });
+        }
+        
+        // 页面浏览事件
+        document.addEventListener('DOMContentLoaded', function() {
+            // 记录页面浏览
+            console.log('页面浏览:', window.location.pathname);
+            
+            // 如果有咨询按钮点击
+            document.querySelectorAll('a[href*="whatsapp"], a[href*="wa.me"]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    console.log('WhatsApp咨询点击:', this.href);
+                    // 这里可以发送到统计服务器
+                });
+            });
+        });
+    </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GMGGNLW8VH"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', 'G-GMGGNLW8VH');
+</script>
 </head>
 <body class="antialiased">
     <!-- Floating Contact Buttons -->
@@ -330,18 +387,74 @@
                     </div>
                 </div>
                 
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex space-x-10">
-                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="smoothScroll('#services')">Services</a>
-                    <a href="#pricing-comparison" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Pricing</a>
-                    <a href="#hospitals" class="text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="smoothScroll('#hospitals')">JCI Hospitals</a>
-                    <a href="medical-tourism-process-complete.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Process</a>
-                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Testimonials</a>
-                    <a href="#contact-form" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
-                </div>
                 
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8">
+                    <div class="relative group">
+                        <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center" onclick="smoothScroll('#services'); return false;">
+                            Services <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-56 z-50">
+                            <a href="dental-tourism-specialized.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Dental Tourism</a>
+                            <a href="cosmetic.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Cosmetic Surgery</a>
+                            <a href="health-screening.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Health Screening</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center" onclick="smoothScroll('#pricing'); return false;">
+                            Pricing <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-56 z-50">
+                            <a href="dental-implant-cost-2024.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">2024 Price Details</a>
+                            <a href="blog-china-vs-usa-dental-costs.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Cost Comparison</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#hospitals" class="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center" onclick="smoothScroll('#hospitals'); return false;">
+                            JCI Hospitals <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-56 z-50">
+                            <a href="brand-professional-dental-hospital.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Hospital Details</a>
+                            <a href="doctors-database.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Our Doctors</a>
+                        </div>
+                    </div>
+                    <a href="medical-tourism-process-complete.html" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Process</a>
+                    <div class="relative group">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                            Safety & Quality <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-56 z-50">
+                            <a href="blog-is-medical-tourism-safe.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Is Medical Tourism Safe?</a>
+                            <a href="doctor-credentials-verification.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Doctor Verification</a>
+                            <a href="certifications-insurance.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Certifications & Insurance</a>
+                            <a href="trust-center-enhanced.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Trust Center</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                            Transparency <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-56 z-50">
+                            <a href="patient-journey-transparency.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Patient Journeys</a>
+                            <a href="price-transparency-benchmark.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Price Benchmark</a>
+                            <a href="doctor-credentials-verification.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Doctor Verification</a>
+                            <a href="certifications-insurance.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Certifications</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center" onclick="smoothScroll('#testimonials'); return false;">
+                            Success Stories <i class="fas fa-chevron-down ml-1 text-sm"></i>
+                        </a>
+                        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 py-2 w-56 z-50">
+                            <a href="testimonials-dental.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Dental Stories</a>
+                            <a href="testimonials-cosmetic.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Cosmetic Stories</a>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/+12133179751" class="text-gray-700 hover:text-blue-600 font-medium transition-colors" >Contact</a>
+                </div>
+
                 <!-- CTA Button -->
-                <a href="#contact-form" class="cta-primary hidden lg:inline-flex">
+                <a href="https://wa.me/+12133179751" class="cta-primary hidden lg:inline-flex">
                     <i class="fas fa-calendar-check mr-3"></i> Free Consultation
                 </a>
                 
@@ -368,15 +481,15 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="#pricing-comparison" class="cta-primary">
+                    <a href="dental-implant-cost-2024.html" class="cta-primary">
                         <i class="fas fa-dollar-sign mr-3"></i> See Price Comparison
                     </a>
-                    <a href="#contact-form" class="cta-secondary">
+                    <a href="https://wa.me/+12133179751" class="cta-secondary">
                         <i class="fas fa-comment-medical mr-3"></i> Free Medical Consultation
                     </a>
                 </div>
                 
-                <!-- Trust Indicators -->
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
                 <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
                     <div class="stat-card">
                         <div class="stat-number">60-75%</div>
@@ -441,7 +554,7 @@
                         </div>
                     </div>
                     
-                    <a href="#dental-consultation" class="cta-primary w-full text-center justify-center">
+                    <a href="https://wa.me/+12133179751" class="cta-primary w-full text-center justify-center">
                         <i class="fas fa-calendar-alt mr-3"></i> Get Dental Quote
                     </a>
                 </div>
@@ -482,7 +595,7 @@
                         </div>
                     </div>
                     
-                    <a href="#cosmetic-consultation" class="cta-primary w-full text-center justify-center">
+                    <a href="https://wa.me/+12133179751" class="cta-primary w-full text-center justify-center">
                         <i class="fas fa-calendar-alt mr-3"></i> Get Cosmetic Quote
                     </a>
                 </div>
@@ -517,7 +630,7 @@
                         </div>
                     </div>
                     
-                    <a href="#screening-consultation" class="cta-primary w-full text-center justify-center">
+                    <a href="https://wa.me/+12133179751" class="cta-primary w-full text-center justify-center">
                         <i class="fas fa-calendar-alt mr-3"></i> Get Screening Quote
                     </a>
                 </div>
@@ -562,7 +675,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-6">JCI-Accredited Partner Hospitals</h2>
                 <p class="text-gray-600 text-lg max-w-3xl mx-auto">
-                    We partner with top-tier hospitals that meet international healthcare standards
+                    Partnering with JCI-accredited international hospitals
                 </p>
             </div>
             
@@ -950,7 +1063,69 @@
         </div>
     </section>
     
-    <!-- Contact Section -->
+    
+<!-- Important Information Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+            Important Information for Patients
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                <div class="text-blue-600 text-3xl mb-4">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">2024 Price Details</h3>
+                <p class="text-gray-600 mb-6">
+                    Complete breakdown of dental implant costs, hospital fees, and travel expenses with transparent pricing.
+                </p>
+                <a href="dental-implant-cost-2024.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                    View Complete Price List
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                <div class="text-green-600 text-3xl mb-4">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Safety Guide</h3>
+                <p class="text-gray-600 mb-6">
+                    Learn about JCI hospital standards, doctor qualifications, safety protocols, and quality assurance.
+                </p>
+                <a href="blog-is-medical-tourism-safe.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                    Read Safety Guide
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                <div class="text-purple-600 text-3xl mb-4">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-gray-900">Patient FAQs</h3>
+                <p class="text-gray-600 mb-6">
+                    Answers to common questions about medical tourism, travel arrangements, treatment process, and aftercare.
+                </p>
+                <a href="patient-concerns-faq.html" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800">
+                    View All FAQs
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="online-consultation-booking.html" class="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg font-bold text-lg hover:bg-blue-700 transition shadow-md">
+                <i class="fas fa-calendar-check mr-3"></i>
+                Book Free Consultation
+                <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -960,4 +1135,89 @@
                 </p>
             </div>
             
-            <div class="max-w-4xl mx-auto
+            <div class="max-w-4xl mx-auto<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-500 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-2xl">ChinaMedTour</div>
+                        <div class="text-sm text-gray-400">Premium Medical Tourism</div>
+                    </div>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    World-class medical tourism services with US-trained doctors in JCI-accredited Chinese hospitals.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://wa.me/+12133179751" class="text-gray-400 hover:text-green-400">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="https://t.me/+19569221708" class="text-gray-400 hover:text-blue-400">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </a>
+                    <a href="mailto:qinzhengzhanghao@gmail.com" class="text-gray-400 hover:text-red-400">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="dental-implant-cost-2024.html" class="text-gray-400 hover:text-white">Price Details</a></li>
+                    <li><a href="blog-is-medical-tourism-safe.html" class="text-gray-400 hover:text-white">Safety Guide</a></li>
+                    <li><a href="medical-tourism-process-complete.html" class="text-gray-400 hover:text-white">Treatment Process</a></li>
+                    <li><a href="doctor-credentials-verification.html" class="text-gray-400 hover:text-white">Doctor Verification</a></li>
+                    <li><a href="patient-concerns-faq.html" class="text-gray-400 hover:text-white">Patient FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-bold mb-6">Our Services</h3>
+                <ul class="space-y-3">
+                    <li><a href="dental-tourism-specialized.html" class="text-gray-400 hover:text-white">Dental Tourism</a></li>
+                    <li><a href="cosmetic.html" class="text-gray-400 hover:text-white">Cosmetic Surgery</a></li>
+                    <li><a href="health-screening.html" class="text-gray-400 hover:text-white">Health Screening</a></li>
+                    <li><a href="brand-professional-dental-hospital.html" class="text-gray-400 hover:text-white">JCI Hospitals</a></li>
+                    <li><a href="online-consultation-booking.html" class="text-gray-400 hover:text-white">Book Consultation</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-bold mb-6">Contact Info</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-phone-alt text-blue-400 mr-3 mt-1"></i>
+                        <div>
+                            <div class="font-medium">Phone/WhatsApp</div>
+                            <a href="https://wa.me/+12133179751" class="text-gray-400 hover:text-white">+1 213 317 9751</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope text-blue-400 mr-3 mt-1"></i>
+                        <div>
+                            <div class="font-medium">Email</div>
+                            <a href="mailto:qinzhengzhanghao@gmail.com" class="text-gray-400 hover:text-white">qinzhengzhanghao@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-clock text-blue-400 mr-3 mt-1"></i>
+                        <div>
+                            <div class="font-medium">Business Hours</div>
+                            <div class="text-gray-400">24/7 Consultation Available</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+            <p>&copy; 2024 ChinaMedTour. All rights reserved.</p>
+            <p class="mt-2 text-sm">Medical tourism services provided through partner JCI-accredited hospitals in China.</p>
+        </div>
+    </div>
+</footer>
