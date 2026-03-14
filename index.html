@@ -1,6 +1,18 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>China Medical Tourism | Premium Healthcare at 60-75% Savings</title><meta name="description" content="World-class dental implants, cosmetic surgery, and health screening in JCI-accredited Chinese hospitals. Save 60-75% vs US prices with US-trained doctors."><!-- 性能优化：预连接和资源提示 --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"></noscript>
+<!DOCTYPE html><html lang="en"><head>
+<!-- 资源加载优化 -->
+<link rel="dns-prefetch" href="https://unpkg.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>China Medical Tourism | Premium Healthcare at 60-75% Savings</title><meta name="description" content="World-class dental implants, cosmetic surgery, and health screening in JCI-accredited Chinese hospitals. Save 60-75% vs US prices with US-trained doctors."><!-- 性能优化：预连接和资源提示 --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"></noscript>
 <!-- Tailwind CSS - 同步加载（修复版） -->
-<link href="https://cdn.tailwindcss.com" rel="stylesheet">
+
+
+
 <!-- Tailwind CSS配置 -->
 <script>
   tailwind.config = {
@@ -69,7 +81,309 @@
     }
   }
 </style>
-</head><body class="antialiased">
+
+
+
+<!-- ============================================ -->
+<!-- 终极布局系统：确保手机端和电脑端都正常 -->
+<!-- ============================================ -->
+
+<!-- 1. 基础CSS（不依赖Tailwind响应式） -->
+<style>
+/* 基础重置 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; color: #1f2937; line-height: 1.6; }
+
+/* 容器系统 */
+.container { 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 响应式媒体查询（独立于Tailwind） */
+@media (min-width: 1024px) {
+    /* 电脑端：强制横向布局 */
+    .desktop-guarantee-nav { 
+        display: flex !important; 
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 2rem !important;
+    }
+    
+    .desktop-guarantee-footer { 
+        display: grid !important; 
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .desktop-guarantee-pricing { 
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2rem !important;
+    }
+    
+    .desktop-guarantee-hospitals {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+    
+    .mobile-guarantee-only { display: none !important; }
+}
+
+@media (max-width: 1023px) {
+    /* 手机端：强制竖向布局 */
+    .desktop-guarantee-nav { display: none !important; }
+    .mobile-guarantee-nav { 
+        display: flex !important; 
+        flex-direction: column !important;
+    }
+    
+    .desktop-guarantee-footer { 
+        display: flex !important; 
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    .desktop-guarantee-pricing { 
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    
+    .desktop-guarantee-hospitals {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    
+    .desktop-guarantee-only { display: none !important; }
+}
+
+/* 关键元素保证（不依赖媒体查询） */
+.guarantee-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.guarantee-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.guarantee-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* 如果所有CSS都失效，这是最后保障 */
+.layout-ultimate-guarantee {
+    min-width: 320px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+</style>
+
+<!-- 2. 设备检测和样式切换 -->
+<script>
+// 终极设备检测和布局切换
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('终极布局系统启动');
+    
+    function applyUltimateGuarantee() {
+        const screenWidth = window.innerWidth;
+        const isDesktop = screenWidth >= 1024;
+        
+        console.log('屏幕检测:', {
+            width: screenWidth,
+            isDesktop: isDesktop,
+            time: new Date().toISOString()
+        });
+        
+        // 1. 导航保障
+        const navElements = document.querySelectorAll('nav .hidden.lg\\:flex, nav .flex');
+        navElements.forEach(nav => {
+            if (isDesktop) {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'row';
+                nav.style.justifyContent = 'space-between';
+                nav.style.alignItems = 'center';
+                nav.style.gap = '2rem';
+            } else {
+                // 手机端：如果是桌面导航则隐藏
+                if (nav.classList.contains('hidden') && nav.classList.contains('lg:flex')) {
+                    nav.style.display = 'none';
+                }
+            }
+        });
+        
+        // 2. 底部信息栏保障
+        const footerGrids = document.querySelectorAll('footer .grid, footer .grid-cols-1, footer .lg\\:grid-cols-5');
+        footerGrids.forEach(footer => {
+            if (isDesktop) {
+                footer.style.display = 'grid';
+                footer.style.gridTemplateColumns = '2fr 1fr 1fr 1fr 1fr';
+                footer.style.gap = '2rem';
+                footer.style.padding = '3rem 0';
+            } else {
+                footer.style.display = 'flex';
+                footer.style.flexDirection = 'column';
+                footer.style.gap = '2rem';
+                footer.style.padding = '2rem 0';
+            }
+        });
+        
+        // 3. 价格卡片保障
+        const pricingSections = document.querySelectorAll('#pricing .grid, .pricing-grid');
+        pricingSections.forEach(section => {
+            if (isDesktop) {
+                section.style.display = 'grid';
+                section.style.gridTemplateColumns = 'repeat(3, 1fr)';
+                section.style.gap = '2rem';
+            } else {
+                section.style.display = 'flex';
+                section.style.flexDirection = 'column';
+                section.style.gap = '1.5rem';
+            }
+        });
+        
+        // 4. 医院卡片保障
+        const hospitalSections = document.querySelectorAll('#hospitals .grid, .hospital-grid');
+        hospitalSections.forEach(section => {
+            if (isDesktop) {
+                section.style.display = 'grid';
+                section.style.gridTemplateColumns = 'repeat(3, 1fr)';
+                section.style.gap = '1.5rem';
+            } else {
+                section.style.display = 'flex';
+                section.style.flexDirection = 'column';
+                section.style.gap = '1.5rem';
+            }
+        });
+        
+        // 5. 移动端菜单处理
+        const mobileMenuButtons = document.querySelectorAll('.lg\\:hidden, .mobile-menu-toggle');
+        mobileMenuButtons.forEach(button => {
+            if (isDesktop) {
+                button.style.display = 'none';
+            } else {
+                button.style.display = 'block';
+            }
+        });
+        
+        console.log('终极布局保障已应用');
+        
+        // 检查效果
+        setTimeout(checkLayoutResult, 500);
+    }
+    
+    function checkLayoutResult() {
+        const screenWidth = window.innerWidth;
+        const isDesktop = screenWidth >= 1024;
+        
+        // 检查导航
+        const nav = document.querySelector('nav .hidden.lg\\:flex');
+        let navOk = true;
+        if (nav) {
+            const style = window.getComputedStyle(nav);
+            if (isDesktop && style.display !== 'flex') {
+                navOk = false;
+                console.warn('导航检查失败，应用紧急修复');
+                applyEmergencyNavFix();
+            }
+        }
+        
+        // 检查底部
+        const footer = document.querySelector('footer .grid');
+        let footerOk = true;
+        if (footer) {
+            const style = window.getComputedStyle(footer);
+            if (isDesktop && !style.gridTemplateColumns.includes('5')) {
+                footerOk = false;
+                console.warn('底部检查失败，应用紧急修复');
+                applyEmergencyFooterFix();
+            }
+        }
+        
+        if (navOk && footerOk) {
+            console.log('✅ 布局检查通过');
+        } else {
+            console.warn('⚠️ 布局检查发现问题，已应用修复');
+        }
+    }
+    
+    function applyEmergencyNavFix() {
+        const navContainer = document.querySelector('nav .container .flex');
+        if (navContainer) {
+            navContainer.style.display = 'flex';
+            navContainer.style.flexDirection = 'row';
+            navContainer.style.justifyContent = 'space-between';
+            navContainer.style.alignItems = 'center';
+            navContainer.style.gap = '2rem';
+            console.log('紧急导航修复已应用');
+        }
+    }
+    
+    function applyEmergencyFooterFix() {
+        const footerContainer = document.querySelector('footer .container > div:first-child');
+        if (footerContainer) {
+            footerContainer.style.display = 'grid';
+            footerContainer.style.gridTemplateColumns = '2fr 1fr 1fr 1fr 1fr';
+            footerContainer.style.gap = '2rem';
+            console.log('紧急底部修复已应用');
+        }
+    }
+    
+    // 初始应用
+    applyUltimateGuarantee();
+    
+    // 窗口大小变化时重新应用
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(applyUltimateGuarantee, 250);
+    });
+    
+    // 添加成功提示
+    setTimeout(function() {
+        const notice = document.createElement('div');
+        notice.id = 'layout-success-notice';
+        notice.style.cssText = 'position: fixed; bottom: 20px; right: 20px; background: #4CAF50; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; z-index: 9999; opacity: 0.9; display: none;';
+        notice.textContent = '✅ 布局保障系统已就绪';
+        document.body.appendChild(notice);
+        
+        notice.style.display = 'block';
+        setTimeout(function() {
+            notice.style.display = 'none';
+        }, 3000);
+    }, 1000);
+});
+</script>
+
+<!-- 3. 简化Tailwind CDN -->
+<link href="https://unpkg.com/tailwindcss@^3.0.0/dist/tailwind.min.css" rel="stylesheet" id="tailwind-simple">
+
+<!-- 4. 基础保障样式 -->
+<style id="base-guarantee-css">
+/* 绝对基础保障 */
+body { font-family: sans-serif; margin: 0; padding: 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+img { max-width: 100%; height: auto; }
+a { color: #0066cc; }
+</style>
+</head><body class="antialiased layout-ultimate-guarantee">
+
+
+
+
 <!-- Tailwind CSS加载检查 -->
 <script>
   // 检查Tailwind CSS是否加载成功
@@ -230,6 +544,8 @@
         </div>
     </div>
 </footer>
+
+
 
 
 </body>
