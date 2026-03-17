@@ -423,4 +423,24 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-</urlset>
+  <url>
+    <loc>https://qinzhengzhanghao-oss.github.io/medical-tourism-website/cosmetic.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  <url>
+    <loc>https://qinzhengzhanghao-oss.github.io/medical-tourism-website/health-screening.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  <url>
+    <loc>https://qinzhengzhanghao-oss.github.io/medical-tourism-website/testimonials-dental.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  <url>
+    <loc>https://qinzhengzhanghao-oss.github.io/medical-tourism-website/testimonials-cosmetic.html</loc>
+    <lastmod>2026-03-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>  </url>  </url>  </url></urlset>
