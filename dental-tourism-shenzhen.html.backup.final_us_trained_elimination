@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Tourism Shenzhen | Dental Implants in China's Capital</title>
+    <meta name="description" content="Dental tourism in Shenzhen, China. Get dental implants with Industry-experienced dental specialists at ISO9001-certified Grade 3A hospitals in China's China's tech hub near Hong Kong.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .emergency-banner { background: linear-gradient(135deg, #f59e0b, #ef4444); color: white; padding: 12px 0; text-align: center; font-weight: 600; font-size: 14px; }
+        .hero-section { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 60px 0; text-align: center; }
+        .section-title { text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b; }
+        .horizontal-cards { display: flex; justify-content: space-between; gap: 20px; margin: 40px 0; }
+        .city-card { flex: 1; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid #f59e0b; }
+        .btn-primary { background: linear-gradient(135deg, #f59e0b, #34d399); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
+        .main-footer { background: #1e293b; color: white; padding: 60px 0; margin-top: 80px; }
+        @media (max-width: 768px) { .horizontal-cards { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <!-- 紧急医疗通道（与服务页面完全一致） -->
+    <div class="emergency-banner">
+        🚨 Need Shenzhen Dental Info? <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a>
+    </div>
+    
+    <!-- 导航（与服务页面完全一致） -->
+    <nav style="background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" style="color: #1e40af; font-weight: 600; text-decoration: none;">← Home</a>
+            <div>
+                <a href="services.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Services</a>
+                <a href="dental-tourism-beijing.html" style="margin-left: 15px; color: #f59e0b; font-weight: 600; text-decoration: none;">Shenzhen</a>
+                <a href="dental-tourism-shanghai.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Shanghai</a>
+                <a href="contact.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Contact</a>
+                <a href="https://wa.me/+12133179751" class="btn-primary" style="margin-left: 15px;">Shenzhen Inquiry</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero（与服务页面完全一致） -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 20px;">Dental Tourism in Shenzhen</h1>
+            <p style="font-size: 20px; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                World-class dental implant treatment in China's China's tech hub near Hong Kong with Industry-experienced dental specialists at ISO9001-certified Grade 3A hospitals.
+            </p> with extensive clinical experience and professional certification with extensive clinical experience and professional certification with extensive clinical experience and professional certification with extensive clinical experience and professional certification
+            <a href="#advantages" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">Shenzhen Advantages</a>
+        </div>
+    </section>
+    
+    <main class="container" style="padding: 40px 20px;">
+        
+        <!-- 深圳优势 - 横向布局（与服务页面完全一致） -->
+        <section id="advantages">
+            <h2 class="section-title">Why Choose Shenzhen</h2>
+            
+            <div class="horizontal-cards">
+                <!-- 医疗设施 -->
+                <div class="city-card" style="border-top-color: #f59e0b;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">🏥</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Top Medical Facilities</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        Multiple ISO9001-certified Grade 3A hospitals with international patient departments and latest dental technology.
+                    </p>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">ISO9001-certified Grade 3A hospitals</li>
+                        <li style="margin-bottom: 8px;">International patient departments</li>
+                        <li style="margin-bottom: 8px;">Latest dental technology</li>
+                        <li>English-speaking medical staff</li>
+                    </ul>
+                </div>
+                
+                <!-- 医生团队 -->
+                <div class="city-card" style="border-top-color: #3b82f6;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">👨‍⚕️</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Industry-experienced dental specialists</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        Dentists trained at UCLA, NYU, Harvard with US standards of care and international experience.
+                    </p>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">UCLA-trained implant specialists</li>
+                        <li style="margin-bottom: 8px;">NYU-trained orthodontists</li>
+                        <li style="margin-bottom: 8px;">Harvard-trained aesthetic dentists</li>
+                        <li>International board certifications</li>
+                    </ul>
+                </div>
+                
+                <!-- 文化体验 -->
+                <div class="city-card" style="border-top-color: #f59e0b;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">🏛️</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Cultural Experience</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        Combine dental treatment with cultural exploration in China's historic China's tech hub near Hong Kong.
+                    </p>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">Great Wall & Forbidden City</li>
+                        <li style="margin-bottom: 8px;">Modern shopping & dining</li>
+                        <li style="margin-bottom: 8px;">International transportation hub</li>
+                        <li>English-friendly tourist areas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 深圳医院 - 横向布局（与服务页面完全一致） -->
+        <section style="margin: 80px 0;">
+            <h2 class="section-title">Shenzhen Hospitals</h2>
+            
+            <div class="horizontal-cards">
+                <div class="city-card">
+                    <div style="font-size: 36px; color: #f59e0b; margin-bottom: 20px;">⭐</div>
+                    <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 15px; color: #2d3748;">Shenzhen United Hospital</h3>
+                    <p style="color: #4a5568; line-height: 1.6;">
+                        ISO9001-certified Grade 3A, international patient department, US-trained dental team.
+                    </p>
+                </div>
+                
+                <div class="city-card">
+                    <div style="font-size: 36px; color: #3b82f6; margin-bottom: 20px;">⭐</div>
+                    <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 15px; color: #2d3748;">Peking University Hospital</h3>
+                    <p style="color: #4a5568; line-height: 1.6;">
+                        Teaching hospital, advanced dental technology, international certifications.
+                    </p>
+                </div>
+                
+                <div class="city-card">
+                    <div style="font-size: 36px; color: #f59e0b; margin-bottom: 20px;">⭐</div>
+                    <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 15px; color: #2d3748;">Capital Medical University</h3>
+                    <p style="color: #4a5568; line-height: 1.6;">
+                        Research hospital, latest implant technology, comprehensive dental services.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 价格优势（与服务页面完全一致） -->
+        <section style="background: #f0f9ff; padding: 60px; border-radius: 16px; margin: 80px 0;">
+            <h2 class="section-title" style="color: #1e40af;">Shenzhen Price Advantages</h2>
+            
+            <div style="display: flex; justify-content: space-between; gap: 30px; margin-top: 40px;">
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 48px; color: #f59e0b; margin-bottom: 15px;">💰</div>
+                    <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 10px;">Cost Savings</h3>
+                    <p style="color: #4b5563;">Save 70-75% vs US prices for same quality treatment</p>
+                </div>
+                
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 48px; color: #3b82f6; margin-bottom: 15px;">🏥</div>
+                    <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 10px;">Hospital Quality</h3>
+                    <p style="color: #4b5563;">ISO9001-certified Grade 3A hospitals with international standards</p>
+                </div>
+                
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 48px; color: #f59e0b; margin-bottom: 15px;">👨‍⚕️</div>
+                    <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 10px;">Doctor Quality</h3>
+                    <p style="color: #4b5563;">Industry-experienced dental specialists with international experience</p> with extensive clinical experience and professional certification with extensive clinical experience and professional certification
+                </div>
+            </div>
+        </section>
+        
+        <!-- 行动号召（与服务页面完全一致） -->
+        <section style="text-align: center; margin: 80px 0;">
+            <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px; color: #1e293b;">Start Your Shenzhen Dental Journey</h2>
+            <p style="font-size: 18px; color: #4b5563; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Get complete information about dental implant treatment in Shenzhen with Industry-experienced dental specialists at ISO9001-certified Grade 3A hospitals.
+            </p> with extensive clinical experience and professional certification with extensive clinical experience and professional certification with extensive clinical experience and professional certification with extensive clinical experience and professional certification
+            <div>
+                <a href="https://wa.me/+12133179751" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">
+                    <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Shenzhen Inquiry
+                </a>
+                <a href="dental-implant-cost-2026.html" class="btn-primary" style="background: #3b82f6; margin-left: 20px; padding: 16px 32px; font-size: 18px;">
+                    <i class="fas fa-dollar-sign" style="margin-right: 10px;"></i> View Prices
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 标准底部信息栏（只有一个） -->
+    <footer class="main-footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="font-size: 32px; color: white; margin-right: 10px;">🏥</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 24px; color: white;">ChinaMedTour</div>
+                            <div style="font-size: 14px; color: #cbd5e0;">Shenzhen Dental Tourism</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #cbd5e0;">
+                        Dental implant tourism in Shenzhen with Industry-experienced dental specialists at ISO9001-certified Grade 3A hospitals.
+                    </p> with extensive clinical experience and professional certification with extensive clinical experience and professional certification
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Shenzhen Info</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e0; text-decoration: none;">Shenzhen Dental</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-tourism-shanghai.html" style="color: #cbd5e0; text-decoration: none;">Shanghai Dental</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-tourism-guangzhou.html" style="color: #cbd5e0; text-decoration: none;">Shenzhen Dental</a></li>
+                        <li><a href="services.html" style="color: #cbd5e0; text-decoration: none;">All Cities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Services</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e0; text-decoration: none;">Dental Implants</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-crowns-cost-china.html" style="color: #cbd5e0; text-decoration: none;">Dental Crowns</a></li>
+                        <li style="margin-bottom: 10px;"><a href="teeth-whitening-cost-china.html" style="color: #cbd5e0; text-decoration: none;">Teeth Whitening</a></li>
+                        <li><a href="services.html" style="color: #cbd5e0; text-decoration: none;">All Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Shenzhen</h3>
+                    <div style="color: #cbd5e0; font-size: 14px; line-height: 1.8;">
+                        <div style="margin-bottom: 10px;">
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/+12133179751" style="color: #20c997; text-decoration: none;">+1 213 317 9751</a>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Email:</strong><br>
+                            <a href="mailto:qinzhengzhanghao@gmail.com" style="color: #cbd5e0; text-decoration: none;">qinzhengzhanghao@gmail.com</a>
+                        </div>
+                        <div>
+                            <
