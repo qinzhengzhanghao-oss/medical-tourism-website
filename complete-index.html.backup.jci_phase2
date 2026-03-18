@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Medical Tourism | Premium Healthcare at 60-75% Savings</title>
+    <meta name="description" content="World-class dental implants, cosmetic surgery, and health screening in JCI-accredited Chinese hospitals. Save 60-75% vs US prices with US-trained doctors.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --accent-teal: #0d9488;
+            --light-blue: #dbeafe;
+            --success-green: #10b981;
+            --warning-orange: #f59e0b;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.1"><path fill="white" d="M0 0h1200v600H0z"/><circle cx="300" cy="300" r="150" fill="none" stroke="white" stroke-width="2"/><circle cx="900" cy="200" r="100" fill="none" stroke="white" stroke-width="2"/></svg>');
+            background-size: cover;
+        }
+        
+        /* CTA Buttons */
+        .cta-primary {
+            background: linear-gradient(135deg, var(--accent-teal), var(--success-green));
+            color: white;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(13, 148, 136, 0.3);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(13, 148, 136, 0.4);
+        }
+        
+        .cta-secondary {
+            background: white;
+            color: var(--primary-blue);
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .cta-secondary:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        /* Cards */
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--accent-teal);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-teal), var(--success-green));
+        }
+        
+        /* Pricing Cards */
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--accent-teal);
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Floating Contact */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .contact-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .whatsapp-icon {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        
+        .telegram-icon {
+            background: linear-gradient(135deg, #0088cc, #006699);
+        }
+        
+        /* Stats */
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        /* Trust Badges */
+        .trust-badge {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0 60px;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .floating-contact {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #1a202c;
+    color: white;
+    padding: 20px 0;
+    z-index: 1000;
+}
+</style>
+</head>
+<body class="antialiased">
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="https://wa.me/12133179751" target="_blank" class="contact-icon whatsapp-icon" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/+19569221708" target="_blank" class="contact-icon telegram-icon" title="Message on Telegram">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-teal-500 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-2xl text-gray-900">ChinaMedTour</div>
+                        <div class="text-sm text-gray-600 font-medium">Premium Medical Tourism</div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-10">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Services</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Pricing</a>
+                    <a href="#hospitals" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Hospitals</a>
+                    <a href="#process" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Process</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Testimonials</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#consultation" class="cta-primary hidden lg:inline-flex">
+                    <i class="fas fa-calendar-check mr-3"></i> Free Consultation
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 text-2xl" id="mobile-menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="hidden lg:hidden mt-4" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium">Pricing</a>
+                    <a href="#hospitals" class="text-gray-700 hover:text-blue-600 font-medium">Hospitals</a>
+                    <a href="#process" class="text-gray-700 hover:text-blue-600 font-medium">Process</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium">Testimonials</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                    <a href="#consultation" class="cta-primary w-full text-center justify-center">
+                        <i class="fas fa-calendar-check mr-3"></i> Free Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+                    World-Class Medical Care<br>
+                    <span class="text-teal-300">Save 60-75%</span> in China
+                </h1>
+                
+                <p class="text-xl lg:text-2xl mb-12 opacity-90 leading-relaxed">
+                    Access premium dental implants, cosmetic surgery, and comprehensive health screening 
+                    in JCI-accredited Chinese hospitals. Identical quality, significant savings with US-trained doctors.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="#pricing" class="cta-primary">
+                        <i class="fas fa-dollar-sign mr-3"></i> See Price Comparison
+                    </a>
+                    <a href="#consultation" class="cta-secondary">
+                        <i class="fas fa-comment-medical mr-3"></i> Free Medical Consultation
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                    <div class="stat-card">
+                        <div class="stat-number">60-75%</div>
+                        <div class="text-gray-600 font-medium">Cost Savings</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">JCI</div>
+                        <div class="text-gray-600 font-medium">Accredited Hospitals</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="text-gray-600 font-medium">Support</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5000+</div>
+                        <div class="text-gray-600 font-medium">Patients Served</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Our Medical Services</h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    Comprehensive healthcare services with international standards
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dental Services -->
+                <div class="service-card">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tooth text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Dental & Implantology</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Single Dental Implant: $850-$1,450
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Full Mouth Reconstruction: $15,000-$25,000
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Teeth Whitening: $300-$500
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Veneers & Crowns: $250-$450 each
+                        </li>
+                    </ul>
+                    <a href="dental-implant-cost-2024.html" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Cosmetic Surgery -->
+                <div class="service-card">
+                    <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-md text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cosmetic Surgery</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Rhinoplasty: $3,500-$5,500
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Breast Augmentation: $4,500-$7
