@@ -33,10 +33,34 @@
         .e-e-a-t-badge {
             background: linear-gradient(135deg, var(--authority) 0%, #a78bfa 100%);
         }
-    </style>
+    
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #1a202c;
+    color: white;
+    padding: 20px 0;
+    z-index: 1000;
+}
+</style>
 </head>
 <body class="antialiased">
     <!-- 返回首页链接 + 完整导航 -->
+    <div class="container mx-auto px-4 py-6">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <a href="index.html" style="color: #1e40af; font-weight: 600; text-decoration: none;">
+                ← Back to Home
+            </a>
+            <div>
+                <a href="services.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Services</a>
+                <a href="contact.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Contact</a>
+                <a href="https://wa.me/+12133179751" style="margin-left: 15px; background: #10b981; color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600;">
+                    Free Consultation
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="container mx-auto px-4 py-6">
         <div class="flex flex-wrap gap-4 items-center">
             <a href="index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors">
@@ -524,7 +548,7 @@
     </div>
     
     <!-- 简单底部 -->
-    <footer class="bg-gray-900 text-white py-12 mt-16">
+    <footer class="bg-gray-900 text-white py-12" style="position: fixed; bottom: 0; width: 100%; z-index: 1000;">
         <div class="container mx-auto px-4 text-center">
             <div class="font-bold text-xl mb-2">ChinaMedTour</div>
             <div class="text-gray-400 text-sm mb-8">E-E-A-T Verified Senior Dental Tourism</div>
@@ -609,45 +633,140 @@
 <!-- ========== 深度整改：实质性内容补充 ========== -->
 <section class="deep-rectify-general">
     <div class="container">
-        <h2>📋 实质性信息补充</h2>
+        <h2>📋 Substantial Information & Verification</h2>
         
-        <h3>🎯 本页面提供的具体价值</h3>
-        <p>本页面专门为您提供以下具体、可验证的信息：</p>
-        <ul>
-            <li><strong>具体数据支撑</strong>：所有信息基于2025年临床统计和国际研究</li>
-            <li><strong>可验证事实</strong>：提供官方验证渠道和验证方法</li>
-            <li><strong>实用建议</strong>：基于实际经验的具体操作建议</li>
-            <li><strong>案例参考</strong>：可参考类似病例的治疗过程和结果</li>
-            <li><strong>风险认知</strong>：明确了解治疗的具体风险和保障措施</li>
-        </ul>
+        <!-- Value Proposition Table -->
+        <div style="background: #f0f9ff; padding: 25px; border-radius: 10px; margin-bottom: 30px;">
+            <h3 style="color: #1e40af; font-size: 20px; font-weight: 600; margin-bottom: 15px;">🎯 Value Proposition</h3>
+            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+                <thead style="background: #1e40af; color: white;">
+                    <tr>
+                        <th style="padding: 15px; text-align: left;">Value Component</th>
+                        <th style="padding: 15px; text-align: left;">Description</th>
+                        <th style="padding: 15px; text-align: left;">Verification Method</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 15px; font-weight: 600;">Data-Backed Information</td>
+                        <td style="padding: 15px;">Based on 2025 clinical statistics & international research</td>
+                        <td style="padding: 15px;">Clinical study references, statistical reports</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 15px; font-weight: 600;">Verifiable Facts</td>
+                        <td style="padding: 15px;">Official verification channels and methods provided</td>
+                        <td style="padding: 15px;">Government website links, certification numbers</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 15px; font-weight: 600;">Practical Advice</td>
+                        <td style="padding: 15px;">Actionable recommendations based on real experience</td>
+                        <td style="padding: 15px;">Case studies, patient testimonials</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 15px; font-weight: 600;">Case References</td>
+                        <td style="padding: 15px;">Similar case treatment processes and outcomes</td>
+                        <td style="padding: 15px;">Before/after comparisons (privacy protected)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; font-weight: 600;">Risk Awareness</td>
+                        <td style="padding: 15px;">Clear understanding of specific risks and safeguards</td>
+                        <td style="padding: 15px;">Risk disclosure documents, safety protocols</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         
-        <h3>📊 具体数据与事实</h3>
-        <ul>
-            <li><strong>治疗成功率数据</strong>：基于2025年临床统计，种植成功率98.7%</li>
-            <li><strong>费用节省数据</strong>：相比美国节省70-75%治疗费用</li>
-            <li><strong>医生经验数据</strong>：平均12年临床经验，2000+成功案例</li>
-            <li><strong>医院标准数据</strong>：JCI国际认证，审核分数98.7/100</li>
-            <li><strong>患者满意度数据</strong>：2025年回访数据96.5%满意</li>
-        </ul>
+        <!-- Data & Facts Table -->
+        <div style="background: #fefce8; padding: 25px; border-radius: 10px; margin-bottom: 30px;">
+            <h3 style="color: #ca8a04; font-size: 20px; font-weight: 600; margin-bottom: 15px;">📊 Specific Data & Facts</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981;">
+                    <div style="font-size: 24px; font-weight: 700; color: #10b981;">98.7%</div>
+                    <div style="font-size: 14px; color: #4b5563;">Implant Success Rate (2025 clinical data)</div>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                    <div style="font-size: 24px; font-weight: 700; color: #3b82f6;">70-75%</div>
+                    <div style="font-size: 14px; color: #4b5563;">Cost Savings vs USA treatment</div>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                    <div style="font-size: 24px; font-weight: 700; color: #8b5cf6;">12+ years</div>
+                    <div style="font-size: 14px; color: #4b5563;">Average doctor clinical experience</div>
+                </div>
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444;">
+                    <div style="font-size: 24px; font-weight: 700; color: #ef4444;">98.7/100</div>
+                    <div style="font-size: 14px; color: #4b5563;">JCI accreditation audit score</div>
+                </div>
+            </div>
+        </div>
         
-        <h3>🔍 信息验证具体方式</h3>
-        <ol>
-            <li><strong>官方渠道验证</strong>：卫生部官网验证医生资质，JCI官网验证医院认证</li>
-            <li><strong>培训证书验证</strong>：提供美国培训学院验证链接和证书编号</li>
-            <li><strong>案例库验证</strong>：查看类似病例治疗前后对比（隐私保护）</li>
-            <li><strong>患者验证</strong>：联系过往国际患者了解真实体验</li>
-            <li><strong>视频验证</strong>：预约视频咨询验证医院环境和医生资质</li>
-        </ol>
+        <!-- Verification Methods Table -->
+        <div style="background: #f3e8ff; padding: 25px; border-radius: 10px; margin-bottom: 30px;">
+            <h3 style="color: #7c3aed; font-size: 20px; font-weight: 600; margin-bottom: 15px;">🔍 Information Verification Methods</h3>
+            <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden;">
+                <thead style="background: #7c3aed; color: white;">
+                    <tr>
+                        <th style="padding: 15px; text-align: left;">#</th>
+                        <th style="padding: 15px; text-align: left;">Verification Method</th>
+                        <th style="padding: 15px; text-align: left;">What You Can Verify</th>
+                        <th style="padding: 15px; text-align: left;">How to Verify</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 15px; font-weight: 600;">1</td>
+                        <td style="padding: 15px;">Official Channel Verification</td>
+                        <td style="padding: 15px;">Doctor licenses, hospital accreditations</td>
+                        <td style="padding: 15px;">Ministry of Health website, JCI official site</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 15px; font-weight: 600;">2</td>
+                        <td style="padding: 15px;">Training Certificate Verification</td>
+                        <td style="padding: 15px;">US training credentials, certifications</td>
+                        <td style="padding: 15px;">Training institution verification links</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 15px; font-weight: 600;">3</td>
+                        <td style="padding: 15px;">Case Database Review</td>
+                        <td style="padding: 15px;">Similar case treatment outcomes</td>
+                        <td style="padding: 15px;">Before/after comparisons (privacy protected)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #e5e7eb;">
+                        <td style="padding: 15px; font-weight: 600;">4</td>
+                        <td style="padding: 15px;">Patient Testimonial Verification</td>
+                        <td style="padding: 15px;">Real patient experiences</td>
+                        <td style="padding: 15px;">Contact previous international patients</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 15px; font-weight: 600;">5</td>
+                        <td style="padding: 15px;">Video Consultation Verification</td>
+                        <td style="padding: 15px;">Hospital environment, doctor credentials</td>
+                        <td style="padding: 15px;">Schedule 30-minute video consultation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         
-        <h3>🚀 建议下一步行动</h3>
-        <p>基于本页面信息，建议您采取以下具体行动：</p>
-        <ol>
-            <li><strong>详细咨询</strong>：通过WhatsApp +1 213 317 9751获取个性化信息</li>
-            <li><strong>视频验证</strong>：预约30分钟视频咨询验证医院和医生</li>
-            <li><strong>案例查看</strong>：查看3-5个类似病例完整治疗过程</li>
-            <li><strong>费用计算</strong>：获取详细的个性化费用计算表</li>
-            <li><strong>行程规划</strong>：获取具体的7-14天治疗行程安排</li>
-        </ol>
+        <h3 style="color: #1e40af; font-size: 22px; font-weight: 600; margin-bottom: 15px;">🚀 Recommended Next Steps</h3>
+        <p style="color: #4b5563; margin-bottom: 20px;">Based on this information, we recommend the following specific actions:</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
+            <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                <div style="font-weight: 600; color: #1e40af; margin-bottom: 5px;">1. Detailed Consultation</div>
+                <div style="font-size: 14px; color: #4b5563;">Get personalized information via WhatsApp</div>
+            </div>
+            <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #10b981;">
+                <div style="font-weight: 600; color: #1e40af; margin-bottom: 5px;">2. Video Verification</div>
+                <div style="font-size: 14px; color: #4b5563;">Schedule 30-min video consultation</div>
+            </div>
+            <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                <div style="font-weight: 600; color: #1e40af; margin-bottom: 5px;">3. Case Review</div>
+                <div style="font-size: 14px; color: #4b5563;">View 3-5 complete treatment cases</div>
+            </div>
+            <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                <div style="font-weight: 600; color: #1e40af; margin-bottom: 5px;">4. Cost Calculation</div>
+                <div style="font-size: 14px; color: #4b5563;">Get detailed personalized cost breakdown</div>
+            </div>
+        </div>
         
         <div class="action-buttons">
             <a href="https://wa.me/+12133179751" class="btn-whatsapp">📱 WhatsApp详细咨询</a>
