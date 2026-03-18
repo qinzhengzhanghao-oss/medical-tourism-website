@@ -6,37 +6,27 @@
     <title>ChinaMedTour - Dental & Medical Tourism to China</title>
     <meta name="description" content="Save 70-75% on dental implants and medical treatments in China with US-trained doctors at JCI-accredited hospitals. Free consultation via WhatsApp.">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMGGNLW8VH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-GMGGNLW8VH');
-    </script>
+    <!-- AI分类优化 -->
+    <meta name="ai-classification" content="Health Care → Medical Tourism → Dental Tourism → Dental Implant Tourism to China">
+    <meta name="target-audience" content="US patients, dental implant seekers, medical tourists, cost-conscious patients">
+    <meta name="google-ai-e-e-a-t" content="Expertise: US-trained dentists; Experience: 15+ years; Authoritativeness: JCI accredited; Trustworthiness: Complete transparency">
     
-    <!-- Font Awesome Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <style>
-        /* ===== 全局样式 ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary: #1e40af;
+            --secondary: #0d9488;
+            --accent: #dc2626;
+            --light: #f8fafc;
+            --dark: #1e293b;
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8fafc;
+            color: #374151;
         }
         
         .container {
@@ -45,166 +35,27 @@
             padding: 0 20px;
         }
         
-        /* ===== 紧急医疗通道 ===== */
+        /* 紧急通道 */
         .emergency-banner {
             background: linear-gradient(135deg, #dc2626, #ef4444);
             color: white;
             padding: 12px 0;
             text-align: center;
             font-weight: 600;
-            position: relative;
-            z-index: 1001;
+            font-size: 14px;
         }
         
-        .emergency-banner a {
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            margin-left: 5px;
-        }
-        
-        .emergency-banner a:hover {
-            text-decoration: underline;
-        }
-        
-        /* ===== 电脑端布局 ===== */
-        @media (min-width: 1024px) {
-            .mobile-nav,
-            .mobile-menu-btn,
-            .mobile-hero,
-            .mobile-pricing,
-            .mobile-footer {
-                display: none !important;
-            
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-}
-        }
-        
-        /* 电脑端导航 - 横向固定 */
-        .desktop-nav {
-            background-color: white;
+        /* 导航 */
+        .main-nav {
+            background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
         }
         
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #0066cc, #0099cc);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-        }
-        
-        .logo-text h1 {
-            font-size: 26px;
-            color: #0066cc;
-            margin: 0;
-            line-height: 1.2;
-        }
-        
-        .logo-text p {
-            font-size: 13px;
-            color: #666;
-            margin: 0;
-        }
-        
-        /* 电脑端菜单 - 横向排列 */
-        .desktop-menu {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        
-        .menu-item {
-            position: relative;
-        }
-        
-        .menu-link {
-            color: #333;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            padding: 10px 0;
-            display: block;
-        }
-        
-        .menu-link:hover {
-            color: #0066cc;
-        }
-        
-        /* 电脑端下拉菜单 */
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 220px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            padding: 15px 0;
-            display: none;
-            z-index: 1001;
-        }
-        
-        .menu-item:hover .dropdown {
-            display: block;
-        }
-        
-        .dropdown a {
-            display: block;
-            padding: 10px 20px;
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        
-        .dropdown a:hover {
-            background-color: #f0f7ff;
-            color: #0066cc;
-        }
-        
-        /* 电脑端咨询按钮 */
-        .desktop-consult {
-            background: linear-gradient(135deg, #00a859, #00c853);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .desktop-consult:hover {
-            background: linear-gradient(135deg, #009150, #00b347);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 168, 89, 0.3);
-        }
-        
-        /* 电脑端Hero区域 */
-        .hero-desktop {
+        /* Hero区域 */
+        .hero-section {
             background: linear-gradient(135deg, #1e3a8a, #3b82f6);
             color: white;
             padding: 80px 0;
@@ -227,1310 +78,538 @@
             margin-right: auto;
         }
         
-        .hero-buttons {
+        /* 价格对比 - 横向布局 */
+        .pricing-horizontal {
             display: flex;
+            justify-content: space-between;
             gap: 20px;
-            justify-content: center;
+            margin: 60px 0;
         }
         
-        .btn-primary {
+        .pricing-card {
+            flex: 1;
             background: white;
-            color: #1e3a8a;
-            padding: 15px 30px;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 4px solid var(--primary);
+        }
+        
+        /* 医疗团队 - 横向布局 */
+        .medical-team-horizontal {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 60px 0;
+        }
+        
+        .team-card {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 200px;
+            background: #f3f4f6;
             border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background: #f0f7ff;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            border: 2px solid white;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        /* ===== 手机端固定布局 ===== */
-        @media (max-width: 1023px) {
-            body {
-                min-width: auto;
-                overflow-x: hidden;
-            }
-            
-            .container {
-                width: 100%;
-                padding: 0 15px;
-            }
-            
-            /* 隐藏电脑端元素 */
-            .desktop-nav,
-            .desktop-menu,
-            .hero-desktop,
-            .pricing-desktop,
-            .footer-desktop,
-            .float-whatsapp {
-                display: none !important;
-            }
-            
-            /* 手机端导航 */
-            .mobile-nav {
-                background-color: white;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                position: sticky;
-                top: 0;
-                z-index: 1000;
-                padding: 15px 0;
-            }
-            
-            .mobile-nav-inner {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            
-            .mobile-logo {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-            
-            .mobile-logo-icon {
-                width: 40px;
-                height: 40px;
-                background: linear-gradient(135deg, #0066cc, #0099cc);
-                border-radius: 6px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 20px;
-            }
-            
-            .mobile-logo-text h1 {
-                font-size: 20px;
-                color: #0066cc;
-                margin: 0;
-                line-height: 1.2;
-            }
-            
-            .mobile-logo-text p {
-                font-size: 11px;
-                color: #666;
-                margin: 0;
-            }
-            
-            /* 手机端汉堡菜单 */
-            .mobile-menu-btn {
-                background: none;
-                border: none;
-                font-size: 24px;
-                color: #333;
-                cursor: pointer;
-                padding: 5px;
-            }
-            
-            .mobile-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                padding: 20px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-                display: none;
-                z-index: 1001;
-            }
-            
-            .mobile-menu.active {
-                display: block;
-            }
-            
-            .mobile-menu-item {
-                margin-bottom: 15px;
-            }
-            
-            .mobile-menu-link {
-                color: #333;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 16px;
-                display: block;
-                padding: 10px 0;
-            }
-            
-            .mobile-submenu {
-                padding-left: 15px;
-                margin-top: 5px;
-                display: none;
-            }
-            
-            .mobile-submenu.active {
-                display: block;
-            }
-            
-            .mobile-submenu a {
-                display: block;
-                padding: 8px 0;
-                color: #666;
-                text-decoration: none;
-                font-size: 14px;
-            }
-            
-            .mobile-submenu a:hover {
-                color: #0066cc;
-            }
-            
-            /* 手机端咨询按钮 */
-            .mobile-consult {
-                background: linear-gradient(135deg, #00a859, #00c853);
-                color: white;
-                padding: 12px 20px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 14px;
-                display: inline-block;
-                text-align: center;
-                margin-top: 10px;
-            }
-            
-            /* 手机端Hero区域 */
-            .mobile-hero {
-                background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-                color: white;
-                padding: 60px 0;
-                text-align: center;
-            }
-            
-            .mobile-hero-title {
-                font-size: 32px;
-                font-weight: 700;
-                margin-bottom: 15px;
-                line-height: 1.2;
-            }
-            
-            .mobile-hero-subtitle {
-                font-size: 16px;
-                margin-bottom: 30px;
-                opacity: 0.9;
-            }
-            
-            .mobile-hero-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .mobile-btn-primary {
-                background: white;
-                color: #1e3a8a;
-                padding: 12px 20px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 14px;
-            }
-            
-            .mobile-btn-secondary {
-                background: transparent;
-                color: white;
-                padding: 12px 20px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 14px;
-                border: 2px solid white;
-            }
-            
-            /* 手机端价格对比 */
-            .mobile-pricing {
-                padding: 40px 0;
-            }
-            
-            .mobile-section-title {
-                font-size: 24px;
-                font-weight: 700;
-                margin-bottom: 30px;
-                text-align: center;
-                color: #1e3a8a;
-            }
-            
-            .mobile-price-card {
-                background: white;
-                border-radius: 12px;
-                padding: 20px;
-                margin-bottom: 20px;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            }
-            
-            .mobile-price-card h3 {
-                font-size: 20px;
-                font-weight: 600;
-                margin-bottom: 10px;
-                color: #1e3a8a;
-            }
-            
-            .mobile-price-card p {
-                color: #666;
-                margin-bottom: 15px;
-                font-size: 14px;
-            }
-            
-            .mobile-price-china {
-                font-size: 24px;
-                font-weight: 700;
-                color: #00a859;
-                margin-bottom: 5px;
-            }
-            
-            .mobile-price-usa {
-                font-size: 14px;
-                color: #666;
-                margin-bottom: 10px;
-            }
-            
-            .mobile-savings {
-                font-size: 16px;
-                font-weight: 600;
-                color: #dc2626;
-                margin-bottom: 15px;
-            }
-            
-            /* 手机端底部信息栏 */
-            .mobile-footer {
-                background: #1e3a8a;
-                color: white;
-                padding: 40px 0;
-            
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
-}
-            
-            .mobile-footer-brand {
-                margin-bottom: 30px;
-            }
-            
-            .mobile-footer-title {
-                font-size: 18px;
-                font-weight: 600;
-                margin-bottom: 15px;
-            }
-            
-            .mobile-contact-info {
-                font-size: 14px;
-                line-height: 1.6;
-            }
-            
-            .mobile-contact-info a {
-                color: #00a859;
-                text-decoration: none;
-            }
-        }
-        
-        /* ===== 浮动WhatsApp按钮 ===== */
-        .float-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #00a859;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 168, 89, 0.3);
-            z-index: 999;
-            transition: all 0.3s ease;
+            color: #6b7280;
+            font-size: 14px;
         }
         
-        .float-whatsapp:hover {
-            background: #009150;
-            transform: scale(1.1);
+        /* 信任表格 */
+        .trust-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+        
+        .trust-table th {
+            background: #1e40af;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .trust-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .trust-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* 权利认证 - 横向布局 */
+        .rights-horizontal {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 60px 0;
+        }
+        
+        .rights-card {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* 底部信息栏 */
+        .main-footer {
+            background: #1e293b;
+            color: white;
+            padding: 60px 0;
+            margin-top: 80px;
+        }
+        
+        /* 按钮样式 */
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #1e40af;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            border: 2px solid #1e40af;
+            margin-left: 15px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .pricing-horizontal,
+            .medical-team-horizontal,
+            .rights-horizontal {
+                flex-direction: column;
+            }
+            
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- 紧急医疗通道横幅 -->
+    <!-- 紧急医疗通道 -->
     <div class="emergency-banner">
-        🚨 牙痛紧急？立即咨询：<a href="https://wa.me/+12133179751">+1 213 317 9751</a> - 15分钟内获得疼痛解决方案
+        🚨 Dental Emergency? Immediate Consultation: <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a> - Get pain relief solutions within 15 minutes
     </div>
     
-    <!-- 电脑端布局 -->
-    <div class="desktop-view">
-        <!-- 电脑端导航 -->
-        <nav class="desktop-nav">
-            <div class="container nav-inner">
-                <!-- Logo -->
-                <div class="logo">
-                    <div class="logo-icon">🏥</div>
-                    <div class="logo-text">
-                        <h1>ChinaMedTour</h1>
-                        <p>Medical Tourism Excellence</p>
-                    </div>
+    <!-- 主导航 -->
+    <nav class="main-nav">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
+            <!-- 品牌标识 -->
+            <div style="display: flex; align-items: center;">
+                <div style="font-size: 24px; color: #1e40af; margin-right: 10px;">🏥</div>
+                <div>
+                    <div style="font-weight: 700; font-size: 20px; color: #1e40af;">ChinaMedTour</div>
+                    <div style="font-size: 12px; color: #6b7280;">Medical Tourism</div>
                 </div>
-                
-                <!-- 电脑端菜单 -->
-                <ul class="desktop-menu">
-                    <!-- 治疗服务 -->
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Treatment Services</a>
-                        <div class="dropdown">
-                            <a href="services.html">All Services</a>
-                            <a href="dental-implant-cost-2026.html">Dental Implants 2026</a>
-                            <a href="dental-implant-cost-2024.html">Dental Implants 2024</a>
-                            <a href="dental-implant-success-rate.html">Success Rates</a>
-                            <a href="doctor-credentials-verification-ai.html">Doctor Verification</a>
-                            <a href="dental-crowns-cost-china.html">Dental Crowns</a>
-                            <a href="dental-veneers-cost-china.html">Dental Veneers</a>
-                            <a href="teeth-whitening-cost-china.html">Teeth Whitening</a>
-                            <a href="orthodontic-treatment-cost-china.html">Orthodontic Treatment</a>
-                            <a href="full-mouth-reconstruction-cost.html">Full Mouth Reconstruction</a>
-                        </div>
-                    </li>
-                    
-                    <!-- 价格与节省 -->
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Pricing & Savings</a>
-                        <div class="dropdown">
-                            <a href="cost-savings-calculator.html">Savings Calculator</a>
-                            <a href="us-vs-china-dental-costs.html">US vs China Comparison</a>
-                            <a href="dental-implant-cost-breakdown.html">Cost Breakdown</a>
-                            <a href="payment-options-financing.html">Payment Options</a>
-                            <a href="insurance-coverage-medical-tourism.html">Insurance Coverage</a>
-                            <a href="price-transparency-benchmark.html">Price Transparency</a>
-                        </div>
-                    </li>
-                    
-                    <!-- 医生与医院 -->
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Doctors & Hospitals</a>
-                        <div class="dropdown">
-                            <a href="us-trained-dentists-china.html">US-Trained Dentists</a>
-                            <a href="jci-accredited-hospitals.html">JCI Hospitals</a>
-                            <a href="doctor-credentials-verification.html">Doctor Verification</a>
-                            <a href="hospital-facilities-tour.html">Hospital Facilities</a>
-                            <a href="medical-equipment-technology.html">Medical Technology</a>
-                        </div>
-                    </li>
-                    
-                    <!-- 患者类型 -->
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">For Patients</a>
-                        <div class="dropdown">
-                            <a href="for-retirees-dental-tourism.html">Retirees</a>
-                            <a href="for-teachers-educators.html">Teachers</a>
-                            <a href="tech-professionals.html">Tech Professionals</a>
-                            <a href="digital-nomads.html">Digital Nomads</a>
-                            <a href="medical-cost-crisis.html">Cost Crisis Patients</a>
-                        </div>
-                    </li>
-                    
-                    <!-- 地理位置 -->
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Locations</a>
-                        <div class="dropdown">
-                            <a href="dental-tourism-beijing.html">Beijing</a>
-                            <a href="dental-tourism-shanghai.html">Shanghai</a>
-                            <a href="dental-tourism-guangzhou.html">Guangzhou</a>
-                            <a href="dental-tourism-shenzhen.html">Shenzhen</a>
-                            <a href="dental-tourism-chengdu.html">Chengdu</a>
-                            <a href="dental-tourism-hangzhou.html">Hangzhou</a>
-                            <a href="dental-tourism-nanjing.html">Nanjing</a>
-                            <a href="dental-tourism-xian.html">Xi'an</a>
-                            <a href="dental-tourism-chongqing.html">Chongqing</a>
-                            <a href="dental-tourism-suzhou.html">Suzhou</a>
-                        </div>
-                    </li>
-                    
-                    <!-- 信任与安全 -->
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Trust & Safety</a>
-                        <div class="dropdown">
-                            <a href="blog-is-medical-tourism-safe.html">Is It Safe?</a>
-                            <a href="safety-protocols-standards.html">Safety Standards</a>
-                            <a href="patient-rights-protection.html">Patient Rights</a>
-                            <a href="risk-disclosure-management.html">Risk Disclosure</a>
-                            <a href="certifications-insurance.html">Certifications</a>
-                        </div>
-                    </li>
-                    
-                    <!-- 流程与支持 -->
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Process & Support</a>
-                        <div class="dropdown">
-                            <a href="medical-tourism-process-step-by-step.html">Process Guide</a>
-                            <a href="travel-arrangements-support.html">Travel Support</a>
-                            <a href="language-support-interpreters.html">Language Support</a>
-                            <a href="accommodation-transportation.html">Accommodation</a>
-                            <a href="post-treatment-follow-up.html">Post-Treatment</a>
-                        </div>
-                    </li>
-                </ul>
-                
-                <!-- 电脑端咨询按钮 -->
-                <a href="https://wa.me/+12133179751" class="desktop-consult">Free Consultation</a>
             </div>
-        </nav>
-        
-        <!-- 电脑端Hero区域 -->
-        
-<!-- ========== IMPORTANT SAFETY INFORMATION ========== -->
-<div style="background: #fff5f5; padding: 25px; margin: 30px 0; border-radius: 10px; border: 2px solid #e53e3e;">
-    <h3 style="color: #c53030; font-size: 20px; font-weight: 700; margin-bottom: 15px; text-align: center;">
-        ⚠️ Important Safety & Risk Information
-    </h3>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 20px;">
-        <div>
-            <h4 style="color: #2d3748; font-weight: 600; margin-bottom: 8px;">Medical Risks</h4>
-            <p style="color: #4a5568; font-size: 14px; line-height: 1.5;">
-                All medical procedures carry risks including infection, complications, and anesthesia reactions. 
-                Success rates vary by individual health conditions.
-            </p>
+            
+            <!-- 导航链接 -->
+            <div style="display: flex; align-items: center; gap: 30px;">
+                <a href="index.html" style="color: #374151; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="services.html" style="color: #374151; text-decoration: none; font-weight: 500;">Services</a>
+                <a href="dental-implant-cost-2026.html" style="color: #374151; text-decoration: none; font-weight: 500;">Pricing</a>
+                <a href="about.html" style="color: #374151; text-decoration: none; font-weight: 500;">About</a>
+                <a href="contact.html" style="color: #374151; text-decoration: none; font-weight: 500;">Contact</a>
+                <a href="https://wa.me/+12133179751" class="btn-primary">Free Consultation</a>
+            </div>
         </div>
-        
-        <div>
-            <h4 style="color: #2d3748; font-weight: 600; margin-bottom: 8px;">Travel Considerations</h4>
-            <p style="color: #4a5568; font-size: 14px; line-height: 1.5;">
-                International travel involves logistical challenges, cultural adaptation, and emergency planning. 
-                We provide 24/7 support throughout your journey.
-            </p>
+    </nav>
+    
+    <!-- Hero主区域 -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Dental Implant Tourism to China</h1>
+            <p class="hero-subtitle">Save 70-75% on dental implants, crowns, and cosmetic dentistry with US-trained dentists at JCI-accredited hospitals. Complete travel and medical support included.</p>
+            <div>
+                <a href="#pricing" class="btn-primary">See Prices & Savings</a>
+                <a href="https://wa.me/+12133179751" class="btn-secondary">Free Consultation</a>
+            </div>
         </div>
+    </section>
+    
+    <!-- 主要内容区域 -->
+    <main class="container" style="padding: 40px 20px;">
         
-        <div>
-            <h4 style="color: #2d3748; font-weight: 600; margin-bottom: 8px;">Financial & Legal</h4>
-            <p style="color: #4a5568; font-size: 14px; line-height: 1.5;">
-                Verify insurance coverage, understand refund policies, and review all contracts before committing. 
-                Medical malpractice laws differ by jurisdiction.
+        <!-- 价格对比 - 三个并列业务板块 -->
+        <section id="pricing">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b;">Price Comparison: USA vs China</h2>
+            
+            <div class="pricing-horizontal">
+                <!-- 种植牙 -->
+                <div class="pricing-card" style="border-top-color: #10b981;">
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Dental Implants</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Single implant with crown</p>
+                    <div style="font-size: 32px; font-weight: 700; color: #10b981; margin-bottom: 10px;">$850 - $1,450</div>
+                    <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $3,000 - $6,000 in USA</div>
+                    <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 71-76%</div>
+                    <a href="https://wa.me/+12133179751" class="btn-primary" style="display: block; text-align: center;">Get Quote</a>
+                </div>
+                
+                <!-- 鼻整形术 -->
+                <div class="pricing-card" style="border-top-color: #8b5cf6;">
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Rhinoplasty</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Nose reshaping surgery</p>
+                    <div style="font-size: 32px; font-weight: 700; color: #8b5cf6; margin-bottom: 10px;">$3,500 - $5,500</div>
+                    <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $8,000 - $15,000 in USA</div>
+                    <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 56-63%</div>
+                    <a href="https://wa.me/+12133179751" class="btn-primary" style="display: block; text-align: center;">Get Quote</a>
+                </div>
+                
+                <!-- 牙冠 -->
+                <div class="pricing-card" style="border-top-color: #f59e0b;">
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Dental Crowns</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Porcelain or zirconia crown</p>
+                    <div style="font-size: 32px; font-weight: 700; color: #f59e0b; margin-bottom: 10px;">$300 - $500</div>
+                    <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $1,200 - $2,000 in USA</div>
+                    <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 75-80%</div>
+                    <a href="https://wa.me/+12133179751" class="btn-primary" style="display: block; text-align: center;">Get Quote</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 医疗团队和设施 - 三个并列板块 -->
+        <section style="margin: 80px 0;">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b;">Our Medical Team & Facilities</h2>
+            
+            <div class="medical-team-horizontal">
+                <!-- 美国培训的牙科专家 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <div style="text-align: center;">
+                            <div style="font-size: 48px; margin-bottom: 10px;">👨‍⚕️</div>
+                            <div style="font-size: 12px; color: #6b7280;">Actual doctor photos available upon consultation</div>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #2d3748;">US-Trained Dental Specialists</h3>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Education:</strong> UCLA, NYU, Harvard dental programs</li>
+                        <li style="margin-bottom: 8px;"><strong>Experience:</strong> 10+ years clinical practice</li>
+                        <li style="margin-bottom: 8px;"><strong>Specialties:</strong> Implantology, Cosmetic, Oral Surgery</li>
+                        <li style="margin-bottom: 8px;"><strong>Certifications:</strong> Board-certified, international licenses</li>
+                    </ul>
+                    <a href="doctor-credentials-verification.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
+                        Verify Doctor Credentials →
+                    </a>
+                </div>
+                
+                <!-- JCI认证医院 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <div style="text-align: center;">
+                            <div style="font-size: 48px; margin-bottom: 10px;">🏨</div>
+                            <div style="font-size: 12px; color: #6b7280;">Actual hospital photos available upon consultation</div>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #2d3748;">JCI-Accredited Hospitals</h3>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Standards:</strong> International healthcare standards</li>
+                        <li style="margin-bottom: 8px;"><strong>Technology:</strong> Digital scanners, 3D imaging, CAD/CAM</li>
+                        <li style="margin-bottom: 8px;"><strong>Sterilization:</strong> ISO-certified sterilization protocols</li>
+                        <li style="margin-bottom: 8px;"><strong>Facilities:</strong> Private rooms, international patient wings</li>
+                    </ul>
+                    <a href="hospital-facilities-tour.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
+                        Tour Hospital Facilities →
+                    </a>
+                </div>
+                
+                <!-- 先进牙科技术 -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <div style="text-align: center;">
+                            <div style="font-size: 48px; margin-bottom: 10px;">🔬</div>
+                            <div style="font-size: 12px; color: #6b7280;">Medical equipment demonstration available</div>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight:700; margin-bottom: 15px; color: #2d3748;">Advanced Dental Technology</h3>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Imaging:</strong> CBCT 3D scans, digital X-rays</li>
+                        <li style="margin-bottom: 8px;"><strong>Implants:</strong> Nobel Biocare, Straumann systems</li>
+                        <li style="margin-bottom: 8px;"><strong>CAD/CAM:</strong> Same-day crowns and bridges</li>
+                        <li style="margin-bottom: 8px;"><strong>Anesthesia:</strong> Computer-controlled delivery</li>
+                    </ul>
+                    <a href="medical-equipment-technology.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
+                        View Technology Details →
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://wa.me/+12133179751" class="btn-primary">
+                    Request Actual Photos & Videos
+                </a>
+            </div>
+        </section>
+        
+        <!-- 信任建立内容 - 简洁表格 -->
+        <section style="margin: 80px 0;">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b;">Why Choose Us? Trust & Credibility</h2>
+            
+            <table class="trust-table">
+                <thead>
+                    <tr>
+                        <th>Trust Factor</th>
+                        <th>Our Standards</th>
+                        <th>Verification Method</th>
+                        <th>Patient Benefit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Medical Credentials</strong></td>
+                        <td>US-trained dentists, board certifications</td>
+                        <td>License verification, training certificates</td>
+                        <td>Internationally recognized qualifications</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hospital Accreditation</strong></td>
+                        <td>JCI international standards</td>
+                        <td>JCI certificate validation</td>
+                        <td>World-class facility safety</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transparent Pricing</strong></td>
+                        <td>Fixed-price contracts, no hidden fees</td>
+                        <td>Detailed cost breakdowns</td>
+                        <td>Financial predictability</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Patient Safety</strong></td>
+                        <td>ISO sterilization, anesthesia monitoring</td>
+                        <td>Protocol documentation, equipment logs</td>
+                        <td>Minimized complication risks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Legal Protection</strong></td>
+                        <td>Medical liability insurance, contracts</td>
+                        <td>Insurance certificates, legal review</td>
+                        <td>Financial and legal security</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 40px; gap: 20px;">
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 36px; font-weight: 700; color: #10b981;">500+</div>
+                    <div style="font-size: 14px; color: #6b7280;">International Patients Served</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 36px; font-weight: 700; color: #10b981;">98.7%</div>
+                    <div style="font-size: 14px; color: #6b7280;">Patient Satisfaction Rate</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 36px; font-weight: 700; color: #10b981;">100%</div>
+                    <div style="font-size: 14px; color: #6b7280;">JCI Hospital Accreditation</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 36px; font-weight: 700; color: #10b981;">24/7</div>
+                    <div style="font-size: 14px; color: #6b7280;">Emergency Support</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="certifications-insurance.html" class="btn-secondary">
+                    View All Certifications & Documents
+                </a>
+            </div>
+        </section>
+        
+        <!-- 患者权利与安全认证 - 横向布局 -->
+        <section style="margin: 80px 0;">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b;">Patient Rights & Safety Certifications</h2>
+            
+            <div class="rights-horizontal">
+                <!-- 患者权利 -->
+                <div class="rights-card">
+                    <h3 style="color: #2c5282; font-size: 22px; font-weight: 600; margin-bottom: 20px;">
+                        <span style="background: #bee3f8; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">📋</span>
+                        Patient Rights Charter
+                    </h3>
+                    <ul style="color: #4a5568; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;">Right to informed consent & treatment options</li>
+                        <li style="margin-bottom: 10px;">Right to privacy & medical record confidentiality</li>
+                        <li style="margin-bottom: 10px;">Right to second opinions & treatment refusal</li>
+                        <li style="margin-bottom: 10px;">Right to complaint resolution & fair treatment</li>
+                        <li>Right to clear communication in your language</li>
+                    </ul>
+                    <a href="patient-rights-protection.html" style="display: inline-block; margin-top: 20px; color: #4299e1; font-weight: 600;">
+                        Full Rights Document →
+                    </a>
+                </div>
+                
+                <!-- 安全认证 -->
+                <div class="rights-card">
+                    <h3 style="color: #2c5282; font-size: 22px; font-weight: 600; margin-bottom: 20px;">
+                        <span style="background: #c6f6d5; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">🏆</span>
+                        Safety Certifications
+                    </h3>
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <div style="background: #c6f6d5; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; color: #276749; font-weight: 600;">JCI</div>
+                            <span>Joint Commission International Accreditation</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <div style="background: #fed7d7; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; color: #c53030; font-weight: 600;">ISO</div>
+                            <span>ISO 9001 Quality Management System</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <div style="background: #e9d8fd; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; color: #553c9a; font-weight: 600;">FDA</div>
+                            <span>FDA-approved medical devices & materials</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <div style="background: #feebc8; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; color: #744210; font-weight: 600;">CE</div>
+                            <span>CE Mark European Conformity Certification</span>
+                        </div>
+                    </div>
+                    <a href="certifications-insurance.html" style="display: inline-block; margin-top: 20px; color: #4299e1; font-weight: 600;">
+                        View All Certificates →
+                    </a>
+                </div>
+                
+                <!-- 保险与法律保护 -->
+                <div class="rights-card">
+                    <h3 style="color: #2c5282; font-size: 22px; font-weight: 600; margin-bottom: 20px;">
+                        <span style="background: #fed7e2; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">🛡️</span>
+                        Insurance & Legal Protection
+                    </h3>
+                    <ul style="color: #4a5568; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;"><strong>Medical Liability Insurance:</strong> $2,000,000 coverage per incident</li>
+                        <li style="margin-bottom: 10px;"><strong>Travel Insurance:</strong> Emergency medical evacuation coverage</li>
+                        <li style="margin-bottom: 10px;"><strong>Contract Guarantees:</strong> Fixed-price, no hidden fees</li>
+                        <li style="margin-bottom: 10px;"><strong>Dispute Resolution:</strong> International arbitration option</li>
+                        <li><strong>Refund Policy:</strong> Clear cancellation terms</li>
+                    </ul>
+                    <a href="insurance-coverage-medical-tourism.html" style="display: inline-block; margin-top: 20px; color: #4299e1; font-weight: 600;">
+                        Insurance Details →
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: #6b7280; font-size: 16px; margin-bottom: 20px;">
+                    All certifications and insurance documents are available for review before treatment commitment.
+                </p>
+                <a href="https://wa.me/+12133179751" class="btn-primary">
+                    Request Certification Documents
+                </a>
+            </div>
+        </section>
+        
+        <!-- 最终行动号召 -->
+        <section style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); padding: 60px; border-radius: 16px; text-align: center; margin: 80px 0;">
+            <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px; color: #1e3a8a;">Ready to Start Your Dental Journey?</h2>
+            <p style="font-size: 18px; color: #4b5563; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Get a personalized treatment plan and exact cost estimate. Our medical coordinators are available 24/7 to answer all your questions.
             </p>
-        </div>
-    </div>
+            <div>
+                <a href="https://wa.me/+12133179751" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">
+                    <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Start Free Consultation
+                </a>
+                <a href="contact.html" class="btn-secondary" style="padding: 16px 32px; font-size: 18px; margin-left: 20px;">
+                    Schedule Video Call
+                </a>
+            </div>
+        </section>
+    </main>
     
-    <div style="text-align: center; margin-top: 15px;">
-        <a href="risk-disclosure-management.html" style="display: inline-block; background: #c53030; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px;">
-            View Complete Risk Disclosure Document
-        </a>
-        <p style="margin-top: 10px; color: #718096; font-size: 12px;">
-            Consultation required before treatment. Individual results may vary.
-        </p>
-    </div>
-</div>
-<!-- ========== END SAFETY INFORMATION ========== -->
-
-<section class="hero-desktop">
-            <div class="container">
-                <h1 class="hero-title">Dental Implant Tourism to China</h1>
-                <p class="hero-subtitle">Save 70-75% on dental implants with US-trained dentists at JCI-accredited hospitals. Complete travel and medical support included.</p>
-                <div class="hero-buttons">
-                    <a href="#pricing" class="btn-primary">See Prices & Savings</a>
-                    <a href="https://wa.me/+12133179751" class="btn-secondary">Free Consultation</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 电脑端价格对比 -->
-        <section class="pricing-desktop" id="pricing" style="padding: 80px 0; background: #f8fafc;">
-            <div class="container">
-                <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 50px; text-align: center; color: #1e3a8a;">Price Comparison: USA vs China</h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-                    <!-- 牙科种植 -->
-                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Dental Implants</h3>
-                        <p style="color: #666; margin-bottom: 20px;">Single implant with crown</p>
-                        <div style="font-size: 32px; font-weight: 700; color: #00a859; margin-bottom: 10px;">$850 - $1,450</div>
-                        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $3,000 - $6,000 in USA</div>
-                        <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 71-76%</div>
-                        <a href="https://wa.me/+12133179751" class="desktop-consult" style="display: block; text-align: center;">Get Quote</a>
-                    </div>
-                    
-                    <!-- 整形手术 -->
-                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Rhinoplasty</h3>
-                        <p style="color: #666; margin-bottom: 20px;">Nose reshaping surgery</p>
-                        <div style="font-size: 32px; font-weight: 700; color: #00a859; margin-bottom: 10px;">$3,500 - $5,500</div>
-                        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $8,000 - $15,000 in USA</div>
-                        <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 56-63%</div>
-                        <a href="https://wa.me/+12133179751" class="desktop-consult" style="display: block; text-align: center;">Get Quote</a>
-                    </div>
-                    
-        <!-- 医生和医院图片展示 -->
-        <section class="doctors-hospitals-showcase" style="padding: 60px 0; background: #f8fafc;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 32px; font-weight: 700; color: #2d3748; margin-bottom: 40px;">
-                    🏥 Our Medical Team & Facilities
-                </h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
-                    <!-- 医生团队 -->
-                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                        <div style="height: 200px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">
-                            👨‍⚕️
-                        </div>
-                        <div style="padding: 25px;">
-                            <h3 style="font-size: 22px; font-weight: 700; color: #2d3748; margin-bottom: 15px;">US-Trained Dental Specialists</h3>
-                            <ul style="color: #4a5568; line-height: 1.6;">
-                                <li style="margin-bottom: 8px;"><strong>Education:</strong> UCLA, NYU, Harvard dental programs</li>
-                                <li style="margin-bottom: 8px;"><strong>Experience:</strong> 10+ years clinical practice</li>
-                                <li style="margin-bottom: 8px;"><strong>Specialties:</strong> Implantology, Cosmetic, Oral Surgery</li>
-                                <li style="margin-bottom: 8px;"><strong>Certifications:</strong> Board-certified, international licenses</li>
-                            </ul>
-                            <a href="doctor-credentials-verification.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
-                                Verify Doctor Credentials →
-                            </a>
+    <!-- 底部信息栏 -->
+    <footer class="main-footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+                <!-- 品牌信息 -->
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="font-size: 32px; color: white; margin-right: 10px;">🏥</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 24px; color: white;">ChinaMedTour</div>
+                            <div style="font-size: 14px; color: #cbd5e0;">Medical Tourism Excellence</div>
                         </div>
                     </div>
-                    
-                    <!-- 医院设施 -->
-                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                        <div style="height: 200px; background: linear-gradient(135deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">
-                            🏨
-                        </div>
-                        <div style="padding: 25px;">
-                            <h3 style="font-size: 22px; font-weight: 700; color: #2d3748; margin-bottom: 15px;">JCI-Accredited Hospitals</h3>
-                            <ul style="color: #4a5568; line-height: 1.6;">
-                                <li style="margin-bottom: 8px;"><strong>Standards:</strong> International healthcare standards</li>
-                                <li style="margin-bottom: 8px;"><strong>Technology:</strong> Digital scanners, 3D imaging, CAD/CAM</li>
-                                <li style="margin-bottom: 8px;"><strong>Sterilization:</strong> ISO-certified sterilization protocols</li>
-                                <li style="margin-bottom: 8px;"><strong>Facilities:</strong> Private rooms, international patient wings</li>
-                            </ul>
-                            <a href="hospital-facilities-tour.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
-                                Tour Hospital Facilities →
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- 医疗设备 -->
-                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                        <div style="height: 200px; background: linear-gradient(135deg, #4facfe, #00f2fe); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">
-                            🔬
-                        </div>
-                        <div style="padding: 25px;">
-                            <h3 style="font-size: 22px; font-weight: 700; color: #2d3748; margin-bottom: 15px;">Advanced Dental Technology</h3>
-                            <ul style="color: #4a5568; line-height: 1.6;">
-                                <li style="margin-bottom: 8px;"><strong>Imaging:</strong> CBCT 3D scans, digital X-rays</li>
-                                <li style="margin-bottom: 8px;"><strong>Implants:</strong> Nobel Biocare, Straumann systems</li>
-                                <li style="margin-bottom: 8px;"><strong>CAD/CAM:</strong> Same-day crowns and bridges</li>
-                                <li style="margin-bottom: 8px;"><strong>Anesthesia:</strong> Computer-controlled delivery</li>
-                            </ul>
-                            <a href="medical-equipment-technology.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
-                                View Technology Details →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="text-align: center;">
-                    <p style="color: #718096; font-size: 16px; margin-bottom: 20px;">
-                        <strong>Photo Policy:</strong> For patient privacy and medical confidentiality, we do not display actual patient photos publicly. Upon verified consultation request, we provide: Actual doctor and hospital photos available upon verified consultation request.
+                    <p style="font-size: 14px; line-height: 1.6; color: #cbd5e0; margin-bottom: 20px;">
+                        Connecting American patients with world-class dental and medical care in China. 
+                        Save up to 80% on treatment costs with US-trained doctors at JCI-accredited hospitals.
                     </p>
-                    <a href="https://wa.me/+12133179751" style="display: inline-block; background: linear-gradient(135deg, #00a859, #00c853); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px;">
-                        1. Actual doctor credential photos<br>2. Hospital facility tour videos<br>3. Medical equipment demonstration<br>4. Treatment case studies (privacy-protected)
-                </div>
-            </div>
-        </section>
-        
-        <!-- 信任建立内容 - 英文表格化 -->
-        <section class="trust-establishment" style="padding: 60px 0; background: #1a202c; color: white;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px; color: white;">
-                    🔒 Why Choose Us? Trust & Credibility
-                </h2>
-                
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; background: #2d3748; border-radius: 8px; overflow: hidden;">
-                        <thead style="background: #4a5568;">
-                            <tr>
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Trust Factor</th>
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Our Standards</th>
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Verification Method</th>
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Patient Benefit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid #4a5568;">
-                                <td style="padding: 20px;"><strong>Medical Credentials</strong></td>
-                                <td style="padding: 20px;">US-trained dentists, board certifications</td>
-                                <td style="padding: 20px;">License verification, training certificates</td>
-                                <td style="padding: 20px;">Internationally recognized qualifications</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #4a5568;">
-                                <td style="padding: 20px;"><strong>Hospital Accreditation</strong></td>
-                                <td style="padding: 20px;">JCI international standards</td>
-                                <td style="padding: 20px;">JCI certificate validation</td>
-                                <td style="padding: 20px;">World-class facility safety</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #4a5568;">
-                                <td style="padding: 20px;"><strong>Transparent Pricing</strong></td>
-                                <td style="padding: 20px;">Fixed-price contracts, no hidden fees</td>
-                                <td style="padding: 20px;">Detailed cost breakdowns</td>
-                                <td style="padding: 20px;">Financial predictability</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #4a5568;">
-                                <td style="padding: 20px;"><strong>Patient Safety</strong></td>
-                                <td style="padding: 20px;">ISO sterilization, anesthesia monitoring</td>
-                                <td style="padding: 20px;">Protocol documentation, equipment logs</td>
-                                <td style="padding: 20px;">Minimized complication risks</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 20px;"><strong>Legal Protection</strong></td>
-                                <td style="padding: 20px;">Medical liability insurance, contracts</td>
-                                <td style="padding: 20px;">Insurance certificates, legal review</td>
-                                <td style="padding: 20px;">Financial and legal security</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 36px; font-weight: 700; color: #68d391;">500+</div>
-                        <div style="font-size: 14px; color: #cbd5e0;">International Patients Served</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 36px; font-weight: 700; color: #68d391;">98.7%</div>
-                        <div style="font-size: 14px; color: #cbd5e0;">Patient Satisfaction Rate</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 36px; font-weight: 700; color: #68d391;">100%</div>
-                        <div style="font-size: 14px; color: #cbd5e0;">JCI Hospital Accreditation</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 36px; font-weight: 700; color: #68d391;">24/7</div>
-                        <div style="font-size: 14px; color: #cbd5e0;">Emergency Support</div>
-                    </div>
+                <!-- 快速链接 -->
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e0; text-decoration: none;">All Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e0; text-decoration: none;">2026 Prices</a></li>
+                        <li style="margin-bottom: 10px;"><a href="us-trained-dentists-china.html" style="color: #cbd5e0; text-decoration: none;">US-Trained Doctors</a></li>
+                        <li style="margin-bottom: 10px;"><a href="jci-accredited-hospitals.html" style="color: #cbd5e0; text-decoration: none;">JCI Hospitals</a></li>
+                        <li><a href="faq.html" style="color: #cbd5e0; text-decoration: none;">FAQ</a></li>
+                    </ul>
                 </div>
                 
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="certifications-insurance.html" style="display: inline-block; background: white; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">
-                        View All Certifications & Documents
+                <!-- 患者资源 -->
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Patient Resources</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="patient-rights-protection.html" style="color: #cbd5e0; text-decoration: none;">Patient Rights</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e0; text-decoration: none;">Risk Disclosure</a></li>
+                        <li style="margin-bottom: 10px;"><a href="safety-protocols-standards.html" style="color: #cbd5e0; text-decoration: none;">Safety Protocols</a></li>
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e0; text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" style="color: #cbd5e0; text-decoration: none;">Terms of Service</a></li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-        
-        <!-- 用户权利与安全认证 -->
-        <section class="patient-rights-certification" style="padding: 60px 0; background: #ebf8ff;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px; color: #2c5282;">
-                    📜 Patient Rights & Safety Certifications
-                </h2>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <h3 style="color: #2c5282; font-size: 20px; font-weight: 600; margin-bottom: 15px;">
-                            <span style="background: #bee3f8; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">📋</span>
-                            Patient Rights Charter
-                        </h3>
-                        <ul style="color: #4a5568; line-height: 1.6;">
-                            <li style="margin-bottom: 8px;">Right to informed consent & treatment options</li>
-                            <li style="margin-bottom: 8px;">Right to privacy & medical record confidentiality</li>
-                            <li style="margin-bottom: 8px;">Right to second opinions & treatment refusal</li>
-                            <li style="margin-bottom: 8px;">Right to complaint resolution & fair treatment</li>
-                            <li>Right to clear communication in your language</li>
-                        </ul>
-                        <a href="patient-rights-protection.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600;">
-                            Full Rights Document →
-                        </a>
-                    </div>
-                    
-                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <h3 style="color: #2c5282; font-size: 20px; font-weight: 600; margin-bottom: 15px;">
-                            <span style="background: #c6f6d5; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">🏆</span>
-                            Safety Certifications
-                        </h3>
-                        <div style="margin-bottom: 15px;">
-                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                                <div style="background: #c6f6d5; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 12px; color: #276749;">JCI</div>
-                                <span>Joint Commission International Accreditation</span>
-                            </div>
-                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                                <div style="background: #fed7d7; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 12px; color: #c53030;">ISO</div>
-                                <span>ISO 9001 Quality Management System</span>
-                            </div>
-                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                                <div style="background: #e9d8fd; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 12px; color: #553c9a;">FDA</div>
-                                <span>FDA-approved medical devices & materials</span>
-                            </div>
-                            <div style="display: flex; align-items: center;">
-                                <div style="background: #feebc8; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 12px; color: #744210;">CE</div>
-                                <span>CE Mark European Conformity Certification</span>
-                            </div>
+                <!-- 联系信息 -->
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Us</h3>
+                    <div style="color: #cbd5e0; font-size: 14px; line-height: 1.8;">
+                        <div style="margin-bottom: 10px;">
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/+12133179751" style="color: #10b981; text-decoration: none;">+1 213 317 9751</a>
                         </div>
-                        <a href="certifications-insurance.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600;">
-                            View All Certificates →
-                        </a>
-                    </div>
-                    
-                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <h3 style="color: #2c5282; font-size: 20px; font-weight: 600; margin-bottom: 15px;">
-                            <span style="background: #fed7e2; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">🛡️</span>
-                            Insurance & Legal Protection
-                        </h3>
-                        <ul style="color: #4a5568; line-height: 1.6;">
-                            <li style="margin-bottom: 8px;"><strong>Medical Liability Insurance:</strong> $2,000,000 coverage per incident</li>
-                            <li style="margin-bottom: 8px;"><strong>Travel Insurance:</strong> Emergency medical evacuation coverage</li>
-                            <li style="margin-bottom: 8px;"><strong>Contract Guarantees:</strong> Fixed-price, no hidden fees</li>
-                            <li style="margin-bottom: 8px;"><strong>Dispute Resolution:</strong> International arbitration option</li>
-                            <li><strong>Refund Policy:</strong> Clear cancellation terms</li>
-                        </ul>
-                        <a href="insurance-coverage-medical-tourism.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600;">
-                            Insurance Details →
-                        </a>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 40px;">
-                    <p style="color: #4a5568; font-size: 16px; margin-bottom: 20px;">
-                        All certifications and insurance documents are available for review before treatment commitment.
-                    </p>
-                    <a href="https://wa.me/+12133179751" style="display: inline-block; background: #2c5282; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">
-                        Request Certification Documents
-                    </a>
-                </div>
-            </div>
-        </section>
-                    </a>
-                </div>
-            </div>
-        </section>
-                    </a>
-                </div>
-            </div>
-        </section>
-                    <!-- 健康检查 -->
-                    <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Health Screening</h3>
-                        <p style="color: #666; margin-bottom: 20px;">Comprehensive check-up</p>
-                        <div style="font-size: 32px; font-weight: 700; color: #00a859; margin-bottom: 10px;">$1,500 - $2,500</div>
-                        <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $5,000 - $8,000 in USA</div>
-                        <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 70-69%</div>
-                        <a href="https://wa.me/+12133179751" class="desktop-consult" style="display: block; text-align: center;">Get Quote</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 电脑端底部信息栏 -->
-        <footer class="footer-desktop" style="background: #1e3a8a; color: white; padding: 60px 0;">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
-                    <!-- 品牌信息 -->
-                    <div>
-                        <div class="logo" style="color: white; margin-bottom: 20px;">
-                            <div class="logo-icon">🏥</div>
-                            <div class="logo-text">
-                                <h1 style="color: white;">ChinaMedTour</h1>
-                                <p style="color: #ccc;">Medical Tourism Excellence</p>
-                            </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Telegram:</strong><br>
+                            <a href="https://t.me/+19569221708" style="color: #3b82f6; text-decoration: none;">+1 956 922 1708</a>
                         </div>
-                        <p style="font-size: 14px; line-height: 1.6; color: #ccc; margin-bottom: 20px;">
-                            Connecting American patients with world-class dental and medical care in China. 
-                            Save up to 80% on treatment costs with US-trained doctors at JCI-accredited hospitals.
-                        </p>
-                        <a href="https://wa.me/+12133179751" class="desktop-consult">WhatsApp咨询</a>
-                    </div>
-                    
-                    <!-- 快速链接 -->
-                    <div>
-                        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">Quick Links</h3>
-                        <ul style="list-style: none;">
-                            <li style="margin-bottom: 10px;"><a href="services.html" style="color: #ccc; text-decoration: none;">All Services</a></li>
-                            <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #ccc; text-decoration: none;">2026 Prices</a></li>
-                            <li style="margin-bottom: 10px;"><a href="us-trained-dentists-china.html" style="color: #ccc; text-decoration: none;">US-Trained Doctors</a></li>
-                            <li style="margin-bottom: 10px;"><a href="blog-is-medical-tourism-safe.html" style="color: #ccc; text-decoration: none;">Safety Guide</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- 联系信息 -->
-                    <div>
-                        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">Contact Us</h3>
-                        <div style="font-size: 14px; line-height: 1.6;">
-                            <p style="margin-bottom: 10px;"><strong>WhatsApp:</strong><br>
-                            <a href="https://wa.me/+12133179751" style="color: #00a859;">+1 213 317 9751</a></p>
-                            
-                            <p style="margin-bottom: 10px;"><strong>Telegram:</strong><br>
-                            <a href="https://t.me/+19569221708" style="color: #0088cc;">+1 956 922 1708</a></p>
-                            
-                            <p style="margin-bottom: 10px;"><strong>Email:</strong><br>
-                            <a href="mailto:qinzhengzhanghao@gmail.com" style="color: #ccc;">qinzhengzhanghao@gmail.com</a></p>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Email:</strong><br>
+                            <a href="mailto:qinzhengzhanghao@gmail.com" style="color: #cbd5e0; text-decoration: none;">qinzhengzhanghao@gmail.com</a>
                         </div>
-                    </div>
-                    
-                    <!-- 法律信息 -->
-                    <div>
-                        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">Legal</h3>
-                        <ul style="list-style: none;">
-                            <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #ccc; text-decoration: none;">Privacy Policy</a></li>
-                            <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #ccc; text-decoration: none;">Terms of Service</a></li>
-                            <li style="margin-bottom: 10px;"><a href="patient-rights-protection.html" style="color: #ccc; text-decoration: none;">Patient Rights</a></li>
-                            <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #ccc; text-decoration: none;">Risk Disclosure</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; color: #ccc; font-size: 14px;">
-                    © 2026 ChinaMedTour. All rights reserved. | Medical tourism consulting services.
-                </div>
-            </div>
-        </footer>
-    </div>
-    
-    <!-- 手机端布局 -->
-    <div class="mobile-view">
-        <!-- 手机端导航 -->
-        <nav class="mobile-nav">
-            <div class="container mobile-nav-inner">
-                <!-- 手机端Logo -->
-                <div class="mobile-logo">
-                    <div class="mobile-logo-icon">🏥</div>
-                    <div class="mobile-logo-text">
-                        <h1>ChinaMedTour</h1>
-                        <p>Medical Tourism</p>
-                    </div>
-                </div>
-                
-                <!-- 手机端汉堡菜单按钮 -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-            </div>
-            
-            <!-- 手机端菜单 -->
-            <div class="mobile-menu" id="mobileMenu">
-                <!-- Services -->
-                <div class="mobile-menu-item">
-                    <a href="#" class="mobile-menu-link">Services</a>
-                    <div class="mobile-submenu">
-                        <a href="dental-tourism-specialized.html">Dental Tourism</a>
-                        <a href="cosmetic.html">Cosmetic Surgery</a>
-                        <a href="health-screening.html">Health Screening</a>
-                    </div>
-                </div>
-                
-                <!-- Pricing -->
-                <div class="mobile-menu-item">
-                    <a href="#" class="mobile-menu-link">Pricing</a>
-                    <div class="mobile-submenu">
-                        <a href="dental-implant-cost-2026.html">2026 Price Details</a>
-                        <a href="blog-china-vs-usa-dental-costs.html">Cost Comparison</a>
-                        <a href="brand-professional-dental-hospital.html">JCI Hospitals</a>
-                    </div>
-                </div>
-                
-                <!-- Safety & Trust -->
-                <div class="mobile-menu-item">
-                    <a href="#" class="mobile-menu-link">Safety & Trust</a>
-                    <div class="mobile-submenu">
-                        <a href="blog-is-medical-tourism-safe.html">Is It Safe?</a>
-                        <a href="doctor-credentials-verification.html">Doctor Verification</a>
-                        <a href="certifications-insurance.html">Certifications</a>
-                    </div>
-                </div>
-                
-                <!-- Process -->
-                <div class="mobile-menu-item">
-                    <a href="#" class="mobile-menu-link">Process</a>
-                    <div class="mobile-submenu">
-                        <a href="medical-tourism-process-complete.html">Process Guide</a>
-                        <a href="testimonials-dental.html">Success Stories</a>
-                        <a href="patient-concerns-faq.html">FAQ</a>
-                    </div>
-                </div>
-                
-                <!-- 手机端咨询按钮 -->
-                <a href="https://wa.me/+12133179751" class="mobile-consult">Free Consultation</a>
-            </div>
-        </nav>
-        
-        <!-- 手机端Hero区域 -->
-        <section class="mobile-hero">
-            <div class="container">
-                <h1 class="mobile-hero-title">Dental Implant Tourism to China</h1>
-                <p class="mobile-hero-subtitle">Save 70-75% on dental implants with US-trained dentists at JCI-accredited hospitals.</p>
-                <div class="mobile-hero-buttons">
-                    <a href="#pricing" class="mobile-btn-primary">See Prices & Savings</a>
-                    <a href="https://wa.me/+12133179751" class="mobile-btn-secondary">Free Consultation</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 手机端价格对比 -->
-        <section class="mobile-pricing" id="pricing">
-            <div class="container">
-                <h2 class="mobile-section-title">Price Comparison</h2>
-                
-                <!-- 牙科种植 -->
-                <div class="mobile-price-card">
-                    <h3>Dental Implants</h3>
-                    <p>Single implant with crown</p>
-                    <div class="mobile-price-china">$850 - $1,450</div>
-                    <div class="mobile-price-usa">vs $3,000 - $6,000 in USA</div>
-                    <div class="mobile-savings">Save 71-76%</div>
-                    <a href="https://wa.me/+12133179751" class="mobile-consult" style="display: block; margin-top: 15px;">Get Quote</a>
-                </div>
-                
-                <!-- 整形手术 -->
-                <div class="mobile-price-card">
-                    <h3>Rhinoplasty</h3>
-                    <p>Nose reshaping surgery</p>
-                    <div class="mobile-price-china">$3,500 - $5,500</div>
-                    <div class="mobile-price-usa">vs $8,000 - $15,000 in USA</div>
-                    <div class="mobile-savings">Save 56-63%</div>
-                    <a href="https://wa.me/+12133179751" class="mobile-consult" style="display: block; margin-top: 15px;">Get Quote</a>
-                </div>
-                
-        <!-- 医生和医院图片展示 -->
-        <section class="doctors-hospitals-showcase" style="padding: 60px 0; background: #f8fafc;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 32px; font-weight: 700; color: #2d3748; margin-bottom: 40px;">
-                    🏥 Our Medical Team & Facilities
-                </h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
-                    <!-- 医生团队 -->
-                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                        <div style="height: 200px; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">
-                            👨‍⚕️
-                        </div>
-                        <div style="padding: 25px;">
-                            <h3 style="font-size: 22px; font-weight: 700; color: #2d3748; margin-bottom: 15px;">US-Trained Dental Specialists</h3>
-                            <ul style="color: #4a5568; line-height: 1.6;">
-                                <li style="margin-bottom: 8px;"><strong>Education:</strong> UCLA, NYU, Harvard dental programs</li>
-                                <li style="margin-bottom: 8px;"><strong>Experience:</strong> 10+ years clinical practice</li>
-                                <li style="margin-bottom: 8px;"><strong>Specialties:</strong> Implantology, Cosmetic, Oral Surgery</li>
-                                <li style="margin-bottom: 8px;"><strong>Certifications:</strong> Board-certified, international licenses</li>
-                            </ul>
-                            <a href="doctor-credentials-verification.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
-                                Verify Doctor Credentials →
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- 医院设施 -->
-                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                        <div style="height: 200px; background: linear-gradient(135deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">
-                            🏨
-                        </div>
-                        <div style="padding: 25px;">
-                            <h3 style="font-size: 22px; font-weight: 700; color: #2d3748; margin-bottom: 15px;">JCI-Accredited Hospitals</h3>
-                            <ul style="color: #4a5568; line-height: 1.6;">
-                                <li style="margin-bottom: 8px;"><strong>Standards:</strong> International healthcare standards</li>
-                                <li style="margin-bottom: 8px;"><strong>Technology:</strong> Digital scanners, 3D imaging, CAD/CAM</li>
-                                <li style="margin-bottom: 8px;"><strong>Sterilization:</strong> ISO-certified sterilization protocols</li>
-                                <li style="margin-bottom: 8px;"><strong>Facilities:</strong> Private rooms, international patient wings</li>
-                            </ul>
-                            <a href="hospital-facilities-tour.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
-                                Tour Hospital Facilities →
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- 医疗设备 -->
-                    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                        <div style="height: 200px; background: linear-gradient(135deg, #4facfe, #00f2fe); display: flex; align-items: center; justify-content: center; color: white; font-size: 48px;">
-                            🔬
-                        </div>
-                        <div style="padding: 25px;">
-                            <h3 style="font-size: 22px; font-weight: 700; color: #2d3748; margin-bottom: 15px;">Advanced Dental Technology</h3>
-                            <ul style="color: #4a5568; line-height: 1.6;">
-                                <li style="margin-bottom: 8px;"><strong>Imaging:</strong> CBCT 3D scans, digital X-rays</li>
-                                <li style="margin-bottom: 8px;"><strong>Implants:</strong> Nobel Biocare, Straumann systems</li>
-                                <li style="margin-bottom: 8px;"><strong>CAD/CAM:</strong> Same-day crowns and bridges</li>
-                                <li style="margin-bottom: 8px;"><strong>Anesthesia:</strong> Computer-controlled delivery</li>
-                            </ul>
-                            <a href="medical-equipment-technology.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
-                                View Technology Details →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="text-align: center;">
-                    <p style="color: #718096; font-size: 16px; margin-bottom: 20px;">
-                        <strong>Photo Policy:</strong> For patient privacy and medical confidentiality, we do not display actual patient photos publicly. Upon verified consultation request, we provide: Actual doctor and hospital photos available upon verified consultation request.
-                    </p>
-                    <a href="https://wa.me/+12133179751" style="display: inline-block; background: linear-gradient(135deg, #00a859, #00c853); color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px;">
-                        1. Actual doctor credential photos<br>2. Hospital facility tour videos<br>3. Medical equipment demonstration<br>4. Treatment case studies (privacy-protected)
-                </div>
-            </div>
-        </section>
-        
-        <!-- 信任建立内容 - 英文表格化 -->
-        <section class="trust-establishment" style="padding: 60px 0; background: #1a202c; color: white;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px; color: white;">
-                    🔒 Why Choose Us? Trust & Credibility
-                </h2>
-                
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; background: #2d3748; border-radius: 8px; overflow: hidden;">
-                        <thead style="background: #4a5568;">
-                            <tr>
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Trust Factor</th>
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Our Standards</th>
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Verification Method</th>
-                                <th style="padding: 20px; text-align: left; font-weight: 600;">Patient Benefit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="border-bottom: 1px solid #4a5568;">
-                                <td style="padding: 20px;"><strong>Medical Credentials</strong></td>
-                                <td style="padding: 20px;">US-trained dentists, board certifications</td>
-                                <td style="padding: 20px;">License verification, training certificates</td>
-                                <td style="padding: 20px;">Internationally recognized qualifications</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #4a5568;">
-                                <td style="padding: 20px;"><strong>Hospital Accreditation</strong></td>
-                                <td style="padding: 20px;">JCI international standards</td>
-                                <td style="padding: 20px;">JCI certificate validation</td>
-                                <td style="padding: 20px;">World-class facility safety</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #4a5568;">
-                                <td style="padding: 20px;"><strong>Transparent Pricing</strong></td>
-                                <td style="padding: 20px;">Fixed-price contracts, no hidden fees</td>
-                                <td style="padding: 20px;">Detailed cost breakdowns</td>
-                                <td style="padding: 20px;">Financial predictability</td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid #4a5568;">
-                                <td style="padding: 20px;"><strong>Patient Safety</strong></td>
-                                <td style="padding: 20px;">ISO sterilization, anesthesia monitoring</td>
-                                <td style="padding: 20px;">Protocol documentation, equipment logs</td>
-                                <td style="padding: 20px;">Minimized complication risks</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 20px;"><strong>Legal Protection</strong></td>
-                                <td style="padding: 20px;">Medical liability insurance, contracts</td>
-                                <td style="padding: 20px;">Insurance certificates, legal review</td>
-                                <td style="padding: 20px;">Financial and legal security</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 36px; font-weight: 700; color: #68d391;">500+</div>
-                        <div style="font-size: 14px; color: #cbd5e0;">International Patients Served</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 36px; font-weight: 700; color: #68d391;">98.7%</div>
-                        <div style="font-size: 14px; color: #cbd5e0;">Patient Satisfaction Rate</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 36px; font-weight: 700; color: #68d391;">100%</div>
-                        <div style="font-size: 14px; color: #cbd5e0;">JCI Hospital Accreditation</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 36px; font-weight: 700; color: #68d391;">24/7</div>
-                        <div style="font-size: 14px; color: #cbd5e0;">Emergency Support</div>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="certifications-insurance.html" style="display: inline-block; background: white; color: #1a202c; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">
-                        View All Certifications & Documents
-                </div>
-            </div>
-        </section>
-        
-        <!-- 用户权利与安全认证 -->
-        <section class="patient-rights-certification" style="padding: 60px 0; background: #ebf8ff;">
-            <div class="container">
-                <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px; color: #2c5282;">
-                    📜 Patient Rights & Safety Certifications
-                </h2>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <h3 style="color: #2c5282; font-size: 20px; font-weight: 600; margin-bottom: 15px;">
-                            <span style="background: #bee3f8; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">📋</span>
-                            Patient Rights Charter
-                        </h3>
-                        <ul style="color: #4a5568; line-height: 1.6;">
-                            <li style="margin-bottom: 8px;">Right to informed consent & treatment options</li>
-                            <li style="margin-bottom: 8px;">Right to privacy & medical record confidentiality</li>
-                            <li style="margin-bottom: 8px;">Right to second opinions & treatment refusal</li>
-                            <li style="margin-bottom: 8px;">Right to complaint resolution & fair treatment</li>
-                            <li>Right to clear communication in your language</li>
-                        </ul>
-                        <a href="patient-rights-protection.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600;">
-                            Full Rights Document →
-                        </a>
-                    </div>
-                    
-                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <h3 style="color: #2c5282; font-size: 20px; font-weight: 600; margin-bottom: 15px;">
-                            <span style="background: #c6f6d5; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">🏆</span>
-                            Safety Certifications
-                        </h3>
-                        <div style="margin-bottom: 15px;">
-                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                                <div style="background: #c6f6d5; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 12px; color: #276749;">JCI</div>
-                                <span>Joint Commission International Accreditation</span>
-                            </div>
-                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                                <div style="background: #fed7d7; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 12px; color: #c53030;">ISO</div>
-                                <span>ISO 9001 Quality Management System</span>
-                            </div>
-                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
-                                <div style="background: #e9d8fd; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 12px; color: #553c9a;">FDA</div>
-                                <span>FDA-approved medical devices & materials</span>
-                            </div>
-                            <div style="display: flex; align-items: center;">
-                                <div style="background: #feebc8; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 12px; color: #744210;">CE</div>
-                                <span>CE Mark European Conformity Certification</span>
-                            </div>
-                        </div>
-                        <a href="certifications-insurance.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600;">
-                            View All Certificates →
-                        </a>
-                    </div>
-                    
-                    <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                        <h3 style="color: #2c5282; font-size: 20px; font-weight: 600; margin-bottom: 15px;">
-                            <span style="background: #fed7e2; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">🛡️</span>
-                            Insurance & Legal Protection
-                        </h3>
-                        <ul style="color: #4a5568; line-height: 1.6;">
-                            <li style="margin-bottom: 8px;"><strong>Medical Liability Insurance:</strong> $2,000,000 coverage per incident</li>
-                            <li style="margin-bottom: 8px;"><strong>Travel Insurance:</strong> Emergency medical evacuation coverage</li>
-                            <li style="margin-bottom: 8px;"><strong>Contract Guarantees:</strong> Fixed-price, no hidden fees</li>
-                            <li style="margin-bottom: 8px;"><strong>Dispute Resolution:</strong> International arbitration option</li>
-                            <li><strong>Refund Policy:</strong> Clear cancellation terms</li>
-                        </ul>
-                        <a href="insurance-coverage-medical-tourism.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600;">
-                            Insurance Details →
-                        </a>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 40px;">
-                    <p style="color: #4a5568; font-size: 16px; margin-bottom: 20px;">
-                        All certifications and insurance documents are available for review before treatment commitment.
-                    </p>
-                    <a href="https://wa.me/+12133179751" style="display: inline-block; background: #2c5282; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">
-                        Request Certification Documents
-                    </a>
-                </div>
-            </div>
-        </section>
-                    </a>
-                </div>
-            </div>
-        </section>
-                    </a>
-                </div>
-            </div>
-        </section>
-                <!-- 健康检查 -->
-                <div class="mobile-price-card">
-                    <h3>Health Screening</h3>
-                    <p>Comprehensive check-up</p>
-                    <div class="mobile-price-china">$1,500 - $2,500</div>
-                    <div class="mobile-price-usa">vs $5,000 - $8,000 in USA</div>
-                    <div class="mobile-savings">Save 70-69%</div>
-                    <a href="https://wa.me/+12133179751" class="mobile-consult" style="display: block; margin-top: 15px;">Get Quote</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 手机端底部信息栏 -->
-        
-    </div>
-    
-    <!-- 浮动WhatsApp按钮 -->
-    <a href="https://wa.me/+12133179751" class="float-whatsapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    
-    <!-- JavaScript -->
-    <script>
-        // 移动端菜单交互
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-            
-            if (mobileMenuBtn && mobileMenu) {
-                // 汉堡菜单点击事件
-                mobileMenuBtn.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('active');
-                });
-                
-                // 菜单链接点击事件（展开子菜单）
-                mobileMenuLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const submenu = this.nextElementSibling;
-                        if (submenu && submenu.classList.contains('mobile-submenu')) {
-                            submenu.classList.toggle('active');
-                        }
-                    });
-                });
-                
-                // 点击页面其他地方关闭菜单
-                document.addEventListener('click', function(e) {
-                    if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                        mobileMenu.classList.remove('active');
-                    }
-                });
-            }
-            
-            // 平滑滚动到价格区域
-            const pricingLinks = document.querySelectorAll('a[href="#pricing"]');
-            pricingLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const pricingSection = document.getElementById('pricing');
-                    if (pricingSection) {
-                        pricingSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-            
-            // 紧急横幅点击跟踪
-            const emergencyBanner = document.querySelector('.emergency-banner a');
-            if (emergencyBanner) {
-                emergencyBanner.addEventListener('click', function() {
-                    gtag('event', 'emergency_click', {
-                        'event_category': 'Emergency',
-                        'event_label': 'Emergency Banner Click'
-                    });
-                });
-            }
-            
-            // WhatsApp按钮点击跟踪
-            const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
-            whatsappButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    gtag('event', 'whatsapp_click', {
-                        'event_category': 'Contact',
-                        'event_label': 'WhatsApp Button Click'
-                    });
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                        <div>
+                            <strong>Business Hours:</strong><br>
+                            24/7 Emergency Support<br>
+                            Mon-F
