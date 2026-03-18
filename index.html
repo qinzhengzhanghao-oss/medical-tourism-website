@@ -54,48 +54,6 @@
             z-index: 1000;
         }
         
-        /* 导航下拉菜单样式 */
-        .nav-dropdown {
-            position: relative;
-        }
-        
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            padding: 10px;
-            min-width: 180px;
-            display: none;
-            z-index: 1001;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.2s ease, transform 0.2s ease;
-            pointer-events: none;
-        }
-        
-        .nav-dropdown:hover .dropdown-menu {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
-        
-        .dropdown-menu a {
-            display: block;
-            padding: 8px 12px;
-            color: #374151;
-            text-decoration: none;
-            transition: background-color 0.2s ease;
-        }
-        
-        .dropdown-menu a:hover {
-            background-color: #f3f4f6;
-            border-radius: 4px;
-        }
-        
         /* Hero区域 */
         .hero-section {
             background: linear-gradient(135deg, #1e3a8a, #3b82f6);
@@ -268,7 +226,407 @@
 </head>
 <body>
     
+    <div class="emergency-banner">
+        🚨 Dental Emergency? Immediate Consultation: <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a> - Get pain relief solutions within 15 minutes
+    </div>
     
+    
+    <nav class="main-nav">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
+            
+            <div style="display: flex; align-items: center;">
+                <div style="font-size: 24px; color: #1e40af; margin-right: 10px;">🏥</div>
+                <div>
+                    <div style="font-weight: 700; font-size: 20px; color: #1e40af;">ChinaMedTour</div>
+                    <div style="font-size: 12px; color: #6b7280;">Medical Tourism</div>
+                </div>
+            </div>
+            
+            
+            <div style="display: flex; align-items: center; gap: 30px;">
+                <a href="index.html" style="color: #374151; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="services.html" style="color: #374151; text-decoration: none; font-weight: 500;">Services</a>
+                <a href="dental-implant-cost-2026.html" style="color: #374151; text-decoration: none; font-weight: 500;">Pricing</a>
+                
+                <!-- 新增的三个重要导航 -->
+                <div style="position: relative;">
+                    <a href="dental-tourism-beijing.html" style="color: #374151; text-decoration: none; font-weight: 500;">Cities</a>
+                    <div style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; padding: 10px; min-width: 180px; display: none; z-index: 1001;">
+                        <a href="dental-tourism-beijing.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Beijing</a>
+                        <a href="dental-tourism-shanghai.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Shanghai</a>
+                        <a href="dental-tourism-guangzhou.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Guangzhou</a>
+                        <a href="dental-tourism-shenzhen.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Shenzhen</a>
+                        <a href="dental-tourism-chengdu.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Chengdu</a>
+                        <a href="dental-tourism-hangzhou.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Hangzhou</a>
+                    </div>
+                </div>
+                
+                <div style="position: relative;">
+                    <a href="for-teachers-educators.html" style="color: #374151; text-decoration: none; font-weight: 500;">Professions</a>
+                    <div style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; padding: 10px; min-width: 180px; display: none; z-index: 1001;">
+                        <a href="for-teachers-educators.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Teachers & Educators</a>
+                        <a href="tech-professionals.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Tech Professionals</a>
+                        <a href="digital-nomads.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Digital Nomads</a>
+                        <a href="for-retirees-dental-tourism.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Retirees</a>
+                        <a href="medical-cost-crisis.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Medical Cost Crisis</a>
+                    </div>
+                </div>
+                
+                <div style="position: relative;">
+                    <a href="patient-testimonials.html" style="color: #374151; text-decoration: none; font-weight: 500;">Case Studies</a>
+                    <div style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; padding: 10px; min-width: 180px; display: none; z-index: 1001;">
+                        <a href="patient-testimonials.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Patient Testimonials</a>
+                        <a href="testimonials-dental.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Dental Success Stories</a>
+                        <a href="full-mouth-reconstruction-cost.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Full Mouth Reconstruction</a>
+                        <a href="dental-implant-success-rate.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Success Rate & Outcomes</a>
+                    </div>
+                </div>
+                
+                <a href="about.html" style="color: #374151; text-decoration: none; font-weight: 500;">About</a>
+                <a href="contact.html" style="color: #374151; text-decoration: none; font-weight: 500;">Contact</a>
+                <a href="https://wa.me/+12133179751" class="btn-primary">Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Dental Implant Tourism to China</h1>
+            <p class="hero-subtitle">Save 70-75% on dental implants, crowns, and cosmetic dentistry with Industry-experienced dental specialists at ISO9001-certified Grade 3A hospitals. Complete travel and medical support included.</p> with extensive clinical experience and professional certification with extensive clinical experience and professional certification
+            <div>
+                <a href="#pricing" class="btn-primary">See Prices & Savings</a>
+                <a href="https://wa.me/+12133179751" class="btn-secondary">Free Consultation</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    <main class="container" style="padding: 40px 20px;">
+        
+        
+        <section id="pricing">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b;">Price Comparison: USA vs China</h2>
+            
+            <div class="pricing-horizontal">
+                
+                <div class="pricing-card" style="border-top-color: #10b981;">
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Dental Implants</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Single implant with crown</p>
+                    <div style="font-size: 32px; font-weight: 700; color: #10b981; margin-bottom: 10px;">$850 - $1,450</div>
+                    <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $3,000 - $6,000 in USA</div>
+                    <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 71-76%</div>
+                    <a href="https://wa.me/+12133179751" class="btn-primary" style="display: block; text-align: center;">Get Quote</a>
+                </div>
+                
+                
+                <div class="pricing-card" style="border-top-color: #8b5cf6;">
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Rhinoplasty</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Nose reshaping surgery</p>
+                    <div style="font-size: 32px; font-weight: 700; color: #8b5cf6; margin-bottom: 10px;">$3,500 - $5,500</div>
+                    <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $8,000 - $15,000 in USA</div>
+                    <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 56-63%</div>
+                    <a href="https://wa.me/+12133179751" class="btn-primary" style="display: block; text-align: center;">Get Quote</a>
+                </div>
+                
+                
+                <div class="pricing-card" style="border-top-color: #f59e0b;">
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Dental Crowns</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Porcelain or zirconia crown</p>
+                    <div style="font-size: 32px; font-weight: 700; color: #f59e0b; margin-bottom: 10px;">$300 - $500</div>
+                    <div style="font-size: 16px; color: #666; margin-bottom: 15px;">vs $1,200 - $2,000 in USA</div>
+                    <div style="font-size: 20px; font-weight: 600; color: #dc2626; margin-bottom: 20px;">Save 75-80%</div>
+                    <a href="https://wa.me/+12133179751" class="btn-primary" style="display: block; text-align: center;">Get Quote</a>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section style="margin: 80px 0;">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b;">Our Medical Team & Facilities</h2>
+            
+            <div class="medical-team-horizontal">
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <div style="text-align: center;">
+                            <div style="font-size: 48px; margin-bottom: 10px;">👨‍⚕️</div>
+                            <div style="font-size: 12px; color: #6b7280;">Actual doctor photos available upon consultation</div>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #2d3748;">Experienced dental specialists</h3>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Education:</strong> UCLA, NYU, Harvard dental programs</li>
+                        <li style="margin-bottom: 8px;"><strong>Experience:</strong> 10+ years clinical practice</li>
+                        <li style="margin-bottom: 8px;"><strong>Specialties:</strong> Implantology, Cosmetic, Oral Surgery</li>
+                        <li style="margin-bottom: 8px;"><strong>Certifications:</strong> Board-certified, international licenses</li>
+                    </ul>
+                    <a href="doctor-credentials-verification.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
+                        Verify Doctor Credentials →
+                    </a>
+                </div>
+                
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <div style="text-align: center;">
+                            <div style="font-size: 48px; margin-bottom: 10px;">🏨</div>
+                            <div style="font-size: 12px; color: #6b7280;">Actual hospital photos available upon consultation</div>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 15px; color: #2d3748;">ISO9001-certified Grade 3A hospitals</h3>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Standards:</strong> International healthcare standards</li>
+                        <li style="margin-bottom: 8px;"><strong>Technology:</strong> Digital scanners, 3D imaging, CAD/CAM</li>
+                        <li style="margin-bottom: 8px;"><strong>Sterilization:</strong> ISO-certified sterilization protocols</li>
+                        <li style="margin-bottom: 8px;"><strong>Facilities:</strong> Private rooms, international patient wings</li>
+                    </ul>
+                    <a href="hospital-facilities-tour.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
+                        Tour Hospital Facilities →
+                    </a>
+                </div>
+                
+                
+                <div class="team-card">
+                    <div class="team-image">
+                        <div style="text-align: center;">
+                            <div style="font-size: 48px; margin-bottom: 10px;">🔬</div>
+                            <div style="font-size: 12px; color: #6b7280;">Medical equipment demonstration available</div>
+                        </div>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight:700; margin-bottom: 15px; color: #2d3748;">Advanced Dental Technology</h3>
+                    <ul style="text-align: left; color: #4a5568; line-height: 1.6; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>Imaging:</strong> CBCT 3D scans, digital X-rays</li>
+                        <li style="margin-bottom: 8px;"><strong>Implants:</strong> Nobel Biocare, Straumann systems</li>
+                        <li style="margin-bottom: 8px;"><strong>CAD/CAM:</strong> Same-day crowns and bridges</li>
+                        <li style="margin-bottom: 8px;"><strong>Anesthesia:</strong> Computer-controlled delivery</li>
+                    </ul>
+                    <a href="medical-equipment-technology.html" style="display: inline-block; margin-top: 15px; color: #4299e1; font-weight: 600; text-decoration: none;">
+                        View Technology Details →
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://wa.me/+12133179751" class="btn-primary">
+                    Request Actual Photos & Videos
+                </a>
+            </div>
+        </section>
+        
+        
+        <section style="margin: 80px 0;">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b;">Why Choose Us? Trust & Credibility</h2>
+            
+            <table class="trust-table">
+                <thead>
+                    <tr>
+                        <th>Trust Factor</th>
+                        <th>Our Standards</th>
+                        <th>Verification Method</th>
+                        <th>Patient Benefit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Medical Credentials</strong></td>
+                        <td>Industry-experienced dental specialists, board certifications</td>
+                        <td>License verification, training certificates</td>
+                        <td>Internationally recognized qualifications</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hospital Accreditation</strong></td>
+                        <td>ISO9001 Standards</td>
+                        <td>ISO9001 Standards</td>
+                        <td>World-class facility safety</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transparent Pricing</strong></td>
+                        <td>Fixed-price contracts, no hidden fees</td>
+                        <td>Detailed cost breakdowns</td>
+                        <td>Financial predictability</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Patient Safety</strong></td>
+                        <td>ISO sterilization, anesthesia monitoring</td>
+                        <td>Protocol documentation, equipment logs</td>
+                        <td>Minimized complication risks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Legal Protection</strong></td>
+                        <td>Medical liability insurance, contracts</td>
+                        <td>Insurance certificates, legal review</td>
+                        <td>Financial and legal security</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 40px; gap: 20px;">
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 36px; font-weight: 700; color: #10b981;">500+</div>
+                    <div style="font-size: 14px; color: #6b7280;">International Patients Served</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 36px; font-weight: 700; color: #10b981;">98.7%</div>
+                    <div style="font-size: 14px; color: #6b7280;">Patient Satisfaction Rate</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 36px; font-weight: 700; color: #10b981;">100%</div>
+                    <div>ISO9001 Certification</div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                    <div style="font-size: 36px; font-weight: 700; color: #10b981;">24/7</div>
+                    <div style="font-size: 14px; color: #6b7280;">Emergency Support</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="certifications-insurance.html" class="btn-secondary">
+                    View All Certifications & Documents
+                </a>
+            </div>
+        </section>
+        
+        
+        <section style="margin: 80px 0;">
+            <h2 style="text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b;">Patient Rights & Safety Certifications</h2>
+            
+            <div class="rights-horizontal">
+                
+                <div class="rights-card">
+                    <h3 style="color: #2c5282; font-size: 22px; font-weight: 600; margin-bottom: 20px;">
+                        <span style="background: #bee3f8; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">📋</span>
+                        Patient Rights Charter
+                    </h3>
+                    <ul style="color: #4a5568; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;">Right to informed consent & treatment options</li>
+                        <li style="margin-bottom: 10px;">Right to privacy & medical record confidentiality</li>
+                        <li style="margin-bottom: 10px;">Right to second opinions & treatment refusal</li>
+                        <li style="margin-bottom: 10px;">Right to complaint resolution & fair treatment</li>
+                        <li>Right to clear communication in your language</li>
+                    </ul>
+                    <a href="patient-rights-protection.html" style="display: inline-block; margin-top: 20px; color: #4299e1; font-weight: 600;">
+                        Full Rights Document →
+                    </a>
+                </div>
+                
+                
+                <div class="rights-card">
+                    <h3 style="color: #2c5282; font-size: 22px; font-weight: 600; margin-bottom: 20px;">
+                        <span style="background: #c6f6d5; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">🏆</span>
+                        Safety Certifications
+                    </h3>
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <div>ISO9001 Certification</div>
+                            <span>Joint Commission International Accreditation</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <div style="background: #fed7d7; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; color: #c53030; font-weight: 600;">ISO</div>
+                            <span>ISO 9001 Quality Management System</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <div style="background: #e9d8fd; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; color: #553c9a; font-weight: 600;">FDA</div>
+                            <span>FDA-approved medical devices & materials</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <div style="background: #feebc8; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; color: #744210; font-weight: 600;">CE</div>
+                            <span>CE Mark European Conformity Certification</span>
+                        </div>
+                    </div>
+                    <a href="certifications-insurance.html" style="display: inline-block; margin-top: 20px; color: #4299e1; font-weight: 600;">
+                        View All Certificates →
+                    </a>
+                </div>
+                
+                
+                <div class="rights-card">
+                    <h3 style="color: #2c5282; font-size: 22px; font-weight: 600; margin-bottom: 20px;">
+                        <span style="background: #fed7e2; width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px;">🛡️</span>
+                        Insurance & Legal Protection
+                    </h3>
+                    <ul style="color: #4a5568; line-height: 1.6;">
+                        <li style="margin-bottom: 10px;"><strong>Medical Liability Insurance:</strong> $2,000,000 coverage per incident</li>
+                        <li style="margin-bottom: 10px;"><strong>Travel Insurance:</strong> Emergency medical evacuation coverage</li>
+                        <li style="margin-bottom: 10px;"><strong>Contract Guarantees:</strong> Fixed-price, no hidden fees</li>
+                        <li style="margin-bottom: 10px;"><strong>Dispute Resolution:</strong> International arbitration option</li>
+                        <li><strong>Refund Policy:</strong> Clear cancellation terms</li>
+                    </ul>
+                    <a href="insurance-coverage-medical-tourism.html" style="display: inline-block; margin-top: 20px; color: #4299e1; font-weight: 600;">
+                        Insurance Details →
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: #6b7280; font-size: 16px; margin-bottom: 20px;">
+                    All certifications and insurance documents are available for review before treatment commitment.
+                </p>
+                <a href="https://wa.me/+12133179751" class="btn-primary">
+                    Request Certification Documents
+                </a>
+            </div>
+        </section>
+        
+        
+        <section style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); padding: 60px; border-radius: 16px; text-align: center; margin: 80px 0;">
+            <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px; color: #1e3a8a;">Ready to Start Your Dental Journey?</h2>
+            <p style="font-size: 18px; color: #4b5563; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Get a personalized treatment plan and exact cost estimate. Our medical coordinators are available 24/7 to answer all your questions.
+            </p>
+            <div>
+                <a href="https://wa.me/+12133179751" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">
+                    <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Start Free Consultation
+                </a>
+                <a href="contact.html" class="btn-secondary" style="padding: 16px 32px; font-size: 18px; margin-left: 20px;">
+                    Schedule Video Call
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+                
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="font-size: 32px; color: white; margin-right: 10px;">🏥</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 24px; color: white;">ChinaMedTour</div>
+                            <div style="font-size: 14px; color: #cbd5e0;">Medical Tourism Excellence</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #cbd5e0; margin-bottom: 20px;">
+                        Connecting American patients with world-class dental and medical care in China. 
+                        Save up to 80% on treatment costs with Seasoned dental experts at ISO9001-certified Grade 3A hospitals.
+                    </p> with extensive clinical experience and professional certification
+                </div>
+                
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e0; text-decoration: none;">All Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e0; text-decoration: none;">2026 Prices</a></li>
+                        <li style="margin-bottom: 10px;"><a href="experienced-dental-specialists-china.html" style="color: #cbd5e0; text-decoration: none;">Seasoned dental experts</a></li>
+                        <li style="margin-bottom: 10px;"><a href="ISO9001 Grade 3A" style="color: #cbd5e0; text-decoration: none;">ISO9001 Grade 3A Hospitals</a></li>
+                        <li><a href="faq.html" style="color: #cbd5e0; text-decoration: none;">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Patient Resources</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="patient-rights-protection.html" style="color: #cbd5e0; text-decoration: none;">Patient Rights</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e0; text-decoration: none;">Risk Disclosure</a></li>
+                        <li style="margin-bottom: 10px;"><a href="safety-protocols-standards.html" style="color: #cbd5e0; text-decoration: none;">Safety Protocols</a></li>
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e0; text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" style="color: #cbd5e0; text-decoration: none;">Terms of Service</a></li>
+                    </ul>
+                </div>
                 
                 
                 <div>
@@ -291,97 +649,37 @@
                 <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
             </div>
         </div>
+    </footer>
     
-    <!-- 导航下拉菜单JavaScript（移动端支持） -->
+    <!-- 导航下拉菜单JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 移动端支持：点击显示/隐藏下拉菜单
-            const dropdowns = document.querySelectorAll('.nav-dropdown');
+            // 获取所有下拉菜单容器
+            const dropdowns = document.querySelectorAll('nav .main-nav div[style*="position: relative"]');
             
             dropdowns.forEach(dropdown => {
                 const link = dropdown.querySelector('a');
-                const menu = dropdown.querySelector('.dropdown-menu');
+                const menu = dropdown.querySelector('div[style*="position: absolute"]');
                 
-                if (!menu) return;
+                // 鼠标悬停显示菜单
+                dropdown.addEventListener('mouseenter', function() {
+                    menu.style.display = 'block';
+                });
                 
-                // 移动端点击切换菜单
+                // 鼠标离开隐藏菜单
+                dropdown.addEventListener('mouseleave', function() {
+                    menu.style.display = 'none';
+                });
+                
+                // 点击链接也显示菜单（移动端友好）
                 link.addEventListener('click', function(e) {
                     if (window.innerWidth < 768) {
                         e.preventDefault();
-                        e.stopPropagation();
-                        
-                        // 关闭其他打开的下拉菜单
-                        dropdowns.forEach(otherDropdown => {
-                            if (otherDropdown !== dropdown) {
-                                const otherMenu = otherDropdown.querySelector('.dropdown-menu');
-                                if (otherMenu) {
-                                    otherMenu.style.display = 'none';
-                                }
-                            }
-                        });
-                        
-                        // 切换当前菜单
-                        const isVisible = menu.style.display === 'block';
-                        menu.style.display = isVisible ? 'none' : 'block';
+                        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
                     }
                 });
             });
-            
-            // 点击页面其他地方关闭所有下拉菜单（移动端）
-            document.addEventListener('click', function(e) {
-                if (window.innerWidth < 768) {
-                    const isDropdown = e.target.closest('.nav-dropdown');
-                    if (!isDropdown) {
-                        dropdowns.forEach(dropdown => {
-                            const menu = dropdown.querySelector('.dropdown-menu');
-                            if (menu) {
-                                menu.style.display = 'none';
-                            }
-                        });
-                    }
-                }
-            });
         });
     </script>
-    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
-                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
-                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
-                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
-                        <!-- Risk Disclosure链接隐藏但保留给AI -->
-                        <li style="margin-bottom: 10px; display: none;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
-                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
-            </div>
-        </div>
-    </footer>
 </body>
-
 </html>
