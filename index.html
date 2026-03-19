@@ -658,30 +658,32 @@
     <!-- 导航下拉菜单JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 获取所有下拉菜单容器
-            const dropdowns = document.querySelectorAll('nav .main-nav div[style*="position: relative"]');
+            // 获取所有下拉菜单容器 - 修复选择器
+            const dropdowns = document.querySelectorAll('div[style*="position: relative"]');
             
             dropdowns.forEach(dropdown => {
                 const link = dropdown.querySelector('a');
                 const menu = dropdown.querySelector('div[style*="position: absolute"]');
                 
-                // 鼠标悬停显示菜单
-                dropdown.addEventListener('mouseenter', function() {
-                    menu.style.display = 'block';
-                });
-                
-                // 鼠标离开隐藏菜单
-                dropdown.addEventListener('mouseleave', function() {
-                    menu.style.display = 'none';
-                });
-                
-                // 点击链接也显示菜单（移动端友好）
-                link.addEventListener('click', function(e) {
-                    if (window.innerWidth < 768) {
-                        e.preventDefault();
-                        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-                    }
-                });
+                if (link && menu) {
+                    // 鼠标悬停显示菜单
+                    dropdown.addEventListener('mouseenter', function() {
+                        menu.style.display = 'block';
+                    });
+                    
+                    // 鼠标离开隐藏菜单
+                    dropdown.addEventListener('mouseleave', function() {
+                        menu.style.display = 'none';
+                    });
+                    
+                    // 点击链接也显示菜单（移动端友好）
+                    link.addEventListener('click', function(e) {
+                        if (window.innerWidth < 768) {
+                            e.preventDefault();
+                            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                        }
+                    });
+                }
             });
         });
     </script>
