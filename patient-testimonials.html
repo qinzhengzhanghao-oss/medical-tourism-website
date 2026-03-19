@@ -119,6 +119,32 @@
             .mobile-menu a:last-child {
                 border-bottom: none;
             }
+            
+            /* 底部信息栏手机端优化 */
+            .main-footer .container > div[style*="display: grid"] {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            
+            .main-footer .container > div[style*="display: grid"] > div {
+                text-align: center;
+            }
+            
+            .main-footer .container > div[style*="display: grid"] > div:first-child {
+                text-align: center;
+            }
+            
+            .main-footer .container > div[style*="display: grid"] > div:first-child > div[style*="display: flex"] {
+                justify-content: center;
+            }
+            
+            .main-footer ul {
+                padding-left: 0;
+            }
+            
+            .main-footer ul li {
+                text-align: center;
+            }
         }
     </style>
 </head>
