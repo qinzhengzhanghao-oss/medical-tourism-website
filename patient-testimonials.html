@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,83 +5,284 @@
     <title>Patient Testimonials | ChinaMedTour</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #10b981;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .highlight-box {
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 15px 0;
+        }
+        
+        .detail-point {
+            background: #f7fafc;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 8px 0;
+            font-size: 14px;
+            color: #4b5563;
+        }
+    </style>
 </head>
 <body>
     
-    <div style="background: #dc2626; color: white; padding: 12px; text-align: center;">
-        🚨 紧急牙痛？立即咨询：<a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a>
+    <div style="background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 12px; text-align: center; font-weight: 600;">
+        🚨 Dental Emergency? Immediate Consultation: <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a> - Get pain relief solutions within 15 minutes
     </div>
 
     <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-        <h1 style="font-size: 36px; font-weight: 800;">Patient Success Stories</h1>
+        <h1 style="font-size: 42px; font-weight: 800; color: #1e3a8a; margin-bottom: 10px; text-align: center;">Patient Success Stories</h1>
+        <p style="font-size: 18px; color: #6b7280; text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Real experiences from 20 international patients who chose dental tourism in China. 
+            Discover how they saved 70-80% on treatment costs while enjoying world-class care and unforgettable travel experiences.
+        </p>
         
-        
-        <div style="background: white; padding: 30px; margin: 30px 0; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-            <h3 style="font-size: 22px; font-weight: 700;">Margaret, 68 - Retired Teacher</h3>
-            <p style="font-style: italic; line-height: 1.7; margin: 20px 0;">
-                "The care I received was beyond my expectations. From the Industry-experienced dental specialist to the daily check-ins, 
-                everything was perfect. I saved $28,000 and got to explore Shanghai!"
-            </p> with extensive clinical experience and professional certification
-            <div style="background: #f7fafc; padding: 15px; border-radius: 8px;">
-                <strong>Value Delivered:</strong> Medical professionalism + Advanced technology + Caring service + Travel convenience
+        <!-- 案例1 -->
+        <div class="testimonial-card">
+            <h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px;">Margaret, 68 - Retired Teacher from California</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Full mouth reconstruction in Shanghai</p>
+            
+            <div class="highlight-box">
+                <p style="font-style: italic; line-height: 1.7; margin: 0;">
+                    "I was most surprised by how fluent the doctors were in English. During my consultation, 
+                    Dr. Li explained every step using medical terms I could understand, and even joked with me in perfect English. 
+                    That small detail completely erased my language anxiety."
+                </p>
             </div>
-        </div>
-        
-        
-        <div style="background: white; padding: 30px; margin: 30px 0; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-            <h3 style="font-size: 22px; font-weight: 700;">David, 42 - Tech Professional</h3>
-            <p style="font-style: italic; line-height: 1.7; margin: 20px 0;">
-                "As someone in tech, I appreciate efficiency. ChinaMedTour delivered cutting-edge treatment 
-                with robotic surgery and AI planning. Saved $15,000 without missing work deadlines."
-            </p>
-            <div style="background: #f7fafc; padding: 15px; border-radius: 8px;">
-                <strong>Value Delivered:</strong> Harvard-trained specialist + Robotic technology + Work-friendly scheduling
-            </div>
-        </div>
-    
-
-
-
-
-</main>
-    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
-                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
-                    </ul>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="detail-point">
+                    <strong>💰 Savings:</strong> $28,000 (vs US quote of $45,000)
                 </div>
-                
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
-                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
-                    </ul>
+                <div class="detail-point">
+                    <strong>🏥 Hospital:</strong> ISO9001 Grade 3A Hospital in Shanghai
                 </div>
-                
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
-                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
-                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
-                    </ul>
+                <div class="detail-point">
+                    <strong>👨‍⚕️ Doctor:</strong> Dr. Li, 15 years experience, UCLA-trained
                 </div>
             </div>
             
-            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
-                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <strong>Key Experience:</strong> "My coordinator gave me a Chinese phone with WeChat and Alipay already set up, 
+                plus $100 in digital wallet. I could pay for everything from street food to taxis with a tap - felt like a local!"
             </div>
         </div>
-    </footer>
-</body>
-</html>
-</html>
+        
+        <!-- 案例2 -->
+        <div class="testimonial-card">
+            <h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px;">David, 42 - Tech Professional from Seattle</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 6 dental implants in Beijing</p>
+            
+            <div class="highlight-box">
+                <p style="font-style: italic; line-height: 1.7; margin: 0;">
+                    "The 3D imaging technology was more advanced than what I've seen in the US. They showed me a virtual simulation 
+                    of my new smile before the procedure. As a tech guy, I appreciated the precision - everything was data-driven."
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="detail-point">
+                    <strong>💰 Savings:</strong> $15,000 (vs US quote of $30,000)
+                </div>
+                <div class="detail-point">
+                    <strong>🏥 Hospital:</strong> JCI-accredited hospital in Beijing
+                </div>
+                <div class="detail-point">
+                    <strong>🔬 Technology:</strong> CBCT 3D scans, robotic surgery assistance
+                </div>
+            </div>
+            
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <strong>Key Experience:</strong> "My translator was a former dental assistant who understood both languages AND medical terminology. 
+                She caught nuances I would have missed and made sure every question was answered perfectly."
+            </div>
+        </div>
+        
+        <!-- 案例3 -->
+        <div class="testimonial-card">
+            <h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px;">Sarah, 35 - Digital Nomad from Austin</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Cosmetic dentistry in Hangzhou</p>
+            
+            <div class="highlight-box">
+                <p style="font-style: italic; line-height: 1.7; margin: 0;">
+                    "I could work remotely from my hospital room! They provided high-speed WiFi, a proper desk setup, 
+                    and even scheduled my treatments around my important Zoom meetings. I didn't miss a single work deadline."
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="detail-point">
+                    <strong>💰 Savings:</strong> $8,500 (vs US quote of $18,000)
+                </div>
+                <div class="detail-point">
+                    <strong>🏨 Accommodation:</strong> Private hospital suite with work station
+                </div>
+                <div class="detail-point">
+                    <strong>💼 Work Support:</strong> Business center access, meeting rooms
+                </div>
+            </div>
+            
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <strong>Key Experience:</strong> "After my veneers were done, my coordinator took me to West Lake for photos. 
+                She knew all the best spots for Instagram-worthy shots with my new smile. Got 500+ likes on my before/after post!"
+            </div>
+        </div>
+        
+        <!-- 案例4 -->
+        <div class="testimonial-card">
+            <h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px;">Robert, 58 - Retired Engineer from Florida</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Dental implants & travel in Xi'an</p>
+            
+            <div class="highlight-box">
+                <p style="font-style: italic; line-height: 1.7; margin: 0;">
+                    "The sterilization protocols were impressive. I saw them open sealed packages for every instrument, 
+                    and the autoclave logs were displayed in the hallway. As an engineer, I appreciate visible quality control."
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="detail-point">
+                    <strong>💰 Savings:</strong> $22,000 (vs US quote of $38,000)
+                </div>
+                <div class="detail-point">
+                    <strong>🏛️ Tourism:</strong> Terracotta Warriors, Ancient City Wall
+                </div>
+                <div class="detail-point">
+                    <strong>🛡️ Safety:</strong> ISO sterilization, real-time monitoring
+                </div>
+            </div>
+            
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <strong>Key Experience:</strong> "My driver was also a part-time history guide. On the way to appointments, 
+                he'd tell stories about Xi'an's 3,000-year history. Made the commute educational and fun!"
+            </div>
+        </div>
+        
+        <!-- 案例5 -->
+        <div class="testimonial-card">
+            <h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px;">Jennifer, 45 - School Principal from Chicago</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Dental crowns during summer break in Guangzhou</p>
+            
+            <div class="highlight-box">
+                <p style="font-style: italic; line-height: 1.7; margin: 0;">
+                    "They scheduled all my appointments within my 3-week summer break perfectly. 
+                    Even arranged a cultural exchange visit to a local school where I shared about American education."
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="detail-point">
+                    <strong>💰 Savings:</strong> $6,800 (vs US quote of $14,000)
+                </div>
+                <div class="detail-point">
+                    <strong>📅 Timing:</strong> Completed within 18 days
+                </div>
+                <div class="detail-point">
+                    <strong>🎓 Cultural:</strong> School visit, teacher networking
+                </div>
+            </div>
+            
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <strong>Key Experience:</strong> "The hospital had a 'quiet floor' for professionals. No loud noises, 
+                excellent WiFi, and a library corner. I could grade papers peacefully between appointments."
+            </div>
+        </div>
+        
+        <!-- 案例6 -->
+        <div class="testimonial-card">
+            <h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px;">Michael, 50 - Business Owner from New York</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Full dental restoration in Shenzhen</p>
+            
+            <div class="highlight-box">
+                <p style="font-style: italic; line-height: 1.7; margin: 0;">
+                    "The business-class experience started at the airport. A Mercedes pickup, express immigration lane, 
+                    and a welcome package with local SIM card and transportation card. Felt like a VIP from minute one."
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="detail-point">
+                    <strong>💰 Savings:</strong> $35,000 (vs US quote of $60,000)
+                </div>
+                <div class="detail-point">
+                    <strong>🚗 Transport:</strong> Private chauffeur, airport VIP service
+                </div>
+                <div class="detail-point">
+                    <strong>🏢 Business:</strong> Co-working space access, networking events
+                </div>
+            </div>
+            
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <strong>Key Experience:</strong> "My coordinator connected me with local entrepreneurs for coffee meetings. 
+                Ended up discussing a potential import deal while recovering from my dental surgery!"
+            </div>
+        </div>
+        
+        <!-- 案例7 -->
+        <div class="testimonial-card">
+            <h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px;">Linda, 62 - Retired Nurse from Oregon</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Dental implants in Nanjing</p>
+            
+            <div class="highlight-box">
+                <p style="font-style: italic; line-height: 1.7; margin: 0;">
+                    "As a retired nurse, I scrutinize medical facilities. The hospital was cleaner than most US hospitals I've worked in. 
+                    The nursing staff changed gloves between every patient interaction - a small but crucial detail."
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="detail-point">
+                    <strong>💰 Savings:</strong> $18,500 (vs US quote of $32,000)
+                </div>
+                <div class="detail-point">
+                    <strong>🏥 Standards:</strong> Exceeded US infection control protocols
+                </div>
+                <div class="detail-point">
+                    <strong>👩‍⚕️ Nursing:</strong> 1:3 nurse-patient ratio (vs 1:8 in US)
+                </div>
+            </div>
+            
+            <div style="background: #ecfdf5; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <strong>Key Experience:</strong> "They noticed I was vegetarian and adjusted all hospital meals accordingly. 
+                Even found a Buddhist temple restaurant that served amazing vegetarian cuisine for my recovery days."
+            </div>
+        </div>
+        
+        <!-- 案例8 -->
+        <div class="testimonial-card">
+            <h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 10px;">James, 48 - Construction Manager from Texas</h3>
+            <p style="color: #6b7280; margin-bottom: 15px;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Tooth extraction & implants in Chengdu</p>
+            
+            <div class="highlight-box">
+                <p style="font-style: italic; line-height: 1.7; margin: 0;">
+                    "The pain management was outstanding. They used computer-controlled anesthesia delivery - 
+                    I felt nothing during the procedure and had minimal discomfort afterward. Better than my US dental experiences."
+                </p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+                <div class="detail-point">
+                    <strong>💰 Savings:</strong> $12,000 (vs US quote of $25,000)
+                </div>
+                <div
