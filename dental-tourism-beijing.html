@@ -154,20 +154,16 @@
             }
             
             /* 底部信息栏手机端优化 */
-            .main-footer .container > div[style*="display: grid"] {
+            .footer-grid {
                 grid-template-columns: 1fr !important;
                 gap: 30px !important;
             }
             
-            .main-footer .container > div[style*="display: grid"] > div {
+            .footer-grid > div {
                 text-align: center;
             }
             
-            .main-footer .container > div[style*="display: grid"] > div:first-child {
-                text-align: center;
-            }
-            
-            .main-footer .container > div[style*="display: grid"] > div:first-child > div[style*="display: flex"] {
+            .footer-grid > div:first-child > div[style*="display: flex"] {
                 justify-content: center;
             }
             
@@ -260,7 +256,8 @@
             <a href="contact.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Contact</a>
             <a href="https://wa.me/+12133179751" style="display: block; background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 16px; border-radius: 6px; text-align: center; margin-top: 15px; text-decoration: none; font-weight: 600;">Free Consultation</a>
         </div>
-    </nav><!-- 响应式导航 -->
+    </nav>
+    <!-- 响应式导航 -->
 
     <!-- Hero（与服务页面完全一致） -->
     <section class="hero-section">
@@ -272,7 +269,7 @@
         </div>
     </section>
 
-    <main class="container" style="padding: 40px 20px; padding: 40px 20px;">
+    <main class="container" style="padding: 40px 20px;">
 
         <!-- 北京优势 - 横向布局（与服务页面完全一致） -->
         <section id="advantages">
@@ -280,7 +277,7 @@
 
             <div class="horizontal-cards">
                 <!-- 医疗设施 -->
-                <div class="city-card" style="margin-bottom: 30px; border-top-color: #dc2626;">
+                <div class="service-card" style="margin-bottom: 30px; border-top-color: #dc2626;">
                     <div style="font-size: 48px; margin-bottom: 20px;">🏥</div>
                     <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Top Medical Facilities</h3>
                     <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
@@ -295,7 +292,7 @@
                 </div>
 
                 <!-- 医生团队 -->
-                <div class="city-card" style="margin-bottom: 30px; border-top-color: #3b82f6;">
+                <div class="service-card" style="margin-bottom: 30px; border-top-color: #3b82f6;">
                     <div style="font-size: 48px; margin-bottom: 20px;">👨‍⚕️</div>
                     <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Industry-experienced dental specialists</h3>
                     <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
@@ -310,7 +307,7 @@
                 </div>
 
                 <!-- 文化体验 -->
-                <div class="city-card" style="margin-bottom: 30px; border-top-color: #10b981;">
+                <div class="service-card" style="margin-bottom: 30px; border-top-color: #10b981;">
                     <div style="font-size: 48px; margin-bottom: 20px;">🏛️</div>
                     <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Cultural Experience</h3>
                     <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
@@ -331,7 +328,7 @@
             <h2 class="section-title">Beijing Hospitals</h2>
 
             <div class="horizontal-cards">
-                <div class="city-card" style="margin-bottom: 30px;">
+                <div class="service-card" style="margin-bottom: 30px;">
                     <div style="font-size: 36px; color: #dc2626; margin-bottom: 20px;">⭐</div>
                     <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 15px; color: #2d3748;">Beijing United Hospital</h3>
                     <p style="color: #4a5568; line-height: 1.6;">
@@ -339,7 +336,7 @@
                     </p>
                 </div>
 
-                <div class="city-card" style="margin-bottom: 30px;">
+                <div class="service-card" style="margin-bottom: 30px;">
                     <div style="font-size: 36px; color: #3b82f6; margin-bottom: 20px;">⭐</div>
                     <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 15px; color: #2d3748;">Peking University Hospital</h3>
                     <p style="color: #4a5568; line-height: 1.6;">
@@ -347,7 +344,7 @@
                     </p>
                 </div>
 
-                <div class="city-card" style="margin-bottom: 30px;">
+                <div class="service-card" style="margin-bottom: 30px;">
                     <div style="font-size: 36px; color: #10b981; margin-bottom: 20px;">⭐</div>
                     <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 15px; color: #2d3748;">Capital Medical University</h3>
                     <p style="color: #4a5568; line-height: 1.6;">
@@ -401,7 +398,7 @@
     <!-- 标准底部信息栏（只有一个） -->
     <footer class="main-footer">
         <div class="container" style="max-width: 100%; box-sizing: border-box;">
-            <div style="display: grid;" class="footer-grid" ; gap: 40px;">
+            <div style="display: grid; gap: 40px;" class="footer-grid">
                 <div>
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 32px; color: white; margin-right: 10px;">🏥</div>
