@@ -171,7 +171,11 @@
             }
             
             .main-nav .container > div:last-child {
+        @media (max-width: 768px) {
+            .main-nav .container > div:last-child {
                 display: none !important;
+            }
+        }
             }
             
             .mobile-menu {
@@ -195,7 +199,11 @@
                 
                 /* 隐藏桌面导航 */
                 .main-nav .container > div:last-child {
-                    display: none !important;
+        @media (max-width: 768px) {
+            .main-nav .container > div:last-child {
+                display: none !important;
+            }
+        }
                 }
                 
                 /* 显示汉堡按钮 */
@@ -280,7 +288,11 @@
             }
             
             .main-nav .container > div:last-child {
+        @media (max-width: 768px) {
+            .main-nav .container > div:last-child {
                 display: none !important;
+            }
+        }
             }
             
             .mobile-menu {
@@ -302,7 +314,11 @@
             }
             
             .main-nav .container > div:last-child {
+        @media (max-width: 768px) {
+            .main-nav .container > div:last-child {
                 display: none !important;
+            }
+        }
             }
             
             .mobile-menu-toggle {
@@ -343,6 +359,31 @@
             color: #6b7280;
         }
 
+    
+        /* 确保桌面版导航显示 */
+        @media (min-width: 769px) {
+            .main-nav .container > div:last-child {
+                display: flex !important;
+                align-items: center;
+                gap: 30px;
+            }
+        }
+    
+        /* 调试样式 - 便于检查 */
+        .main-nav {
+            background: rgba(255,0,0,0.1) !important;  /* 浅红色背景 */
+            border: 2px solid red !important;
+        }
+        .main-nav .container > div:last-child {
+            background: rgba(0,0,255,0.1) !important;  /* 浅蓝色背景 */
+            border: 2px solid blue !important;
+            padding: 5px !important;
+        }
+        .main-nav .container > div:last-child a {
+            background: rgba(0,255,0,0.1) !important;  /* 浅绿色背景 */
+            border: 1px solid green !important;
+            padding: 5px !important;
+        }
     </style>
 </head>
 
