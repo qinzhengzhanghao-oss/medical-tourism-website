@@ -20,11 +20,35 @@
         .btn-primary { background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
         .main-footer { background: #000000; color: white; padding: 60px 0; margin-top: 80px; }
         @media (max-width: 768px) {
-            /* 横版卡片在移动端改为竖版（参照首页） */
+            /* 仅手机版：横版改为竖版 */
             .horizontal-cards {
                 flex-direction: column !important;
                 gap: 30px !important;
             }
+            
+            .horizontal-cards > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            
+            /* 其他flex布局在手机端改为竖版 */
+            div[style*="display: flex"][style*="justify-content: space-between"] {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            
+            div[style*="display: flex"] > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            
+            /* 网格布局在手机端改为单列 */
+            div[style*="display: grid"]:not(.main-footer .container > div) {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            /* 横版卡片在移动端改为竖版（参照首页） */
+            
             
             .horizontal-cards > div {
                 width: 100% !important;
@@ -150,7 +174,29 @@
                 box-sizing: border-box !important;
             }
         }
-        </style>
+        
+        /* 桌面版布局（保持不变） */
+        @media (min-width: 769px) {
+            .horizontal-cards {
+                display: flex !important;
+                justify-content: space-between !important;
+                flex-direction: row !important;
+                gap: 20px !important;
+            }
+            
+            .horizontal-cards > div {
+                flex: 1 !important;
+                width: auto !important;
+                margin-bottom: 0 !important;
+            }
+            
+            /* 确保其他flex布局在桌面端是横版 */
+            div[style*="display: flex"][style*="justify-content: space-between"] {
+                flex-direction: row !important;
+                gap: 20px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- 紧急医疗通道（与服务页面完全一致） -->
