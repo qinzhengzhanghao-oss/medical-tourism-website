@@ -96,7 +96,7 @@
             }
             
             /* 网格布局在手机端改为单列 */
-            div[style*="display: grid"]:not(.main-footer .container > div) {
+            div[style*="display: grid"]:not(.footer-grid) {
                 grid-template-columns: 1fr !important;
                 gap: 30px !important;
             }
@@ -194,20 +194,16 @@
         } }
     
         /* 响应式底部信息栏 */
-        @media (min-width: 768px) {
-            .main-footer .container > div {
-                grid-template-columns: repeat(4, 1fr) !important;
-                gap: 40px !important;
-            }
+        
         }
         
-        @media (max-width: 767px) {
-            .main-footer .container > div {
-                grid-template-columns: repeat(1, 1fr) !important;
-                gap: 30px !important;
-            }
+        
             
             .main-footer {
+    margin-top: 80px;
+    padding: 60px 0;
+    color: white;
+    background: #000000;
                 padding: 40px 0 !important;
             }
             
@@ -218,6 +214,10 @@
             
             /* 确保不超出屏幕 */
             .main-footer {
+    margin-top: 80px;
+    padding: 60px 0;
+    color: white;
+    background: #000000;
                 max-width: 100vw !important;
                 overflow-x: hidden !important;
             }
@@ -265,6 +265,48 @@
             
             .city-card {
                 padding: 30px !important;
+            }
+        }
+    
+        /* 底部信息栏专用布局 */
+        .footer-grid {
+            display: grid;
+            gap: 40px;
+        }
+        
+        /* 桌面版：4列横版 */
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+        }
+        
+        /* 手机版：单列竖版 */
+        @media (max-width: 767px) {
+            .footer-grid {
+                grid-template-columns: repeat(1, 1fr) !important;
+                gap: 30px !important;
+            }
+            
+            .main-footer {
+    margin-top: 80px;
+    padding: 60px 0;
+    color: white;
+    background: #000000;
+                padding: 40px 0 !important;
+            }
+            
+            .main-footer .container {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            
+            .footer-grid > div {
+                text-align: center;
+            }
+            
+            .footer-grid > div:first-child > div[style*="display: flex"] {
+                justify-content: center;
             }
         }
     </style>
@@ -452,7 +494,7 @@
     <!-- 标准底部信息栏（只有一个） -->
     <footer class="main-footer">
         <div class="container" style="max-width: 100%; box-sizing: border-box;">
-            <div style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 40px;">
+            <div style="display: grid;" class="footer-grid" ; gap: 40px;">
                 <div>
                     <div style="display: flex; align-items: center; margin-bottom: 20px;">
                         <div style="font-size: 32px; color: white; margin-right: 10px;">🏥</div>
