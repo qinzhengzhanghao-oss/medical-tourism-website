@@ -23,12 +23,97 @@
         .city-card { flex: 1; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid #3b82f6; }
         .btn-primary { background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
         .main-footer { background: #000000; color: white; padding: 60px 0; margin-top: 80px; }
+        
+        /* 移动端响应式（完全参照首页） */
         @media (max-width: 768px) {
-            /* 确保所有.horizontal-cards在移动端改为竖版 */
+            /* 导航栏手机端优化 */
+            .main-nav .container {
+                flex-wrap: wrap;
+            }
+            
+            .main-nav .container > div:last-child {
+                display: none; /* 隐藏桌面导航，显示汉堡菜单 */
+            }
+            
+            .mobile-menu-toggle {
+                display: block !important;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #374151;
+                cursor: pointer;
+            }
+            
+            .mobile-menu {
+                display: none;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                margin-top: 10px;
+                border-radius: 8px;
+            }
+            
+            .mobile-menu.active {
+                display: block;
+            }
+            
+            .mobile-menu a {
+                display: block;
+                padding: 12px 0;
+                color: #374151;
+                text-decoration: none;
+                font-weight: 500;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            
+            .mobile-menu a:last-child {
+                border-bottom: none;
+            }
+            
+            /* 横版布局改为竖版（参照首页的.pricing-horizontal等） */
             .horizontal-cards {
                 flex-direction: column !important;
                 gap: 30px !important;
             }
+            
+            .horizontal-cards > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            
+            /* 其他flex横版布局 */
+            div[style*="display: flex"][style*="justify-content: space-between"] {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            
+            div[style*="display: flex"] > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            
+            /* 网格布局 */
+            div[style*="display: grid"]:not(.footer-grid) {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            
+            /* 通用优化 */
+            .container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+            
+            h1, h2, h3 {
+                text-align: center !important;
+            }
+            
+            p, li {
+                font-size: 14px !important;
+                line-height: 1.6 !important;
+            }
+        }
             
             .horizontal-cards > div {
                 width: 100% !important;
@@ -39,12 +124,97 @@
                 padding: 20px !important;
                 margin-bottom: 30px !important;
             }
-@media (max-width: 768px) {
-            /* 确保所有.horizontal-cards在移动端改为竖版 */
+
+        /* 移动端响应式（完全参照首页） */
+        @media (max-width: 768px) {
+            /* 导航栏手机端优化 */
+            .main-nav .container {
+                flex-wrap: wrap;
+            }
+            
+            .main-nav .container > div:last-child {
+                display: none; /* 隐藏桌面导航，显示汉堡菜单 */
+            }
+            
+            .mobile-menu-toggle {
+                display: block !important;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #374151;
+                cursor: pointer;
+            }
+            
+            .mobile-menu {
+                display: none;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                margin-top: 10px;
+                border-radius: 8px;
+            }
+            
+            .mobile-menu.active {
+                display: block;
+            }
+            
+            .mobile-menu a {
+                display: block;
+                padding: 12px 0;
+                color: #374151;
+                text-decoration: none;
+                font-weight: 500;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            
+            .mobile-menu a:last-child {
+                border-bottom: none;
+            }
+            
+            /* 横版布局改为竖版（参照首页的.pricing-horizontal等） */
             .horizontal-cards {
                 flex-direction: column !important;
                 gap: 30px !important;
             }
+            
+            .horizontal-cards > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            
+            /* 其他flex横版布局 */
+            div[style*="display: flex"][style*="justify-content: space-between"] {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            
+            div[style*="display: flex"] > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            
+            /* 网格布局 */
+            div[style*="display: grid"]:not(.footer-grid) {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            
+            /* 通用优化 */
+            .container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+            
+            h1, h2, h3 {
+                text-align: center !important;
+            }
+            
+            p, li {
+                font-size: 14px !important;
+                line-height: 1.6 !important;
+            }
+        }
             
             .horizontal-cards > div {
                 width: 100% !important;
@@ -323,18 +493,11 @@
         }
         
         /* 桌面版：4列横版 */
-        @media (min-width: 768px) {
-            .footer-grid {
-                grid-template-columns: repeat(4, 1fr) !important;
-            }
+        
         }
         
         /* 手机版：单列竖版 */
-        @media (max-width: 767px) {
-            .footer-grid {
-                grid-template-columns: repeat(1, 1fr) !important;
-                gap: 30px !important;
-            }
+        
             
             .main-footer {
     margin-top: 80px;
@@ -359,14 +522,97 @@
         }
     
         /* 移动端强制优化 */
+        
+        /* 移动端响应式（完全参照首页） */
         @media (max-width: 768px) {
-            /* 确保所有卡片在移动端全宽度 */
-            .city-card, .service-card, .feature-card {
-                width: 100% !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                margin-bottom: 30px !important;
+            /* 导航栏手机端优化 */
+            .main-nav .container {
+                flex-wrap: wrap;
             }
+            
+            .main-nav .container > div:last-child {
+                display: none; /* 隐藏桌面导航，显示汉堡菜单 */
+            }
+            
+            .mobile-menu-toggle {
+                display: block !important;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #374151;
+                cursor: pointer;
+            }
+            
+            .mobile-menu {
+                display: none;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                margin-top: 10px;
+                border-radius: 8px;
+            }
+            
+            .mobile-menu.active {
+                display: block;
+            }
+            
+            .mobile-menu a {
+                display: block;
+                padding: 12px 0;
+                color: #374151;
+                text-decoration: none;
+                font-weight: 500;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            
+            .mobile-menu a:last-child {
+                border-bottom: none;
+            }
+            
+            /* 横版布局改为竖版（参照首页的.pricing-horizontal等） */
+            .horizontal-cards {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            
+            .horizontal-cards > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            
+            /* 其他flex横版布局 */
+            div[style*="display: flex"][style*="justify-content: space-between"] {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            
+            div[style*="display: flex"] > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            
+            /* 网格布局 */
+            div[style*="display: grid"]:not(.footer-grid) {
+                grid-template-columns: 1fr !important;
+                gap: 30px !important;
+            }
+            
+            /* 通用优化 */
+            .container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+            
+            h1, h2, h3 {
+                text-align: center !important;
+            }
+            
+            p, li {
+                font-size: 14px !important;
+                line-height: 1.6 !important;
+            }
+        }
             
             /* 确保图片在移动端适配 */
             img {
@@ -401,6 +647,34 @@
                 margin: 10px 0 !important;
             }
         }
+    
+        /* 底部信息栏（首页风格） */
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .footer-grid {
+                grid-template-columns: repeat(1, 1fr) !important;
+                gap: 30px !important;
+            }
+        }
+    
+        /* 桌面版保护 */
+        @media (min-width: 769px) {
+            .horizontal-cards {
+                flex-direction: row !important;
+                gap: 20px !important;
+            }
+            
+            .horizontal-cards > div {
+                flex: 1 !important;
+                width: auto !important;
+                margin-bottom: 0 !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -411,41 +685,41 @@
     
     <!-- 统一响应式导航栏 -->
     <!-- 严格参照首页的导航栏 -->
-    <nav class="main-nav">
-        <div class="container" style="max-width: 100%; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
-            
-            <div style="display: flex; align-items: center;">
-                <div style="font-size: 24px; color: #1e40af; margin-right: 10px;">🏥</div>
-                <div>
-                    <div style="font-weight: 700; font-size: 20px; color: #1e40af;">ChinaMedTour</div>
-                    <div style="font-size: 12px; color: #6b7280;">Medical Tourism</div>
+    
+        <!-- 导航栏（首页风格） -->
+        <nav class="main-nav">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
+                
+                <div style="display: flex; align-items: center;">
+                    <div style="font-size: 24px; color: #1e40af; margin-right: 10px;">🏥</div>
+                    <div>
+                        <div style="font-weight: 700; font-size: 20px; color: #1e40af;">ChinaMedTour</div>
+                        <div style="font-size: 12px; color: #6b7280;">Medical Tourism</div>
+                    </div>
                 </div>
+                
+                <!-- 桌面导航 -->
+                <div style="display: flex; align-items: center; gap: 30px;">
+                    <a href="index.html" style="color: #374151; text-decoration: none; font-weight: 500;">Home</a>
+                    <a href="services.html" style="color: #374151; text-decoration: none; font-weight: 500;">Services</a>
+                    <a href="dental-tourism-shanghai.html" style="color: #dc2626; text-decoration: none; font-weight: 600;">Shanghai</a>
+                    <a href="contact.html" style="color: #374151; text-decoration: none; font-weight: 500;">Contact</a>
+                </div>
+                
+                <!-- 汉堡菜单按钮 -->
+                <button class="mobile-menu-toggle" style="display: none; background: none; border: none; font-size: 24px; color: #374151; cursor: pointer;">
+                    ☰
+                </button>
             </div>
             
-            
-            <div style="display: flex; align-items: center; gap: 30px;">
-                <a href="index.html" style="color: #374151; text-decoration: none; font-weight: 500;">Home</a>
-                <a href="services.html" style="color: #374151; text-decoration: none; font-weight: 500;">Services</a>
-                <a href="dental-tourism-shanghai.html" style="color: #dc2626; text-decoration: none; font-weight: 600;">Shanghai</a>
-                <a href="contact.html" style="color: #374151; text-decoration: none; font-weight: 500;">Contact</a>
-                <a href="https://wa.me/+12133179751" class="btn-primary" style="padding: 10px 20px; font-size: 14px;">Shanghai Inquiry</a>
+            <!-- 移动菜单 -->
+            <div class="mobile-menu" style="display: none; width: 100%; background: white; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 10px; border-radius: 8px;">
+                <a href="index.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Home</a>
+                <a href="services.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Services</a>
+                <a href="dental-tourism-shanghai.html" style="display: block; padding: 12px 0; color: #dc2626; text-decoration: none; font-weight: 600; border-bottom: 1px solid #e5e7eb;">Shanghai</a>
+                <a href="contact.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Contact</a>
             </div>
-            
-            <!-- 汉堡菜单按钮（移动端显示） -->
-            <button class="mobile-menu-toggle" style="display: none; background: none; border: none; font-size: 24px; color: #374151; cursor: pointer;">
-                ☰
-            </button>
-        </div>
-        
-        <!-- 移动端菜单（默认隐藏） -->
-        <div class="mobile-menu" style="display: none; width: 100%; background: white; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 10px; border-radius: 8px;">
-            <a href="index.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Home</a>
-            <a href="services.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Services</a>
-            <a href="dental-tourism-shanghai.html" style="display: block; padding: 12px 0; color: #dc2626; text-decoration: none; font-weight: 600; border-bottom: 1px solid #e5e7eb;">Shanghai</a>
-            <a href="contact.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Contact</a>
-            <a href="https://wa.me/+12133179751" style="display: block; padding: 12px 0; color: #1e40af; text-decoration: none; font-weight: 600;">WhatsApp Inquiry</a>
-        </div>
-    </nav><!-- 响应式导航 -->
+        </nav><!-- 响应式导航 -->
     
     
     <!-- Hero（与服务页面完全一致） -->
@@ -629,3 +903,25 @@
                         <div style="margin-bottom: 10px;">
                             <strong>Email:</strong><br>
                             <a href="mailto:qinzhengzhanghao@gmail.com" style="color: #cbd5e0; text-decoration:
+<script>
+        // 汉堡菜单交互（首页版本）
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                });
+                
+                // 点击菜单项后关闭菜单
+                const menuLinks = mobileMenu.querySelectorAll('a');
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
