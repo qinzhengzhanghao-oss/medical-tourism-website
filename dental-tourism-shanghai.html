@@ -390,6 +390,84 @@
                 border-bottom: none;
             }
         }
+    
+        /* 桌面版导航显示 */
+        @media (min-width: 769px) {
+            .main-nav .container > div:last-child {
+                display: flex !important;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            .mobile-menu-toggle {
+                display: none !important;
+            }
+            
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+    
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            /* 显示汉堡按钮 */
+            .mobile-menu-toggle {
+                display: block !important;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #374151;
+                cursor: pointer;
+                z-index: 1002;
+            }
+            
+            /* 隐藏桌面导航 */
+            .main-nav .container > div:last-child {
+                display: none !important;
+            }
+            
+            /* 移动菜单样式 */
+            .mobile-menu {
+                display: none;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                margin-top: 10px;
+                border-radius: 8px;
+            }
+            
+            .mobile-menu.active {
+                display: block !important;
+            }
+            
+            .mobile-menu a {
+                display: block;
+                padding: 12px 0;
+                color: #374151;
+                text-decoration: none;
+                font-weight: 500;
+                border-bottom: 1px solid #e5e7eb;
+            }
+            
+            .mobile-menu a:last-child {
+                border-bottom: none;
+            }
+            
+            /* 内容竖排单列 */
+            .horizontal-cards {
+                flex-direction: column !important;
+            }
+            
+            .city-card {
+                width: 100% !important;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -621,72 +699,7 @@
 
 
 
-<script>
-    // 简单可靠的汉堡菜单交互
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('页面加载完成，初始化汉堡菜单');
-        
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        console.log('找到按钮:', menuToggle);
-        console.log('找到菜单:', mobileMenu);
-        
-        if (!menuToggle || !mobileMenu) {
-            console.error('错误: 找不到汉堡按钮或移动菜单');
-            return;
-        }
-        
-        // 简单的点击切换
-        menuToggle.addEventListener('click', function(event) {
-            console.log('汉堡按钮被点击');
-            event.preventDefault();
-            event.stopPropagation();
-            
-            // 切换菜单显示
-            if (mobileMenu.style.display === 'block') {
-                mobileMenu.style.display = 'none';
-                mobileMenu.classList.remove('active');
-            } else {
-                mobileMenu.style.display = 'block';
-                mobileMenu.classList.add('active');
-            }
-            
-            console.log('菜单状态:', mobileMenu.style.display);
-        });
-        
-        // 点击菜单项关闭
-        const menuLinks = mobileMenu.querySelectorAll('a');
-        menuLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
-                console.log('菜单项被点击，关闭菜单');
-                mobileMenu.style.display = 'none';
-                mobileMenu.classList.remove('active');
-            });
-        });
-        
-        // 点击页面其他区域关闭菜单
-        document.addEventListener('click', function(event) {
-            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-                mobileMenu.style.display = 'none';
-                mobileMenu.classList.remove('active');
-            }
-        });
-        
-        // 响应式：窗口大小变化时重置
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                mobileMenu.style.display = 'none';
-                mobileMenu.classList.remove('active');
-            }
-        });
-        
-        console.log('汉堡菜单初始化完成');
-    });
-    
-    // 调试：在控制台显示菜单状态
-    console.log('汉堡菜单脚本已加载');
-</script>
+
 
     <!-- 调试信息（页面加载时显示） -->
     <div id="debug-info" style="position: fixed; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; font-size: 12px; z-index: 9999; display: none;">
@@ -695,21 +708,55 @@
         <button onclick="document.getElementById('debug-info').style.display='none'" style="background: #666; color: white; border: none; padding: 2px 5px; margin-top: 5px; cursor: pointer;">隐藏</button>
     </div>
     
-    <script>
-        // 更新调试信息
-        function updateDebugInfo() {
-            const menu = document.querySelector('.mobile-menu');
-            const status = menu ? (menu.style.display === 'block' ? '显示' : '隐藏') : '未找到';
-            document.getElementById('menu-status').textContent = status;
-            document.getElementById('screen-width').textContent = window.innerWidth;
-        }
+    
+
+<script>
+    // 简单可靠的汉堡菜单
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
         
-        // 初始显示调试信息
-        setTimeout(function() {
-            document.getElementById('debug-info').style.display = 'block';
-            updateDebugInfo();
-            setInterval(updateDebugInfo, 1000);
-        }, 1000);
+        if (menuToggle && mobileMenu) {
+            // 点击切换菜单
+            menuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (mobileMenu.style.display === 'block' || mobileMenu.classList.contains('active')) {
+                    mobileMenu.style.display = 'none';
+                    mobileMenu.classList.remove('active');
+                } else {
+                    mobileMenu.style.display = 'block';
+                    mobileMenu.classList.add('active');
+                }
+            });
+            
+            // 点击菜单项关闭
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.style.display = 'none';
+                    mobileMenu.classList.remove('active');
+                });
+            });
+            
+            // 点击页面其他区域关闭
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    mobileMenu.style.display = 'none';
+                    mobileMenu.classList.remove('active');
+                }
+            });
+            
+            // 窗口大小变化时重置
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    mobileMenu.style.display = 'none';
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
+    });
     </script>
 </body>
 </html>
