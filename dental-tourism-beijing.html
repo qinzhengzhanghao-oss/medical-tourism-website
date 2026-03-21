@@ -24,10 +24,58 @@
         .btn-primary { background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
         .main-footer { background: #000000; color: white; padding: 60px 0; margin-top: 80px; }
         @media (max-width: 768px) {
+            /* 确保所有.horizontal-cards在移动端改为竖版 */
+            .horizontal-cards {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            
+            .horizontal-cards > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
             /* 城市卡片在移动端优化 */
             .city-card {
                 padding: 20px !important;
                 margin-bottom: 30px !important;
+            }
+@media (max-width: 768px) {
+            /* 确保所有.horizontal-cards在移动端改为竖版 */
+            .horizontal-cards {
+                flex-direction: column !important;
+                gap: 30px !important;
+            }
+            
+            .horizontal-cards > div {
+                width: 100% !important;
+                margin-bottom: 20px !important;
+            }
+            /* 导航栏手机端优化 */
+            .main-nav .container {
+                flex-wrap: wrap;
+            }
+            
+            .main-nav .container > div:last-child {
+                display: none; /* 隐藏桌面导航，显示汉堡菜单 */
+            }
+            
+            .mobile-menu-toggle {
+                display: block !important;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #374151;
+                cursor: pointer;
+            }
+            
+            .mobile-menu {
+                display: none;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                margin-top: 10px;
+                border-radius: 8px;
             }
             
             .city-card h3 {
@@ -307,6 +355,50 @@
             
             .footer-grid > div:first-child > div[style*="display: flex"] {
                 justify-content: center;
+            }
+        }
+    
+        /* 移动端强制优化 */
+        @media (max-width: 768px) {
+            /* 确保所有卡片在移动端全宽度 */
+            .city-card, .service-card, .feature-card {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-bottom: 30px !important;
+            }
+            
+            /* 确保图片在移动端适配 */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            
+            /* 确保表格在移动端可滚动 */
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            /* 优化文字显示 */
+            h1, h2, h3, h4 {
+                text-align: center !important;
+                word-wrap: break-word;
+            }
+            
+            p, li {
+                font-size: 14px !important;
+                line-height: 1.6 !important;
+                text-align: justify !important;
+            }
+            
+            /* 按钮优化 */
+            .btn-primary, .btn-secondary, button[type="submit"], input[type="submit"] {
+                width: 100% !important;
+                padding: 12px 24px !important;
+                font-size: 16px !important;
+                margin: 10px 0 !important;
             }
         }
     </style>
