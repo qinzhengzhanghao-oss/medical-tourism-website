@@ -64,7 +64,7 @@
             }
             
             .mobile-menu.active {
-                display: block !important;
+                display: block;
             }
             
             .mobile-menu a {
@@ -151,15 +151,15 @@
             
             
             .mobile-menu-toggle {
-                display: none;
+                display: block !important;
+                position: absolute;
+                right: 20px;
+                top: 15px;
                 background: none;
                 border: none;
                 font-size: 24px;
                 color: #374151;
                 cursor: pointer;
-                position: absolute;
-                right: 20px;
-                top: 15px;
                 z-index: 1002;
             }
             
@@ -179,7 +179,7 @@
             }
             
             .mobile-menu.active {
-                display: block !important;
+                display: block;
             }
         }
                 .main-nav .container {
@@ -195,15 +195,15 @@
                 
                 /* 显示汉堡按钮 */
 .mobile-menu-toggle {
-                display: none;
+                display: block !important;
+                position: absolute;
+                right: 20px;
+                top: 15px;
                 background: none;
                 border: none;
                 font-size: 24px;
                 color: #374151;
                 cursor: pointer;
-                position: absolute;
-                right: 20px;
-                top: 15px;
                 z-index: 1002;
             }
                 
@@ -219,7 +219,7 @@
             }
                 
                 .mobile-menu.active {
-                display: block !important;
+                display: block;
             }
                 
                 .mobile-menu a {
@@ -253,15 +253,15 @@
 
             
             .mobile-menu-toggle {
-                display: none;
+                display: block !important;
+                position: absolute;
+                right: 20px;
+                top: 15px;
                 background: none;
                 border: none;
                 font-size: 24px;
                 color: #374151;
                 cursor: pointer;
-                position: absolute;
-                right: 20px;
-                top: 15px;
                 z-index: 1002;
             }
             
@@ -281,7 +281,7 @@
             }
             
             .mobile-menu.active {
-                display: block !important;
+                display: block;
             }
         }
             .main-nav .container {
@@ -294,15 +294,15 @@
             }
             
             .mobile-menu-toggle {
-                display: none;
+                display: block !important;
+                position: absolute;
+                right: 20px;
+                top: 15px;
                 background: none;
                 border: none;
                 font-size: 24px;
                 color: #374151;
                 cursor: pointer;
-                position: absolute;
-                right: 20px;
-                top: 15px;
                 z-index: 1002;
             }
         }
@@ -369,6 +369,15 @@
             /* 显示汉堡按钮 */
             .mobile-menu-toggle {
                 display: block !important;
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #374151;
+                cursor: pointer;
+                z-index: 1002;
             }
             
             /* 隐藏桌面导航 */
@@ -400,11 +409,26 @@
             }
             
             .mobile-menu-toggle {
-                display: none !important;
+                display: block !important;
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: #374151;
+                cursor: pointer;
+                z-index: 1002;
             }
             
             .mobile-menu {
-                display: none !important;
+                display: none;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                margin-top: 10px;
+                border-radius: 8px;
             }
         }
     
@@ -414,9 +438,8 @@
             .mobile-menu-toggle {
                 display: block !important;
                 position: absolute;
-                right: 15px;
-                top: 50%;
-                transform: translateY(-50%);
+                right: 20px;
+                top: 15px;
                 background: none;
                 border: none;
                 font-size: 24px;
@@ -442,7 +465,7 @@
             }
             
             .mobile-menu.active {
-                display: block !important;
+                display: block;
             }
             
             .mobile-menu a {
@@ -714,53 +737,21 @@
     
     
 
+
+
 <script>
-    // 简单可靠的汉堡菜单
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        if (menuToggle && mobileMenu) {
-            // 点击切换菜单
-            menuToggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                
-                if (mobileMenu.style.display === 'block' || mobileMenu.classList.contains('active')) {
-                    mobileMenu.style.display = 'none';
-                    mobileMenu.classList.remove('active');
-                } else {
-                    mobileMenu.style.display = 'block';
-                    mobileMenu.classList.add('active');
-                }
-            });
+    // 汉堡菜单控制
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const desktopNav = document.querySelector('.main-nav .container > div:last-child');
             
-            // 点击菜单项关闭
-            const menuLinks = mobileMenu.querySelectorAll('a');
-            menuLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    mobileMenu.style.display = 'none';
-                    mobileMenu.classList.remove('active');
-                });
-            });
-            
-            // 点击页面其他区域关闭
-            document.addEventListener('click', function(e) {
-                if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                    mobileMenu.style.display = 'none';
-                    mobileMenu.classList.remove('active');
-                }
-            });
-            
-            // 窗口大小变化时重置
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    mobileMenu.style.display = 'none';
-                    mobileMenu.classList.remove('active');
-                }
-            });
-        }
-    });
-    </script>
+            if (mobileMenuToggle && mobileMenu) {
+                function updateMenuVisibility() {
+                    if (window.innerWidth < 768) {
+                        mobileMenuToggle.style.display = 'block';
+                        if (desktopNav) desktopNav.style.display = 'none';
+                        mobileMenu.style.display = 'none';
+                    }
+        </script>
 </body>
 </html>
