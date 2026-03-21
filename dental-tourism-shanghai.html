@@ -491,6 +491,41 @@
                 margin-bottom: 20px;
             }
         }
+    
+        /* 紧急修复：汉堡按钮移动端显示 */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block !important;
+                position: absolute !important;
+                right: 20px !important;
+                top: 15px !important;
+                background: none !important;
+                border: none !important;
+                font-size: 24px !important;
+                color: #374151 !important;
+                cursor: pointer !important;
+                z-index: 1002 !important;
+            }
+            
+            /* 隐藏桌面导航 */
+            .main-nav .container > div:last-child {
+                display: none !important;
+            }
+        }
+        
+        /* 桌面端隐藏汉堡按钮 */
+        @media (min-width: 769px) {
+            .mobile-menu-toggle {
+                display: none !important;
+            }
+            
+            /* 显示桌面导航 */
+            .main-nav .container > div:last-child {
+                display: flex !important;
+                align-items: center;
+                gap: 30px;
+            }
+        }
     </style>
 </head>
 
@@ -735,19 +770,100 @@
 
 
 
+
+
 <script>
-    // 汉堡菜单控制
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const desktopNav = document.querySelector('.main-nav .container > div:last-child');
+    // 紧急修复：简单可靠的汉堡菜单
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('紧急修复：初始化汉堡菜单');
+        
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const desktopNav = document.querySelector('.main-nav .container > div:last-child');
+        
+        if (menuToggle && mobileMenu) {
+            console.log('找到汉堡按钮和菜单');
             
-            if (mobileMenuToggle && mobileMenu) {
-                function updateMenuVisibility() {
-                    if (window.innerWidth < 768) {
-                        mobileMenuToggle.style.display = 'block';
-                        if (desktopNav) desktopNav.style.display = 'none';
-                        mobileMenu.style.display = 'none';
-                    }
-        </script>
+            // 响应式显示控制
+            function updateDisplay() {
+                if (window.innerWidth <= 768) {
+                    console.log('移动端：显示汉堡按钮');
+                    menuToggle.style.display = 'block';
+                    if (desktopNav) desktopNav.style.display = 'none';
+                } else {
+                    console.log('桌面端：隐藏汉堡按钮');
+                    menuToggle.style.display = 'none';
+                    if (desktopNav) desktopNav.style.display = 'flex';
+                    mobileMenu.style.display = 'none';
+                }
+            }
+            
+            // 初始设置
+            updateDisplay();
+            
+            // 窗口大小变化
+            window.addEventListener('resize', updateDisplay);
+            
+            // 点击汉堡按钮
+            menuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('汉堡按钮被点击');
+                
+                if (mobileMenu.style.display === 'block') {
+                    mobileMenu.style.display = 'none';
+                } else {
+                    mobileMenu.style.display = 'block';
+                }
+            });
+            
+            // 点击菜单项关闭
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.style.display = 'none';
+                });
+            });
+            
+            // 点击页面其他区域关闭
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    mobileMenu.style.display = 'none';
+                }
+            });
+        } else {
+            console.error('紧急修复：找不到汉堡按钮或菜单', {menuToggle, mobileMenu});
+        }
+    });
+    </script>
+
+    <!-- 紧急修复调试信息 -->
+    <div style="position: fixed; bottom: 10px; right: 10px; background: red; color: white; padding: 10px; border-radius: 5px; font-size: 12px; z-index: 9999;">
+        <div>紧急修复版本: 2026-03-22 02:35</div>
+        <div>页面: Shanghai</div>
+        <div id="debug-width">宽度: 加载中...</div>
+        <div id="debug-hamburger">汉堡按钮: 检查中...</div>
+        <div id="debug-logo">Logo: 检查中...</div>
+    </div>
+    
+    <script>
+        // 更新调试信息
+        function updateDebugInfo() {
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const logo = document.querySelector('.main-nav .container > div:first-child');
+            
+            document.getElementById('debug-width').textContent = '宽度: ' + window.innerWidth + 'px';
+            document.getElementById('debug-hamburger').textContent = '汉堡按钮: ' + (menuToggle ? '找到' : '未找到');
+            document.getElementById('debug-logo').textContent = 'Logo: ' + (logo ? '找到' : '未找到');
+            
+            if (menuToggle) {
+                document.getElementById('debug-hamburger').textContent += ' (显示: ' + menuToggle.style.display + ')';
+            }
+        }
+        
+        // 初始更新
+        setTimeout(updateDebugInfo, 1000);
+        setInterval(updateDebugInfo, 3000);
+    </script>
 </body>
 </html>
