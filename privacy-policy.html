@@ -24,43 +24,74 @@
     </script>
 </head>
 <body class="antialiased">
-    <!-- 紧急通道 -->
-    <div class="emergency-banner" style="background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 12px 0; text-align: center; font-weight: 600; font-size: 14px;">
-        🚨 Dental Emergency? Immediate Consultation: <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a>
-    </div>
-    
-    <!-- 导航栏 -->
-    <nav class="bg-white shadow-lg py-4 relative">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-heartbeat text-white"></i>
-                    </div>
-                    <div>
-                        <div class="font-bold text-xl text-gray-900">ChinaMedTour</div>
-                        <div class="text-sm text-gray-600">Premium Medical Tourism</div>
-                    </div>
+    <!-- 手机端导航开始 -->
+    <nav style="background: white; padding: 1rem; position: relative;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, #2563eb, #0d9488); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: white; font-size: 1.25rem;">❤️</span>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
-                    <a href="faq.html" class="text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
+                <div>
+                    <div style="font-weight: bold; font-size: 1.25rem; color: #1f2937;">ChinaMedTour</div>
+                    <div style="font-size: 0.875rem; color: #6b7280;">Medical Tourism</div>
                 </div>
+            </div>
+            <div style="display: none;">
+                <!-- 桌面导航（隐藏，由原页面提供） -->
             </div>
         </div>
         
-        <!-- 汉堡菜单按钮（手机端显示） -->
-        <button id="mobile-menu-toggle" class="md:hidden absolute right-4 top-4 bg-none border-none text-2xl text-gray-700 cursor-pointer z-50">☰</button>
+        <!-- 汉堡菜单按钮（只在手机端显示） -->
+        <button id="mobile-menu-toggle" style="display: none; position: absolute; right: 1rem; top: 1rem; background: none; border: none; font-size: 1.5rem; color: #374151; cursor: pointer; z-index: 50;">☰</button>
         
-        <!-- 移动菜单（手机端显示） -->
-        <div id="mobile-menu" class="hidden md:hidden w-full bg-white p-5 shadow-lg mt-3 rounded-lg">
-            <a href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/" class="block py-3 text-gray-700 font-medium border-b border-gray-200">Home</a>
-            <a href="services.html" class="block py-3 text-gray-700 font-medium border-b border-gray-200">Services</a>
-            <a href="faq.html" class="block py-3 text-blue-600 font-medium border-b border-gray-200">FAQ</a>
-            <a href="https://wa.me/+12133179751" class="block mt-4 bg-gradient-to-r from-green-500 to-teal-500 text-white py-3 px-4 rounded-lg text-center font-semibold">Free Consultation</a>
+        <!-- 移动菜单（只在手机端显示） -->
+        <div id="mobile-menu" style="display: none; width: 100%; background: white; padding: 1.25rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 0.75rem; border-radius: 0.5rem;">
+            <a href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/" style="display: block; padding: 0.75rem 0; color: #374151; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Home</a>
+            <a href="services.html" style="display: block; padding: 0.75rem 0; color: #374151; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Services</a>
+            <a href="faq.html" style="display: block; padding: 0.75rem 0; color: #3b82f6; font-weight: 500; border-bottom: 1px solid #e5e7eb;">FAQ</a>
+            <a href="https://wa.me/+12133179751" style="display: block; margin-top: 1rem; background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 0.75rem 1rem; border-radius: 0.5rem; text-align: center; font-weight: 600;">Free Consultation</a>
         </div>
     </nav>
+    <!-- 手机端导航结束 -->
+    
+    <!-- 最小化的JavaScript控制 -->
+    <script>
+    // 只在手机端激活导航
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileToggle && mobileMenu) {
+            // 响应式显示控制
+            function updateForMobile() {
+                if (window.innerWidth < 768) {
+                    // 手机端：显示汉堡菜单
+                    mobileToggle.style.display = 'block';
+                } else {
+                    // 电脑端：隐藏汉堡菜单
+                    mobileToggle.style.display = 'none';
+                    mobileMenu.style.display = 'none';
+                }
+            }
+            
+            // 点击汉堡菜单切换移动菜单
+            mobileToggle.addEventListener('click', function() {
+                mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+            });
+            
+            // 初始化和响应式更新
+            updateForMobile();
+            window.addEventListener('resize', updateForMobile);
+            
+            // 点击菜单外区域关闭菜单
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+                    mobileMenu.style.display = 'none';
+                }
+            });
+        }
+    });
+    </script>
 
     <!-- 紧急通道 -->
     <div class="emergency-banner" style="background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 12px 0; text-align: center; font-weight: 600; font-size: 14px;">
@@ -80,32 +111,5 @@
     
     <!-- JavaScript控制（来自faq.html模板） -->
     {template["js"]}
-
-    <!-- 手机端菜单控制 -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (mobileToggle && mobileMenu) {
-            mobileToggle.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // 响应式显示控制
-            function updateMobileMenu() {
-                if (window.innerWidth < 768) {
-                    mobileToggle.classList.remove('hidden');
-                } else {
-                    mobileToggle.classList.add('hidden');
-                    mobileMenu.classList.add('hidden');
-                }
-            }
-            
-            updateMobileMenu();
-            window.addEventListener('resize', updateMobileMenu);
-        }
-    });
-    </script>
 </body>
 </html>
