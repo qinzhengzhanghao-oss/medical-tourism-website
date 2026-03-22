@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -129,6 +130,70 @@ footer {
             </div>
         </div>
     </footer>
+
+    <script>
+    // 页面加载验证
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('=== 价格页面验证开始 ===');
+        console.log('页面标题:', document.title);
+        
+        // 检查Tailwind CSS
+        const tailwindLoaded = typeof tailwind !== 'undefined';
+        console.log('Tailwind CSS:', tailwindLoaded ? '✅ 已加载' : '❌ 未加载');
+        
+        // 检查移动端菜单
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        console.log('移动端菜单:', {
+            toggle: mobileToggle ? '✅ 存在' : '❌ 不存在',
+            menu: mobileMenu ? '✅ 存在' : '❌ 不存在'
+        });
+        
+        // 添加移动端功能
+        if (mobileToggle && mobileMenu) {
+            mobileToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // 响应式显示控制
+            function updateMobileMenu() {
+                if (window.innerWidth < 768) {
+                    mobileToggle.classList.remove('hidden');
+                } else {
+                    mobileToggle.classList.add('hidden');
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+            
+            updateMobileMenu();
+            window.addEventListener('resize', updateMobileMenu);
+        }
+        
+        // 检查主要内容
+        const mainElements = document.querySelectorAll('main, .container, [class*="content"]');
+        console.log(`主要内容区域: 找到${mainElements.length}个可能的内容容器`);
+        
+        mainElements.forEach((el, i) => {
+            if (el.textContent.trim().length > 50) {
+                console.log(`内容容器${i+1}:`, {
+                    tag: el.tagName,
+                    class: el.className,
+                    textPreview: el.textContent.substring(0, 100) + '...',
+                    visible: el.offsetWidth > 0 && el.offsetHeight > 0 ? '✅ 可见' : '❌ 不可见'
+                });
+            }
+        });
+        
+        console.log('=== 价格页面验证结束 ===');
+    });
+    
+    // 错误捕获
+    window.addEventListener('error', function(e) {
+        console.error('页面错误:', e.message);
+        console.error('文件:', e.filename);
+        console.error('行号:', e.lineno);
+    });
+    </script>
 </body>
-</html>
 </html>
