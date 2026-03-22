@@ -121,30 +121,42 @@ footer {
         </div>
     </nav>
     
-    <!-- 导航JavaScript（从index.html复制） -->
+    <!-- 导航JavaScript（修复下拉菜单） -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // 下拉菜单功能
-        const dropdowns = document.querySelectorAll("nav .main-nav > .container > div:last-child > div[style*='position: relative']");
+        console.log("导航JavaScript加载...");
         
-        dropdowns.forEach(dropdown => {
+        // 下拉菜单功能 - 修复选择器
+        const dropdowns = document.querySelectorAll(".main-nav .container > div:last-child > div[style*='position: relative']");
+        console.log("找到下拉菜单数量:", dropdowns.length);
+        
+        dropdowns.forEach((dropdown, index) => {
             const link = dropdown.querySelector("a");
             const menu = dropdown.querySelector("div[style*='position: absolute']");
             
+            console.log(`下拉菜单 ${index + 1}:`, link ? link.textContent : "无链接", menu ? "有菜单" : "无菜单");
+            
             if (link && menu) {
-                // 鼠标悬停显示下拉菜单
+                // 电脑端：鼠标悬停显示下拉菜单
                 dropdown.addEventListener("mouseenter", function() {
-                    menu.style.display = "block";
+                    if (window.innerWidth >= 768) {
+                        console.log("鼠标进入:", link.textContent);
+                        menu.style.display = "block";
+                    }
                 });
                 
                 dropdown.addEventListener("mouseleave", function() {
-                    menu.style.display = "none";
+                    if (window.innerWidth >= 768) {
+                        console.log("鼠标离开:", link.textContent);
+                        menu.style.display = "none";
+                    }
                 });
                 
-                // 点击链接时（手机端）切换下拉菜单
+                // 手机端：点击切换下拉菜单
                 link.addEventListener("click", function(e) {
                     if (window.innerWidth < 768) {
                         e.preventDefault();
+                        console.log("手机端点击:", link.textContent);
                         menu.style.display = menu.style.display === "block" ? "none" : "block";
                     }
                 });
@@ -156,23 +168,33 @@ footer {
         const mobileMenu = document.querySelector(".mobile-menu");
         const desktopNav = document.querySelector(".main-nav .container > div:last-child");
         
+        console.log("手机端元素:", {
+            toggle: !!mobileToggle,
+            menu: !!mobileMenu,
+            desktopNav: !!desktopNav
+        });
+        
         if (mobileToggle && mobileMenu && desktopNav) {
             // 响应式显示控制
             function updateNavigation() {
+                console.log("窗口宽度:", window.innerWidth);
                 if (window.innerWidth < 768) {
                     // 手机端：显示汉堡菜单，隐藏桌面导航
                     mobileToggle.style.display = "block";
                     desktopNav.style.display = "none";
+                    console.log("切换到手机端导航");
                 } else {
                     // 电脑端：显示桌面导航，隐藏汉堡菜单和移动菜单
                     mobileToggle.style.display = "none";
                     mobileMenu.style.display = "none";
                     desktopNav.style.display = "flex";
+                    console.log("切换到电脑端导航");
                 }
             }
             
             // 点击汉堡菜单切换移动菜单
             mobileToggle.addEventListener("click", function() {
+                console.log("点击汉堡菜单");
                 mobileMenu.style.display = mobileMenu.style.display === "block" ? "none" : "block";
             });
             
@@ -187,6 +209,8 @@ footer {
                 }
             });
         }
+        
+        console.log("导航JavaScript初始化完成");
     });
     </script>
 
