@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,88 +6,528 @@
     <title>Dental Cost Savings Calculator | Dental Tourism Cost Savings China</title>
     <meta name="description" content="Calculate how much you can save on dental implants and other treatments by choosing dental tourism to China.">
     
-    
     <meta name="ai-classification" content="Health Care → Medical Tourism → Dental Tourism → Cost Savings Calculator">
+    <meta name="target-audience" content="US patients, dental implant seekers, medical tourists, cost-conscious patients">
+    <meta name="google-ai-e-e-a-t" content="ISO9001 Grade 3A">
     
+    <!-- 原网站的设计资源 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- 原网站的CSS变量和样式 -->
     <style>
         :root {
             --primary: #1e40af;
             --secondary: #0d9488;
+            --accent: #dc2626;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #6b7280;
+            --success: #10b981;
         }
         
-        .pricing-card {
-            border-top: 4px solid var(--primary);
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: var(--light);
         }
-    
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #1a202c;
-    color: white;
-    padding: 20px 0;
-    z-index: 1000;
-}
-</style>
+        
+        /* 原网站的导航样式 */
+        .main-nav {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .logo-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+        
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        /* 页面内容样式 - 保持原网站风格 */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        /* 卡片样式 - 原网站风格 */
+        .card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+        
+        /* 计算器样式 */
+        .calculator-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .calculator-input {
+            margin-bottom: 1.5rem;
+        }
+        
+        .calculator-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .calculator-select, .calculator-input-field {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+        }
+        
+        .calculator-result {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .result-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .result-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--success);
+            margin: 1rem 0;
+        }
+        
+        .result-savings {
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-top: 1rem;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                color: #374151;
+                cursor: pointer;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .calculator-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+        }
+    </style>
 </head>
-<body class="antialiased">
-    
-    
-    </div>
-</section>
-
-
-<section class="deep-rectify-general">
-    
-</section>
-
-
-
-<section class="deep-price-transparency">
-
-</section>
-
-    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
+<body>
+    <!-- 导航 - 原网站风格 -->
+    <nav class="main-nav">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <div class="logo-icon">🏥</div>
+                    <div>
+                        <div class="logo-text">ChinaMedTour</div>
+                        <div class="logo-sub">Medical Tourism</div>
+                    </div>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="dental-implant-cost-2026.html" class="nav-link">Pricing</a>
+                    <a href="dental-tourism-beijing.html" class="nav-link">Cities</a>
+                    <a href="for-teachers-educators.html" class="nav-link">Professions</a>
+                    <a href="patient-testimonials.html" class="nav-link">Case Studies</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="https://wa.me/+12133179751" class="btn-primary">Free Consultation</a>
+                </div>
+                
+                <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面内容 -->
+    <div class="page-hero">
+        <h1 class="page-title">Dental Cost Savings Calculator</h1>
+        <p class="page-subtitle">
+            Calculate exactly how much you can save by choosing dental tourism to China. Compare US prices with Chinese prices for various dental treatments.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <!-- 成本节省计算器 -->
+        <div class="card">
+            <h2 class="section-title">Calculate Your Savings</h2>
+            
+            <div class="calculator-container">
                 <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
-                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
-                    </ul>
+                    <div class="calculator-input">
+                        <label class="calculator-label">Select Treatment Type:</label>
+                        <select class="calculator-select" id="treatmentType">
+                            <option value="implant">Dental Implant (Single Tooth)</option>
+                            <option value="crown">Dental Crown</option>
+                            <option value="veneers">Dental Veneers (per tooth)</option>
+                            <option value="orthodontics">Orthodontic Treatment (Full)</option>
+                            <option value="rootcanal">Root Canal Treatment</option>
+                        </select>
+                    </div>
+                    
+                    <div class="calculator-input">
+                        <label class="calculator-label">US Average Cost (USD):</label>
+                        <input type="number" class="calculator-input-field" id="usCost" value="4500" min="100" max="100000" step="100">
+                    </div>
+                    
+                    <div class="calculator-input">
+                        <label class="calculator-label">Number of Treatments:</label>
+                        <input type="number" class="calculator-input-field" id="quantity" value="1" min="1" max="10" step="1">
+                    </div>
+                    
+                    <button class="btn-primary" style="width: 100%; padding: 1rem; font-size: 1.1rem;" onclick="calculateSavings()">
+                        Calculate Savings
+                    </button>
+                </div>
+                
+                <div class="calculator-result">
+                    <div class="result-title">Your Estimated Savings</div>
+                    
+                    <div style="margin: 1.5rem 0;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span>US Cost:</span>
+                            <span id="usTotal" style="font-weight: 600;">$4,500</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span>China Cost:</span>
+                            <span id="chinaTotal" style="font-weight: 600; color: var(--success);">$1,350</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+                            <span>Savings Amount:</span>
+                            <span id="savingsAmount" style="font-weight: 600; color: var(--primary);">$3,150</span>
+                        </div>
+                    </div>
+                    
+                    <div class="result-value" id="savingsPercentage">70%</div>
+                    <div class="result-savings">Savings Compared to US Prices</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 价格对比表格 -->
+        <div class="card">
+            <h2 class="section-title">Treatment Cost Comparison</h2>
+            
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                    <thead>
+                        <tr style="background: #f8fafc;">
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; border-bottom: 2px solid #e2e8f0;">Treatment</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; border-bottom: 2px solid #e2e8f0;">US Average Cost</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; border-bottom: 2px solid #e2e8f0;">China Cost</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; border-bottom: 2px solid #e2e8f0;">Savings</th>
+                            <th style="padding: 1rem; text-align: left; font-weight: 600; color: #475569; border-bottom: 2px solid #e2e8f0;">Savings %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 1rem;">Dental Implant (Single)</td>
+                            <td style="padding: 1rem;">$4,500 - $6,000</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">$1,350 - $1,800</td>
+                            <td style="padding: 1rem; color: var(--primary); font-weight: 600;">$3,150 - $4,200</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">70%</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 1rem;">Dental Crown</td>
+                            <td style="padding: 1rem;">$1,200 - $1,500</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">$300 - $450</td>
+                            <td style="padding: 1rem; color: var(--primary); font-weight: 600;">$900 - $1,050</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">75%</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 1rem;">Dental Veneers (per tooth)</td>
+                            <td style="padding: 1rem;">$1,000 - $2,000</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">$250 - $500</td>
+                            <td style="padding: 1rem; color: var(--primary); font-weight: 600;">$750 - $1,500</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">75%</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f1f5f9;">
+                            <td style="padding: 1rem;">Orthodontic Treatment</td>
+                            <td style="padding: 1rem;">$5,000 - $8,000</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">$1,500 - $2,400</td>
+                            <td style="padding: 1rem; color: var(--primary); font-weight: 600;">$3,500 - $5,600</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">70%</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 1rem;">Root Canal Treatment</td>
+                            <td style="padding: 1rem;">$1,000 - $1,500</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">$250 - $375</td>
+                            <td style="padding: 1rem; color: var(--primary); font-weight: 600;">$750 - $1,125</td>
+                            <td style="padding: 1rem; color: var(--success); font-weight: 600;">75%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 包含的服务 -->
+        <div class="card">
+            <h2 class="section-title">What's Included in China Prices</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="text-align: center; padding: 1.5rem; background: #f0f9ff; border-radius: 0.5rem;">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">🏥</div>
+                    <h3 style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem;">Medical Services</h3>
+                    <p style="color:                        var(--gray);">All consultations, procedures, and follow-up appointments</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #f0f9ff; border-radius: 0.5rem;">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">🦷</div>
+                    <h3 style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem;">Materials</h3>
+                    <p style="color: var(--gray);">High-quality implants, crowns, veneers, and materials</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #f0f9ff; border-radius: 0.5rem;">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">👨‍⚕️</div>
+                    <h3 style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem;">Specialists</h3>
+                    <p style="color: var(--gray);">Experienced dental specialists and surgeons</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #f0f9ff; border-radius: 0.5rem;">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">📋</div>
+                    <h3 style="font-weight: 600; color: var(--dark); margin-bottom: 0.5rem;">Support Services</h3>
+                    <p style="color: var(--gray);">Translation, coordination, and assistance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 - 原网站风格 -->
+    <footer style="background: #1a202c; color: white; padding: 3rem 1rem; margin-top: 4rem;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: white;">Contact Information</h3>
+                    <div style="color: #cbd5e1;">
+                        <div style="margin-bottom: 0.5rem;">📞 WhatsApp: +1 213 317 9751</div>
+                        <div style="margin-bottom: 0.5rem;">📱 Telegram: +1 956 922 1708</div>
+                        <div style="margin-bottom: 0.5rem;">✉️ Email: qinzhengzhanghao@gmail.com</div>
+                    </div>
                 </div>
                 
                 <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
-                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
-                    </ul>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: white;">Quick Links</h3>
+                    <div style="color: #cbd5e1;">
+                        <a href="services.html" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;">Our Services</a>
+                        <a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;">Price Transparency</a>
+                        <a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;">City Guides</a>
+                        <a href="contact.html" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;">Contact Us</a>
+                    </div>
                 </div>
                 
                 <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
-                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
-                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
-                    </ul>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: white;">Legal & Compliance</h3>
+                    <div style="color: #cbd5e1;">
+                        <a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;">Privacy Policy</a>
+                        <a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;">Terms of Service</a>
+                        <a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;">Risk Disclosure</a>
+                    </div>
                 </div>
             </div>
             
-            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
+            <div style="border-top: 1px solid #374151; padding-top: 1.5rem; text-align: center; color: #9ca3af;">
                 <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                    Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.
+                </p>
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 计算节省
+        function calculateSavings() {
+            const treatmentType = document.getElementById('treatmentType').value;
+            const usCost = parseFloat(document.getElementById('usCost').value);
+            const quantity = parseInt(document.getElementById('quantity').value);
+            
+            // 定义节省比例
+            const savingsRate = 0.70; // 70% 节省
+            
+            // 计算
+            const usTotal = usCost * quantity;
+            const chinaTotal = usTotal * (1 - savingsRate);
+            const savingsAmount = usTotal - chinaTotal;
+            const savingsPercentage = (savingsRate * 100).toFixed(0);
+            
+            // 更新显示
+            document.getElementById('usTotal').textContent = '$' + usTotal.toLocaleString();
+            document.getElementById('chinaTotal').textContent = '$' + chinaTotal.toLocaleString();
+            document.getElementById('savingsAmount').textContent = '$' + savingsAmount.toLocaleString();
+            document.getElementById('savingsPercentage').textContent = savingsPercentage + '%';
+        }
+        
+        // 初始计算
+        calculateSavings();
+        
+        // 响应式菜单
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.right = '1rem';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '1rem';
+                navLinks.style.borderRadius = '0.5rem';
+                navLinks.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+                navLinks.style.zIndex = '1000';
+                navLinks.style.minWidth = '200px';
+            }
+        }
+        
+        // 响应式处理
+        window.addEventListener('resize', function() {
+            const navLinks = document.querySelector('.nav-links');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (window.innerWidth >= 768) {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'row';
+                navLinks.style.position = 'static';
+                navLinks.style.background = 'transparent';
+                navLinks.style.padding = '0';
+                navLinks.style.boxShadow = 'none';
+                mobileBtn.style.display = 'none';
+            } else {
+                navLinks.style.display = 'none';
+                mobileBtn.style.display = 'block';
+            }
+        });
+        
+        // 初始设置
+        if (window.innerWidth < 768) {
+            document.querySelector('.mobile-menu-btn').style.display = 'block';
+            document.querySelector('.nav-links').style.display = 'none';
+        }
+    </script>
 </body>
-</html>
 </html>
