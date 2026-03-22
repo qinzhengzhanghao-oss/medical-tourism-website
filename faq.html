@@ -1,110 +1,193 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - China Medical Tourism</title>
+    <title>FAQ | China Medical Tourism</title>
+    <meta name="description" content="Frequently asked questions about medical tourism in China. Learn about costs, quality, process, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 极简样式确保显示 */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: white;
-        }
-        
-        /* 导航 */
-        .navbar {
-            background: white;
-            padding: 1rem;
-            border-bottom: 1px solid #e5e7eb;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-weight: bold;
-            font-size: 1.25rem;
-            color: #1e40af;
-        }
-        
-        /* 主要内容 */
-        .main-content {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        
-        .page-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1f2937;
-            margin-bottom: 1.5rem;
-        }
-        
-        .content-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        
-        .faq-content p {
-            margin-bottom: 1rem;
-            color: #4b5563;
-            line-height: 1.7;
-        }
-        
-        .faq-content strong {
-            color: #1e40af;
-        }
-        
-        /* 底部 */
-        .footer {
-            background: #111827;
-            color: white;
-            padding: 2rem;
-            margin-top: 3rem;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <!-- 导航 -->
-    <nav class="navbar">
-        <div class="logo">ChinaMedTour</div>
-        <div>
-            <a href="#" style="margin-right: 1rem; color: #374151; text-decoration: none;">Home</a>
-            <a href="#" style="color: #374151; text-decoration: none;">FAQ</a>
-        </div>
-    </nav>
+        .faq-item { border-bottom: 1px solid #e5e7eb; padding: 20px 0; }
+        .faq-question { font-weight: 600; color: #1e40af; cursor: pointer; }
+        .faq-answer { padding-top: 12px; color: #4b5563; }
     
-    <!-- 主要内容 -->
-    <main class="main-content">
-        <h1 class="page-title">Frequently Asked Questions</h1>
-        
-        <div class="content-box">
-            <div class="faq-content">
-                <p><strong>最终提醒：</strong> 医疗旅游需要仔细规划和准备。我们建议您提前收集所有医疗记录，与您的本地医生讨论，并确保您了解整个流程。我们的团队将协助您完成每一步，从医疗记录翻译到旅行安排，从医院预约到术后护理。我们相信，通过充分的准备和专业的支持，医疗旅游可以是一个安全、有效、经济的选择。再次感谢您阅读我们的常见问题，我们期待为您提供帮助。</p>
-                
-                <p>如果您有任何其他问题或需要进一步的信息，请不要犹豫，立即联系我们。我们在这里为您提供帮助，确保您的医疗旅游决策是基于充分的信息和专业的建议。祝您健康愉快！</p>
-                
-                <p>我们期待听到您的消息，并帮助您开始这段重要的健康旅程。</p>
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #1a202c;
+    color: white;
+    padding: 20px 0;
+    z-index: 1000;
+}
+</style>
+
+<script async="None" src="https://www.googletagmanager.com/gtag/js?id=G-GMGGNLW8VH"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+
+ gtag('config', 'G-GMGGNLW8VH');
+</script>
+</head>
+<body class="antialiased">
+    <nav class="relative" class="bg-white shadow-lg py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl text-gray-900">ChinaMedTour</div>
+                        <div class="text-sm text-gray-600">Premium Medical Tourism</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
+                    <a href="faq.html" class="text-blue-600 font-medium">FAQ</a>
+                </div>
             </div>
         </div>
-    </main>
     
-    <!-- 底部 -->
-    <footer class="footer">
-        <p>© 2026 Medical Tourism China. All rights reserved.</p>
+        <!-- 汉堡菜单按钮 -->
+        <button id="mobile-menu-toggle" class="md:hidden absolute right-4 top-4 text-2xl text-gray-700">☰</button>
+        
+        <!-- 移动菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-4">
+            <a href="/" class="block py-2">Home</a>
+            <a href="services.html" class="block py-2">Services</a>
+            <a href="faq.html" class="block py-2 text-blue-600">FAQ</a>
+        </div>
+</nav>
+    
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h1>
+        <div class="bg-white rounded-lg shadow p-6">
+</html>
+
+<p><strong>最终提醒：</strong> 医疗旅游需要仔细规划和准备。我们建议您提前收集所有医疗记录，与您的本地医生讨论，并确保您了解整个流程。我们的团队将协助您完成每一步，从医疗记录翻译到旅行安排，从医院预约到术后护理。我们相信，通过充分的准备和专业的支持，医疗旅游可以是一个安全、有效、经济的选择。再次感谢您阅读我们的常见问题，我们期待为您提供帮助。</p>
+
+<p>如果您有任何其他问题或需要进一步的信息，请不要犹豫，立即联系我们。我们在这里为您提供帮助，确保您的医疗旅游决策是基于充分的信息和专业的建议。祝您健康愉快！</p>
+
+<p>我们期待听到您的消息，并帮助您开始这段重要的健康旅程。</p>
+    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
+                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
+                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
+                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
+                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+            </div>
+        </div>
     </footer>
-    
+
     <script>
-        // 简单控制台日志
-        console.log('FAQ页面加载完成');
-        console.log('正文内容:', document.querySelector('.faq-content').textContent.substring(0, 100) + '...');
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        
+        if (toggle && menu) {
+            toggle.addEventListener('click', function() {
+                menu.classList.toggle('hidden');
+            });
+            
+            // 响应式显示
+            function updateMenu() {
+                if (window.innerWidth < 768) {
+                    toggle.classList.remove('hidden');
+                } else {
+                    toggle.classList.add('hidden');
+                    menu.classList.add('hidden');
+                }
+            }
+            
+            updateMenu();
+            window.addEventListener('resize', updateMenu);
+        }
+        
+        // 验证内容加载
+        console.log('FAQ页面已加载，正文内容:', document.querySelector('main') ? '存在' : '不存在');
+    });
     </script>
+</body>
+</html></html>
+
+        </div>
+    </main>
+
+    
+    
+
+
+    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
+                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
+                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
+                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
+                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
