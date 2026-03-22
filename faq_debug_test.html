@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Test - Debug</title>
+    <!-- 加载相同的资源 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 添加明确的测试样式 */
+        .test-highlight { border: 3px solid red !important; }
+        .test-visible { background: yellow !important; }
+    </style>
+</head>
+<body>
+    <div style="padding: 20px; background: #f0f0f0;">
+        <h1>FAQ Debug Test</h1>
+        <p>这个页面用于测试FAQ内容是否显示</p>
+    </div>
+    
+    <!-- 复制FAQ的main内容 -->
+    <main class="container mx-auto px-4 py-8 test-highlight">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6 test-visible">Frequently Asked Questions (Test)</h1>
+        <div class="prose max-w-none test-visible">
+            <p><strong>测试内容：</strong> 这是一个测试，用于验证内容是否显示。</p>
+            <p>如果这个显示，但原页面不显示，说明是样式问题。</p>
+            <p>如果这个也不显示，说明是Tailwind CSS加载问题。</p>
+        </div>
+    </main>
+    
+    <script>
+        console.log('FAQ测试页面加载完成');
+        console.log('Tailwind加载状态:', typeof tailwind !== 'undefined' ? '已加载' : '未加载');
+        console.log('prose元素:', document.querySelector('.prose'));
+    </script>
+</body>
+</html>

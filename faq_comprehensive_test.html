@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Comprehensive Test</title>
+    
+    <!-- 测试1: 加载所有原资源 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 测试2: 添加诊断样式 -->
+    <style>
+        /* 诊断样式 */
+        .diagnostic-border { border: 3px solid #ff0000 !important; }
+        .diagnostic-bg { background-color: rgba(255, 0, 0, 0.1) !important; }
+        .diagnostic-text { color: #ff0000 !important; font-weight: bold !important; }
+        
+        /* 确保内容可见的备用样式 */
+        .fallback-visible { 
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            height: auto !important;
+            width: auto !important;
+        }
+    </style>
+</head>
+<body style="margin: 0; font-family: sans-serif;">
+    <!-- 诊断头部 -->
+    <div style="background: #f0f0f0; padding: 10px; border-bottom: 2px solid #ccc;">
+        <h2 style="color: #333; margin: 0;">FAQ诊断测试页面</h2>
+        <p style="color: #666; margin: 5px 0 0 0;">检查点: 1.Tailwind加载 2.内容显示 3.JS功能</p>
+    </div>
+    
+    <!-- 测试原结构 -->
+    <nav class="bg-white shadow-lg py-4 diagnostic-border">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl text-gray-900">ChinaMedTour</div>
+                        <div class="text-sm text-gray-600">FAQ诊断测试</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="#" class="text-blue-600 font-medium">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 测试正文 -->
+    <main class="container mx-auto px-4 py-8 diagnostic-border diagnostic-bg">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6 diagnostic-text">Frequently Asked Questions (诊断测试)</h1>
+        <div class="prose max-w-none fallback-visible">
+            <p class="diagnostic-text"><strong>诊断测试内容：</strong> 如果这个显示，说明Tailwind CSS工作正常。</p>
+            <p>这是第一段测试内容，用于验证正文显示。</p>
+            <p>这是第二段测试内容，如果看到这段文字，说明内容容器正常。</p>
+            <p>这是第三段测试内容，包含<strong>加粗文字</strong>和<em>斜体文字</em>。</p>
+        </div>
+    </main>
+    
+    <!-- 诊断脚部 -->
+    <div style="background: #333; color: white; padding: 20px; margin-top: 40px;">
+        <h3 style="color: #fff;">诊断结果区域</h3>
+        <div id="diagnostic-results" style="background: #444; padding: 10px; border-radius: 5px;">
+            诊断结果将显示在这里...
+        </div>
+    </div>
+    
+    <!-- 全面诊断脚本 -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('=== FAQ诊断测试开始 ===');
+        
+        // 检查Tailwind CSS
+        const tailwindLoaded = typeof tailwind !== 'undefined';
+        console.log('1. Tailwind CSS加载:', tailwindLoaded ? '✅ 已加载' : '❌ 未加载');
+        
+        // 检查主要元素
+        const checks = [
+            { id: 'main', selector: 'main', name: '主要内容区域' },
+            { id: 'h1', selector: 'h1', name: '标题' },
+            { id: 'prose', selector: '.prose', name: '内容容器' },
+            { id: 'paragraphs', selector: '.prose p', name: '段落' },
+        ];
+        
+        let resultsHtml = '<ul>';
+        
+        checks.forEach(check => {
+            const element = document.querySelector(check.selector);
+            const exists = element !== null;
+            const visible = exists && 
+                           element.offsetWidth > 0 && 
+                           element.offsetHeight > 0 &&
+                           window.getComputedStyle(element).display !== 'none' &&
+                           window.getComputedStyle(element).visibility !== 'hidden' &&
+                           parseFloat(window.getComputedStyle(element).opacity) > 0;
+            
+            console.log(`${exists ? '✅' : '❌'} ${check.name}: 存在=${exists}, 可见=${visible}`);
+            
+            if (exists) {
+                console.log(`   ${check.name}内容: "${element.textContent.substring(0, 50)}..."`);
+                console.log(`   ${check.name}样式:`, window.getComputedStyle(element));
+            }
+            
+            resultsHtml += `<li>${exists ? '✅' : '❌'} ${check.name}: 存在=${exists}, 可见=${visible}</li>`;
+        });
+        
+        resultsHtml += '</ul>';
+        
+        // 显示诊断结果
+        document.getElementById('diagnostic-results').innerHTML = resultsHtml;
+        
+        console.log('=== FAQ诊断测试结束 ===');
+    });
+    
+    // 捕获所有错误
+    window.addEventListener('error', function(e) {
+        console.error('页面错误:', e.error);
+        console.error('错误位置:', e.filename, ':', e.lineno, ':', e.colno);
+    });
+    </script>
+</body>
+</html>
