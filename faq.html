@@ -52,6 +52,17 @@ footer {
                 </div>
             </div>
         </div>
+        <!-- 汉堡菜单按钮（手机端显示） -->
+        <button id="mobile-menu-toggle" class="md:hidden absolute right-4 top-4 bg-none border-none text-2xl text-gray-700 cursor-pointer z-50">☰</button>
+        
+        <!-- 移动菜单（手机端显示） -->
+        <div id="mobile-menu" class="hidden md:hidden w-full bg-white p-5 shadow-lg mt-3 rounded-lg">
+            <a href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/" class="block py-3 text-gray-700 font-medium border-b border-gray-200">Home</a>
+            <a href="services.html" class="block py-3 text-gray-700 font-medium border-b border-gray-200">Services</a>
+            <a href="faq.html" class="block py-3 text-blue-600 font-medium border-b border-gray-200">FAQ</a>
+            <a href="https://wa.me/+12133179751" class="block mt-4 bg-gradient-to-r from-green-500 to-teal-500 text-white py-3 px-4 rounded-lg text-center font-semibold">Free Consultation</a>
+        </div>
+    
     </nav>
     
     
@@ -95,6 +106,56 @@ footer {
             </div>
         </div>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 汉堡菜单控制
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const desktopNav = document.querySelector('.hidden.md\:flex');
+        
+        if (mobileMenuToggle && mobileMenu) {
+            // 根据屏幕宽度显示/隐藏相应元素
+            function updateMenuVisibility() {
+                if (window.innerWidth < 768) {
+                    // 手机端：显示汉堡菜单
+                    mobileMenuToggle.classList.remove('hidden');
+                    mobileMenuToggle.classList.add('block');
+                    if (desktopNav) desktopNav.classList.add('hidden');
+                } else {
+                    // 桌面端：隐藏汉堡菜单，显示桌面导航
+                    mobileMenuToggle.classList.add('hidden');
+                    mobileMenuToggle.classList.remove('block');
+                    mobileMenu.classList.add('hidden');
+                    if (desktopNav) desktopNav.classList.remove('hidden');
+                }
+            }
+            
+            // 初始检查和窗口大小变化时更新
+            updateMenuVisibility();
+            window.addEventListener('resize', updateMenuVisibility);
+            
+            // 点击汉堡菜单切换移动菜单
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // 点击移动菜单外的区域关闭菜单
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            
+            // 点击移动菜单链接也关闭菜单
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    });
+    </script>
+    
 </body>
 </html></html>
 
