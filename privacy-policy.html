@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,110 +6,80 @@
     <title>Privacy Policy - China Medical Tourism</title>
     <meta name="description" content="Privacy policy for China Medical Tourism Services. Learn how we protect your personal and medical information.">
     
-    <!-- 原页面的其他meta标签 -->
     
-    <!-- Tailwind CSS -->
+    <meta name="robots" content="index, follow">
+    
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMGGNLW8VH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){{dataLayer.push(arguments);}}
-        gtag('js', new Date());
-        gtag('config', 'G-GMGGNLW8VH');
-    </script>
-</head>
-<body class="antialiased">
-    <!-- 手机端导航开始 -->
-    <nav style="background: white; padding: 1rem; position: relative;">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
-                <div style="width: 2.5rem; height: 2.5rem; background: linear-gradient(135deg, #2563eb, #0d9488); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center;">
-                    <span style="color: white; font-size: 1.25rem;">❤️</span>
-                </div>
-                <div>
-                    <div style="font-weight: bold; font-size: 1.25rem; color: #1f2937;">ChinaMedTour</div>
-                    <div style="font-size: 0.875rem; color: #6b7280;">Medical Tourism</div>
-                </div>
-            </div>
-            <div style="display: none;">
-                <!-- 桌面导航（隐藏，由原页面提供） -->
-            </div>
-        </div>
-        
-        <!-- 汉堡菜单按钮（只在手机端显示） -->
-        <button id="mobile-menu-toggle" style="display: none; position: absolute; right: 1rem; top: 1rem; background: none; border: none; font-size: 1.5rem; color: #374151; cursor: pointer; z-index: 50;">☰</button>
-        
-        <!-- 移动菜单（只在手机端显示） -->
-        <div id="mobile-menu" style="display: none; width: 100%; background: white; padding: 1.25rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 0.75rem; border-radius: 0.5rem;">
-            <a href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/" style="display: block; padding: 0.75rem 0; color: #374151; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Home</a>
-            <a href="services.html" style="display: block; padding: 0.75rem 0; color: #374151; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Services</a>
-            <a href="faq.html" style="display: block; padding: 0.75rem 0; color: #3b82f6; font-weight: 500; border-bottom: 1px solid #e5e7eb;">FAQ</a>
-            <a href="https://wa.me/+12133179751" style="display: block; margin-top: 1rem; background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 0.75rem 1rem; border-radius: 0.5rem; text-align: center; font-weight: 600;">Free Consultation</a>
-        </div>
-    </nav>
-    <!-- 手机端导航结束 -->
-    
-    <!-- 最小化的JavaScript控制 -->
-    <script>
-    // 只在手机端激活导航
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (mobileToggle && mobileMenu) {
-            // 响应式显示控制
-            function updateForMobile() {
-                if (window.innerWidth < 768) {
-                    // 手机端：显示汉堡菜单
-                    mobileToggle.style.display = 'block';
-                } else {
-                    // 电脑端：隐藏汉堡菜单
-                    mobileToggle.style.display = 'none';
-                    mobileMenu.style.display = 'none';
-                }
-            }
-            
-            // 点击汉堡菜单切换移动菜单
-            mobileToggle.addEventListener('click', function() {
-                mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
-            });
-            
-            // 初始化和响应式更新
-            updateForMobile();
-            window.addEventListener('resize', updateForMobile);
-            
-            // 点击菜单外区域关闭菜单
-            document.addEventListener('click', function(event) {
-                if (!mobileMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
-                    mobileMenu.style.display = 'none';
-                }
-            });
+    <style>
+        :root {
+            --color-primary: #1e40af;
+            --color-secondary: #0d9488;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
         }
-    });
-    </script>
-
-    <!-- 紧急通道 -->
-    <div class="emergency-banner" style="background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 12px 0; text-align: center; font-weight: 600; font-size: 14px;">
-        🚨 Dental Emergency? Immediate Consultation: <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a>
+        
+        body {
+            font-family: var(--font-body);
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+        }
+    
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #1a202c;
+    color: white;
+    padding: 20px 0;
+    z-index: 1000;
+}
+</style>
+</head>
+<body>
+    <!-- 主要内容 -->
+    <main style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
+        <h1 style="font-size: 2.5rem; font-weight: bold; color: #1f2937; margin-bottom: 1.5rem;">Privacy Policy</h1>
+        
+    <div style="background: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 2rem;">
+        <p style="color: #6b7280; margin-bottom: 1.5rem;">Last updated: March 22, 2026</p>
+        
+        <h2 style="font-size: 1.5rem; font-weight: 600; color: #374151; margin-bottom: 1rem;">1. Introduction</h2>
+        <p style="color: #4b5563; margin-bottom: 1.5rem;">
+            ChinaMedTour is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our medical tourism consultation services.
+        </p>
+        
+        <h2 style="font-size: 1.5rem; font-weight: 600; color: #374151; margin-bottom: 1rem;">2. Information Collection</h2>
+        <p style="color: #4b5563; margin-bottom: 1rem;">We collect information you provide, including:</p>
+        <ul style="color: #4b5563; margin-bottom: 1.5rem; padding-left: 1.5rem;">
+            <li style="margin-bottom: 0.5rem;">Contact details (name, email, phone)</li>
+            <li style="margin-bottom: 0.5rem;">Medical history and requirements</li>
+            <li style="margin-bottom: 0.5rem;">Travel preferences</li>
+            <li style="margin-bottom: 0.5rem;">Payment information</li>
+        </ul>
+        
+        <h2 style="font-size: 1.5rem; font-weight: 600; color: #374151; margin-bottom: 1rem;">3. Data Security</h2>
+        <p style="color: #4b5563; margin-bottom: 1.5rem;">
+            We implement security measures to protect your information from unauthorized access or disclosure.
+        </p>
+        
+        <h2 style="font-size: 1.5rem; font-weight: 600; color: #374151; margin-bottom: 1rem;">4. Contact Information</h2>
+        <div style="background: #f9fafb; padding: 1rem; border-radius: 0.375rem;">
+            <p style="color: #4b5563; margin-bottom: 0.5rem;"><strong>Email:</strong> legal@chinamedtour.com</p>
+            <p style="color: #4b5563; margin-bottom: 0.5rem;"><strong>WhatsApp:</strong> +1 213 317 9751</p>
+            <p style="color: #4b5563;"><strong>Business Hours:</strong> Mon-Fri, 9AM-6PM PST</p>
+        </div>
     </div>
-    
-    <!-- 导航栏（来自faq.html模板） -->
-    {template["nav"]}
-    
-    <!-- 原页面的主要内容 -->
-    <main class="container mx-auto px-4 py-8">
-        {page_data["main_content"]}
+
     </main>
     
-    <!-- 底部信息栏（来自faq.html模板） -->
-    {template["footer"]}
-    
-    <!-- JavaScript控制（来自faq.html模板） -->
-    {template["js"]}
 </body>
+</html>
 </html>
