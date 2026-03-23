@@ -28,6 +28,7 @@
         .faq-answer { 
             padding-top: 12px; 
             color: #4b5563; 
+            display: block !important;  /* 修复：让答案默认显示 */
         }
         
         .btn-primary {
@@ -42,6 +43,18 @@
         
         .btn-primary:hover {
             opacity: 0.9;
+        }
+        
+        /* FAQ内容区域样式 */
+        .faq-content {
+            position: relative;
+            z-index: 2;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: -40px;
+            margin-bottom: 40px;
+            padding: 40px 0;
         }
         
         /* 响应式设计 */
@@ -69,6 +82,11 @@
             
             .faq-item {
                 padding: 15px 0;
+            }
+            
+            .faq-content {
+                margin-top: -20px;
+                border-radius: 0;
             }
         }
         
@@ -174,7 +192,7 @@
     </nav>
 
     <!-- FAQ页面内容 -->
-    <div class="min-h-screen">
+    <div class="min-h-screen" style="position: relative; z-index: 1;">
         <!-- FAQ头部 -->
         <div class="faq-hero" style="background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; padding: 60px 0; text-align: center;">
             <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
@@ -416,14 +434,28 @@
             const answer = element.nextElementSibling;
             const icon = element.querySelector('i');
             
-            if (answer.style.display === 'block') {
-                answer.style.display = 'none';
-                icon.className = 'fas fa-plus';
-            } else {
+            if (answer.style.display === 'none') {
                 answer.style.display = 'block';
                 icon.className = 'fas fa-minus';
+            } else {
+                answer.style.display = 'none';
+                icon.className = 'fas fa-plus';
             }
         }
+        
+        // 页面加载时初始化所有FAQ答案为显示状态
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqAnswers = document.querySelectorAll('.faq-answer');
+            faqAnswers.forEach(answer => {
+                answer.style.display = 'block';
+            });
+            
+            // 初始化所有图标为减号
+            const faqIcons = document.querySelectorAll('.faq-question i');
+            faqIcons.forEach(icon => {
+                icon.className = 'fas fa-minus';
+            });
+        });
         
         // 移动菜单控制
         document.addEventListener('DOMContentLoaded', function() {
