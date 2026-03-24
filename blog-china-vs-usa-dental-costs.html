@@ -98,7 +98,95 @@ footer {
     padding: 20px 0;
     z-index: 1000;
 }
-</style>
+
+        @media (max-width: 768px) {
+            /* 导航栏手机端优化 */
+            .main-nav .container,
+            nav .container {
+                flex-wrap: wrap !important;
+                position: relative !important;
+            }
+            
+            .main-nav .container > div:last-child,
+            nav .container > div:last-child {
+                display: none !important;
+            }
+            
+            .mobile-menu-toggle {
+                display: block !important;
+                position: absolute !important;
+                right: 20px !important;
+                top: 15px !important;
+                background: none !important;
+                border: none !important;
+                font-size: 24px !important;
+                color: #374151 !important;
+                cursor: pointer !important;
+                z-index: 1002 !important;
+            }
+            
+            .mobile-menu {
+                display: none !important;
+                width: 100% !important;
+                background: white !important;
+                padding: 20px !important;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+                margin-top: 10px !important;
+                border-radius: 8px !important;
+            }
+            
+            .mobile-menu.active {
+                display: block !important;
+            }
+            
+            .mobile-menu a {
+                display: block !important;
+                padding: 12px 0 !important;
+                color: #374151 !important;
+                text-decoration: none !important;
+                font-weight: 500 !important;
+                border-bottom: 1px solid #e5e7eb !important;
+            }
+            
+            .mobile-menu a:last-child {
+                border-bottom: none !important;
+            }
+            
+            /* 通用布局优化 */
+            .horizontal-cards {
+                flex-direction: column !important;
+            }
+            
+            .service-card, .price-card, .treatment-card {
+                margin-bottom: 20px !important;
+            }
+            
+            /* 按钮优化 */
+            .btn-primary {
+                display: block !important;
+                width: 100% !important;
+                margin: 10px 0 !important;
+                text-align: center !important;
+            }
+            
+            /* 桌面端显示桌面导航 */
+            @media (min-width: 769px) {
+                .mobile-menu-toggle {
+                    display: none !important;
+                }
+                
+                .main-nav .container > div:last-child,
+                nav .container > div:last-child {
+                    display: flex !important;
+                }
+                
+                .mobile-menu {
+                    display: none !important;
+                }
+            }
+        }
+
+    </style>
 
 <script async="None" src="https://www.googletagmanager.com/gtag/js?id=G-GMGGNLW8VH"></script>
 
