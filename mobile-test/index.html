@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机测试页面 - Telegram访问</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+        }
+        .page-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .page-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .page-title:before {
+            content: "📱";
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        .page-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .test-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .features {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 3px solid #34c759;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .feature-item:before {
+            content: "✅";
+            margin-right: 10px;
+            color: #34c759;
+        }
+        .instructions {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            color: #333;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #d63031;
+            display: flex;
+            align-items: center;
+        }
+        .instructions h3:before {
+            content: "🔍";
+            margin-right: 10px;
+        }
+        .step {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .step:before {
+            content: "👉";
+            position: absolute;
+            left: 0;
+            color: #d63031;
+        }
+        .status-info {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .page-card {
+                padding: 20px;
+            }
+            .page-title {
+                font-size: 20px;
+            }
+            .test-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📱 手机端测试页面</h1>
+        <p>通过Telegram访问 - 刚刚完成手机端适配</p>
+        <p style="font-size: 14px; opacity: 0.8;">测试时间：2026-03-25 01:09</p>
+    </div>
+
+    <div class="container">
+        <!-- 页面1 -->
+        <div class="page-card">
+            <div class="page-title">1. 牙科旅游流程指南页面</div>
+            <div class="page-description">
+                完整的牙科旅游流程步骤指南，从咨询到随访的全过程说明。包含详细的时间线和各阶段服务。
+            </div>
+            <a href="dental-tourism-process-step-by-step.html" class="test-button">点击测试此页面</a>
+            
+            <div class="features">
+                <div class="feature-item">汉堡菜单按钮（手机端显示 ☰）</div>
+                <div class="feature-item">移动菜单（包含所有导航链接）</div>
+                <div class="feature-item">JavaScript控制（点击切换显示/隐藏）</div>
+                <div class="feature-item">响应式CSS（手机端优化布局）</div>
+                <div class="feature-item">时间线可视化展示</div>
+            </div>
+        </div>
+
+        <!-- 页面2 -->
+        <div class="page-card">
+            <div class="page-title">2. 专业种植牙页面</div>
+            <div class="page-description">
+                专业种植牙和美容牙科服务介绍，高级牙科治疗选项。包含种植牙、美容牙科、全口重建等专业服务。
+            </div>
+            <a href="dental-tourism-specialized.html" class="test-button">点击测试此页面</a>
+            
+            <div class="features">
+                <div class="feature-item">汉堡菜单按钮（手机端显示 ☰）</div>
+                <div class="feature-item">移动菜单（包含所有导航链接）</div>
+                <div class="feature-item">JavaScript控制（点击切换显示/隐藏）</div>
+                <div class="feature-item">响应式CSS（手机端优化布局）</div>
+                <div class="feature-item">专业牙科服务分类展示</div>
+            </div>
+        </div>
+
+        <!-- 测试说明 -->
+        <div class="instructions">
+            <h3>📋 测试说明</h3>
+            <div class="step">在手机浏览器中点击上面的测试按钮</div>
+            <div class="step">页面加载后，查看手机端显示效果</div>
+            <div class="step">点击右上角汉堡菜单按钮（☰）</div>
+            <div class="step">检查菜单是否能正常展开/收起</div>
+            <div class="step">点击菜单中的链接测试导航功能</div>
+            <div class="step">检查页面布局是否适配手机屏幕</div>
+            <div class="step">滑动页面检查响应式布局效果</div>
+            <div class="step">测试后通过Telegram回复结果</div>
+        </div>
+
+        <div class="status-info">
+            <p><strong>适配状态：</strong>2个城市页面已完成手机端适配</p>
+            <p><strong>测试目标：</strong>验证汉堡菜单、移动导航、响应式布局</p>
+            <p><strong>反馈方式：</strong>通过Telegram直接回复测试结果</p>
+            <p><strong>服务器：</strong>OpenClaw Gateway (端口18789)</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; color: rgba(255,255,255,0.7); font-size: 12px;">
+        <p>OpenClaw 手机端适配测试 | 2026-03-25</p>
+    </div>
+</body>
+</html>
