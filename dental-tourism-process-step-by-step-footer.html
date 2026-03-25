@@ -104,5 +104,66 @@
             }
         });
     </script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 下拉菜单控制
+            const dropdowns = document.querySelectorAll('div[style*="position: relative"]');
+            
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('a');
+                const menu = dropdown.querySelector('div[style*="position: absolute"]');
+                
+                if (link && menu) {
+                    dropdown.addEventListener('mouseenter', function() {
+                        menu.style.display = 'block';
+                    });
+                    
+                    dropdown.addEventListener('mouseleave', function() {
+                        menu.style.display = 'none';
+                    });
+                    
+                    link.addEventListener('click', function(e) {
+                        if (window.innerWidth < 768) {
+                            e.preventDefault();
+                            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                        }
+                    });
+                }
+            });
+            
+            // 汉堡菜单控制
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const desktopNav = document.querySelector('.main-nav .container > div:last-child');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                function updateMenuVisibility() {
+                    if (window.innerWidth < 768) {
+                        mobileMenuToggle.style.display = 'block';
+                        if (desktopNav) desktopNav.style.display = 'none';
+                        mobileMenu.style.display = 'none';
+                    } else {
+                        mobileMenuToggle.style.display = 'none';
+                        if (desktopNav) desktopNav.style.display = 'flex';
+                        mobileMenu.style.display = 'none';
+                    }
+                }
+                
+                updateMenuVisibility();
+                window.addEventListener('resize', updateMenuVisibility);
+                
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+                });
+                
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                        mobileMenu.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
