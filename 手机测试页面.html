@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手机端测试页面 - 刚刚适配的两个城市页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .page-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #007aff;
+        }
+        .page-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+        .page-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .test-button {
+            display: inline-block;
+            background: #007aff;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+        .test-button:hover {
+            background: #0056cc;
+        }
+        .features {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .feature-item:before {
+            content: "✅";
+            margin-right: 10px;
+            color: #34c759;
+        }
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        .step {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .step:before {
+            content: "🔍";
+            position: absolute;
+            left: 0;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            .page-card {
+                padding: 20px;
+            }
+            .page-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📱 手机端测试页面</h1>
+        <p>刚刚完成手机端适配的两个城市页面</p>
+        <p style="color: #666; font-size: 14px;">测试时间：2026-03-25 00:57</p>
+    </div>
+
+    <!-- 页面1 -->
+    <div class="page-card">
+        <div class="page-title">1. 牙科旅游流程指南页面</div>
+        <div class="page-description">
+            完整的牙科旅游流程步骤指南，从咨询到随访的全过程说明。
+        </div>
+        <a href="dental-tourism-process-step-by-step.html" class="test-button">点击测试此页面</a>
+        
+        <div class="features">
+            <div class="feature-item">汉堡菜单按钮（手机端显示）</div>
+            <div class="feature-item">移动菜单（包含所有导航链接）</div>
+            <div class="feature-item">JavaScript控制（点击切换显示/隐藏）</div>
+            <div class="feature-item">响应式CSS（手机端优化布局）</div>
+            <div class="feature-item">页面结构完整修复</div>
+        </div>
+    </div>
+
+    <!-- 页面2 -->
+    <div class="page-card">
+        <div class="page-title">2. 专业种植牙页面</div>
+        <div class="page-description">
+            专业种植牙和美容牙科服务介绍，高级牙科治疗选项。
+        </div>
+        <a href="dental-tourism-specialized.html" class="test-button">点击测试此页面</a>
+        
+        <div class="features">
+            <div class="feature-item">汉堡菜单按钮（手机端显示）</div>
+            <div class="feature-item">移动菜单（包含所有导航链接）</div>
+            <div class="feature-item">JavaScript控制（点击切换显示/隐藏）</div>
+            <div class="feature-item">响应式CSS（手机端优化布局）</div>
+            <div class="feature-item">保持原页面完整性</div>
+        </div>
+    </div>
+
+    <!-- 测试说明 -->
+    <div class="instructions">
+        <h3>📋 测试说明</h3>
+        <div class="step">在手机浏览器中打开此页面</div>
+        <div class="step">点击上面的"点击测试此页面"按钮</div>
+        <div class="step">在手机端查看页面效果</div>
+        <div class="step">点击右上角汉堡菜单按钮（☰）</div>
+        <div class="step">检查菜单是否能正常展开/收起</div>
+        <div class="step">检查所有链接是否正确</div>
+        <div class="step">检查页面布局是否适配手机屏幕</div>
+        <div class="step">如有问题，请立即反馈</div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; color: #666; font-size: 14px;">
+        <p>适配完成时间：2026-03-25 00:57</p>
+        <p>适配页面数：2个城市页面</p>
+        <p>剩余未适配：41个用户可见页面</p>
+    </div>
+</body>
+</html>
