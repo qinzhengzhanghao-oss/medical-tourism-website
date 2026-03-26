@@ -172,6 +172,40 @@
     </style>
 </head>
 <body class="antialiased">
+    <nav class="main-nav">
+        <div class="container" style="max-width: 100%; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; padding: 12px 15px;">
+            <div style="display: flex; align-items: center;">
+                <div style="font-size: 24px; color: #1e40af; margin-right: 10px;">🏥</div>
+                <div>
+                    <div style="font-weight: 700; font-size: 20px; color: #1e40af;">ChinaMedTour</div>
+                    <div style="font-size: 12px; color: #6b7280;">Medical Tourism</div>
+                </div>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 30px;">
+                <a href="index.html" style="color: #374151; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="services.html" style="color: #1e40af; text-decoration: none; font-weight: 600;">Services</a>
+                <a href="dental-implant-cost-2026.html" style="color: #374151; text-decoration: none; font-weight: 500;">Pricing</a>
+                <a href="about.html" style="color: #374151; text-decoration: none; font-weight: 500;">About</a>
+                <a href="contact.html" style="color: #374151; text-decoration: none; font-weight: 500;">Contact</a>
+                <a href="https://wa.me/+12133179751" class="btn-primary">Free Consultation</a>
+            </div>
+        </div>
+        
+        <!-- 汉堡菜单按钮（手机端显示） -->
+        <button class="mobile-menu-toggle" style="display: none; position: absolute; right: 20px; top: 15px; background: none; border: none; font-size: 24px; color: #374151; cursor: pointer; z-index: 1002;">☰</button>
+        
+        <!-- 移动菜单（手机端显示） -->
+        <div class="mobile-menu" style="display: none; width: 100%; background: white; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 10px; border-radius: 8px;">
+            <a href="index.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Home</a>
+            <a href="services.html" style="display: block; padding: 12px 0; color: #1e40af; text-decoration: none; font-weight: 600; border-bottom: 1px solid #e5e7eb;">Services</a>
+            <a href="dental-implant-cost-2026.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Pricing</a>
+            <a href="dental-tourism-beijing.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Cities</a>
+            <a href="for-teachers-educators.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Professions</a>
+            <a href="patient-testimonials.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Case Studies</a>
+            <a href="contact.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500;">Contact</a>
+        </div>
+    </nav>
     <!-- 返回首页链接 -->
     <div class="container mx-auto px-4 py-6">
         <a href="index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors" aria-label="返回首页">
@@ -181,42 +215,7 @@
     </div>
 
     <!-- 导航栏 -->
-    <nav class="bg-white shadow-lg py-4">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-shield-alt text-white"></i>
-                    </div>
-                    <div>
-                        <div class="font-bold text-xl text-gray-900">ChinaMedTour</div>
-                        <div class="text-sm text-gray-600">Safety Protocols & Standards</div>
-                    </div>
-                </div>
-                
-                <!-- 桌面导航 -->
-                <div class="desktop-nav space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
-                    <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
-                    <a href="safety-protocols-standards.html" class="text-blue-600 font-medium">Safety</a>
-                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-                </div>
-                
-                <!-- 手机菜单按钮 -->
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            
-            <!-- 手机导航菜单 -->
-            <div class="mobile-nav" id="mobileNav">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="safety-protocols-standards.html">Safety</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </nav>
+    
 
     <!-- Hero Section -->
     <section class="gradient-bg text-white py-16">
@@ -556,45 +555,7 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
-        <div class="container mx-auto px-4">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
-                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
-                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
-                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
-                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
-                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at JCI-accredited hospitals following international safety standards.</p>
-                <p style="margin-top: 10px; font-size: 12px;">Last updated: March 2026 | Safety protocols reviewed quarterly</p>
-            </div>
-        </div>
-    </footer>
+    
 
     <!-- JavaScript for mobile menu -->
     <script>
@@ -613,5 +574,112 @@
             }
         });
     </script>
+<script>
+    // 手机菜单切换
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', function() {
+                if (mobileMenu.style.display === 'block') {
+                    mobileMenu.style.display = 'none';
+                } else {
+                    mobileMenu.style.display = 'block';
+                }
+            });
+            
+            // 窗口大小变化时隐藏手机菜单
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    mobileMenu.style.display = 'none';
+                }
+            });
+        }
+        
+        // 响应式显示/隐藏菜单按钮
+        function updateMenuVisibility() {
+            if (window.innerWidth <= 768) {
+                if (menuToggle) menuToggle.style.display = 'block';
+                // 隐藏桌面导航
+                const desktopNav = document.querySelector('.main-nav .container > div:last-child');
+                if (desktopNav) desktopNav.style.display = 'none';
+            } else {
+                if (menuToggle) menuToggle.style.display = 'none';
+                if (mobileMenu) mobileMenu.style.display = 'none';
+                // 显示桌面导航
+                const desktopNav = document.querySelector('.main-nav .container > div:last-child');
+                if (desktopNav) desktopNav.style.display = 'flex';
+            }
+        }
+        
+        updateMenuVisibility();
+        window.addEventListener('resize', updateMenuVisibility);
+    });
+</script>
+<footer class="main-footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+                
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="font-size: 32px; color: white; margin-right: 10px;">🏥</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 24px; color: white;">ChinaMedTour</div>
+                            <div style="font-size: 14px; color: #cbd5e0;">Medical Tourism Excellence</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #cbd5e0; margin-bottom: 20px;">
+                        Connecting American patients with world-class dental and medical care in China. 
+                        Save up to 80% on treatment costs with experienced dental specialists at ISO9001-certified Grade 3A hospitals.
+                    </p>
+                </div>
+                
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e0; text-decoration: none;">All Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e0; text-decoration: none;">2026 Prices</a></li>
+                        <li style="margin-bottom: 10px;"><a href="experienced-dental-specialists-china.html" style="color: #cbd5e0; text-decoration: none;">Seasoned dental experts</a></li>
+                        <li style="margin-bottom: 10px;"><a href="iso9001-grade-3a-hospitals.html" style="color: #cbd5e0; text-decoration: none;">ISO9001 Grade 3A Hospitals</a></li>
+                        <li><a href="faq.html" style="color: #cbd5e0; text-decoration: none;">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Patient Resources</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="patient-rights-protection.html" style="color: #cbd5e0; text-decoration: none;">Patient Rights</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e0; text-decoration: none;">Risk Disclosure</a></li>
+                        <li style="margin-bottom: 10px;"><a href="safety-protocols-standards.html" style="color: #cbd5e0; text-decoration: none;">Safety Protocols</a></li>
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e0; text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" style="color: #cbd5e0; text-decoration: none;">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Us</h3>
+                    <div style="color: #cbd5e0; font-size: 14px; line-height: 1.8;">
+                        <div style="margin-bottom: 10px;">
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/+12133179751" style="color: #10b981; text-decoration: none;">+1 213 317 9751</a>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Telegram:</strong><br>
+                            Mon-Fri: 9:00 AM - 6:00 PM (PST)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af; margin-top: 40px;">
+                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
+                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
