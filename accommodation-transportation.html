@@ -1,25 +1,149 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accommodation Transportation | Dental Tourism China</title>
-    <meta name="description" content="Page under development">
+    <title>Accommodation & Transportation | Dental Tourism China</title>
+    <meta name="description" content="Complete accommodation and transportation services for dental tourists in China. 4-5 star hotels, airport transfers, daily transportation, and travel support.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1e40af;
+            --secondary: #0d9488;
+            --accent: #f59e0b;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            .service-grid { grid-template-columns: 1fr !important; }
+            .mobile-menu-toggle { display: block !important; }
+            .desktop-nav { display: none !important; }
+            .mobile-nav { display: none; }
+            h1 { font-size: 28px !important; }
+            h2 { font-size: 22px !important; }
+            img { max-width: 100%; height: auto; }
+            table { display: block; overflow-x: auto; }
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-menu-toggle { display: none !important; }
+            .desktop-nav { display: flex !important; }
+        }
+        
+        .mobile-menu-toggle {
+            background: none; border: none; font-size: 24px; color: #333; cursor: pointer; padding: 10px;
+        }
+        
+        .mobile-nav.active { display: block; }
+        
+        button, .btn, a.btn {
+            min-height: 44px; min-width: 44px;
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.15);
+        }
+    </style>
 </head>
 <body class="antialiased">
-    <div class="container mx-auto px-4 py-12 text-center">
-        <h1 class="text-3xl font-bold mb-6">Page Under Development</h1>
-        <p class="text-gray-600 mb-8">This page is currently being developed.</p>
-        <a href="index.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg">Back to Home</a>
+    <!-- 返回首页 -->
+    <div class="container mx-auto px-4 py-6">
+        <a href="index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+            <i class="fas fa-arrow-left mr-3"></i><span>Back to Home</span>
+        </a>
     </div>
 
+    <!-- 导航 -->
+    <nav class="bg-white shadow-lg py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-hotel text-white"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl text-gray-900">ChinaMedTour</div>
+                        <div class="text-sm text-gray-600">Accommodation & Transport</div>
+                    </div>
+                </div>
+                
+                <div class="desktop-nav space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
+                    <a href="accommodation-transportation.html" class="text-blue-600 font-medium">Accommodation</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </div>
+                
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="accommodation-transportation.html">Accommodation</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-blue-600 to-teal-500 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Accommodation & Transportation</h1>
+            <p class="text-xl mb-8 opacity-90">Complete travel support for dental tourists in China</p>
+        </div>
+    </section>
 
+    <!-- 住宿服务 -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Hotel Accommodation Services</h2>
+            
+            <div class="service-grid grid md:grid-cols-2 gap-8">
+                <div class="service-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-hotel text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">4-5 Star Hotels</h3>
+                    <p class="text-gray-600 mb-6">Luxury hotels near partner hospitals with special medical tourist rates.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i><span>Walking distance to hospitals</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i><span>Recovery-friendly facilities</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i><span>24/7 room service</span></li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-car text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Airport Transfers</h3>
+                    <p class="text-gray-600 mb-6">Meet & greet service at airport with English-speaking drivers.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i><span>Flight tracking</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i><span>Assistance with luggage</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 mr-3"></i><span>Direct to hotel/hospital</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
+    <!-- Footer -->
     <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
-        <div class="container">
+        <div class="container mx-auto px-4">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
                 <div>
                     <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
@@ -51,11 +175,15 @@
             </div>
             
             <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
-                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+                <p>© 2026 Medical Tourism China. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+    </script>
 </body>
-</html>
 </html>

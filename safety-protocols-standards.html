@@ -1,57 +1,563 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safety Protocols & Standards | Dental Tourism Safety China</title>
-    <meta name="description" content="Detailed information about safety protocols, sterilization standards, and infection control measures in our partner hospitals.">
+    <meta name="description" content="Detailed safety protocols, sterilization standards, and infection control measures in our partner hospitals. JCI-accredited facilities with international safety standards.">
     
-    
+    <!-- AI分类优化 -->
     <meta name="ai-classification" content="Health Care → Medical Tourism → Dental Tourism → Safety Protocols">
+    <meta name="google-ai-category" content="Dental Tourism Safety Standards">
+    <meta name="openai-category" content="Medical Tourism - Safety Protocols">
+    
+    <!-- 基于精准策略的关键词优化 -->
+    <meta name="target-keywords" content="dental tourism safety, hospital safety protocols, sterilization standards china, infection control dental, JCI accredited hospitals">
+    <meta name="search-intent" content="safety verification, protocol details, standard compliance">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMGGNLW8VH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GMGGNLW8VH');
+    </script>
     
     <style>
         :root {
             --primary: #1e40af;
             --secondary: #0d9488;
+            --safety-green: #10b981;
+            --warning-orange: #f59e0b;
+            --danger-red: #ef4444;
         }
         
-        .trust-card {
-            border-top: 4px solid var(--primary);
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
         }
-    
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #1a202c;
-    color: white;
-    padding: 20px 0;
-    z-index: 1000;
-}
-</style>
+        
+        .safety-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--safety-green);
+        }
+        
+        .safety-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+        }
+        
+        .protocol-badge {
+            background: linear-gradient(135deg, var(--safety-green) 0%, #34d399 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .safety-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .protocol-section {
+                padding: 20px 15px !important;
+            }
+            
+            h1 {
+                font-size: 28px !important;
+            }
+            
+            h2 {
+                font-size: 22px !important;
+            }
+            
+            .mobile-menu-toggle {
+                display: block !important;
+            }
+            
+            .desktop-nav {
+                display: none !important;
+            }
+            
+            .mobile-nav {
+                display: block !important;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-menu-toggle {
+                display: none !important;
+            }
+            
+            .desktop-nav {
+                display: flex !important;
+            }
+            
+            .mobile-nav {
+                display: none !important;
+            }
+        }
+        
+        /* 导航适配 */
+        .mobile-menu-toggle {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .mobile-nav {
+            display: none;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            padding: 12px 0;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+        
+        /* 触摸友好 */
+        button, .btn, a.btn {
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* 图片响应式 */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* 表格响应式 */
+        table {
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
 </head>
 <body class="antialiased">
-    
-    
-</section>
+    <!-- 返回首页链接 -->
+    <div class="container mx-auto px-4 py-6">
+        <a href="index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors" aria-label="返回首页">
+            <i class="fas fa-arrow-left mr-3"></i>
+            <span>Back to Home Page</span>
+        </a>
+    </div>
 
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-white"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl text-gray-900">ChinaMedTour</div>
+                        <div class="text-sm text-gray-600">Safety Protocols & Standards</div>
+                    </div>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <div class="desktop-nav space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
+                    <a href="safety-protocols-standards.html" class="text-blue-600 font-medium">Safety</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </div>
+                
+                <!-- 手机菜单按钮 -->
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- 手机导航菜单 -->
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="safety-protocols-standards.html">Safety</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Safety Protocols & Standards
+            </h1>
+            <p class="text-xl mb-8 opacity-90">
+                International safety standards, JCI-accredited hospitals, and rigorous infection control protocols for your peace of mind.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#protocols" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition">
+                    <i class="fas fa-shield-alt mr-3"></i> View Safety Protocols
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+                    <i class="fas fa-question-circle mr-3"></i> Ask Safety Questions
+                </a>
+            </div>
+        </div>
+    </section>
 
-<section class="deep-risk-safety">
+    <!-- 重要安全说明 -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+                <div class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 text-2xl mt-1 mr-4"></i>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-green-800">Certified Safety Standards</h3>
+                        <p class="text-green-700">
+                            All our partner hospitals are <strong>JCI-accredited</strong> (Joint Commission International) and follow 
+                            <strong>ISO 9001 quality management systems</strong>. We maintain the highest international safety standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <!-- 安全协议网格 -->
+    <section id="protocols" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Comprehensive Safety Protocols</h2>
+            
+            <div class="safety-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 协议1：灭菌标准 -->
+                <div class="safety-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-virus-slash text-green-600 text-2xl"></i>
+                    </div>
+                    <span class="protocol-badge mb-4">Sterilization Protocol</span>
+                    <h3 class="text-2xl font-bold mb-4">Sterilization Standards</h3>
+                    <p class="text-gray-600 mb-6">
+                        All dental instruments undergo Class B autoclave sterilization (134°C, 2.1 bar pressure for 18 minutes) following ADA and CDC guidelines.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Single-use disposable instruments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Class B autoclave sterilization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Chemical indicator monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Biological spore testing weekly</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 协议2：感染控制 -->
+                <div class="safety-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-hands-wash text-blue-600 text-2xl"></i>
+                    </div>
+                    <span class="protocol-badge mb-4">Infection Control</span>
+                    <h3 class="text-2xl font-bold mb-4">Infection Control Measures</h3>
+                    <p class="text-gray-600 mb-6">
+                        Strict infection control protocols including hand hygiene, personal protective equipment, and environmental cleaning.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>WHO 5-moment hand hygiene</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Full PPE for all procedures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Surface disinfection between patients</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Air purification systems (HEPA filters)</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 协议3：设备安全 -->
+                <div class="safety-card bg-white rounded-2xl shadow-lg p-8">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-purple-600 text-2xl"></i>
+                    </div>
+                    <span class="protocol-badge mb-4">Equipment Safety</span>
+                    <h3 class="text-2xl font-bold mb-4">Medical Equipment Safety</h3>
+                    <p class="text-gray-600 mb-6">
+                        All medical equipment undergoes regular maintenance, calibration, and safety checks according to manufacturer specifications.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Regular equipment calibration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Preventive maintenance schedules</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>FDA/CE certified equipment only</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Emergency backup systems</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- JCI认证详情 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">JCI Accreditation Standards</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mr-6">
+                        <i class="fas fa-award text-blue-600 text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-800">Joint Commission International (JCI) Accreditation</h3>
+                        <p class="text-gray-600 mt-2">Gold standard for hospital quality and patient safety worldwide</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-green-700">✅ Patient Safety Goals</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Correct patient identification</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Effective communication among caregivers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Safe medication administration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Infection prevention and control</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-bold mb-4 text-blue-700">✅ Quality Standards</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>International Patient Safety Goals (IPSG)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Access to Care and Continuity of Care (ACC)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Patient and Family Rights (PFR)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Assessment of Patients (AOP)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-blue-50 rounded-xl">
+                    <h4 class="text-xl font-bold mb-4 text-blue-800">JCI Accreditation Process</h4>
+                    <p class="text-gray-700">
+                        JCI accreditation involves rigorous on-site evaluation every 3 years, including:
+                    </p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-clipboard-check text-blue-500 mt-1 mr-3"></i>
+                            <span>Document review of policies and procedures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user-md text-blue-500 mt-1 mr-3"></i>
+                            <span>On-site observation of clinical practices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-comments text-blue-500 mt-1 mr-3"></i>
+                            <span>Interviews with staff and patients</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chart-line text-blue-500 mt-1 mr-3"></i>
+                            <span>Review of quality improvement data</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- 紧急安全协议 -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Emergency Safety Protocols</h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
+                        <thead class="bg-red-600 text-white">
+                            <tr>
+                                <th class="py-4 px-6 text-left">Emergency Scenario</th>
+                                <th class="py-4 px-6 text-left">Protocol</th>
+                                <th class="py-4 px-6 text-left">Response Time</th>
+                                <th class="py-4 px-6 text-left">Equipment Available</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Anaphylactic Reaction</td>
+                                <td class="py-4 px-6">
+                                    <div class="font-bold text-red-600">Epinephrine administration</div>
+                                    <div class="text-sm text-gray-600">Airway management, IV access, monitoring</div>
+                                </td>
+                                <td class="py-4 px-6 font-bold">≤ 2 minutes</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Epinephrine</span>
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Defibrillator</span>
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Oxygen</span>
+                                </td>
+                            </tr>
+                            
+                            <tr class="bg-gray-50">
+                                <td class="py-4 px-6 font-medium">Cardiac Arrest</td>
+                                <td class="py-4 px-6">
+                                    <div class="font-bold text-red-600">ACLS protocol</div>
+                                    <div class="text-sm text-gray-600">CPR, defibrillation, advanced airway</div>
+                                </td>
+                                <td class="py-4 px-6 font-bold">≤ 1 minute</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Defibrillator</span>
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Emergency drugs</span>
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Ventilator</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="py-4 px-6 font-medium">Severe Bleeding</td>
+                                <td class="py-4 px-6">
+                                    <div class="font-bold text-red-600">Hemostasis protocol</div>
+                                    <div class="text-sm text-gray-600">Pressure, packing, surgical intervention</div>
+                                </td>
+                                <td class="py-4 px-6 font-bold">≤ 3 minutes</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Hemostatic agents</span>
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Surgical kit</span>
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Blood products</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="substantial-content">
+    <!-- 联系信息 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Safety Questions? Contact Our Team</h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                Our safety coordinators are available 24/7 to answer any questions about our safety protocols, standards, or emergency procedures.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <i class="fab fa-whatsapp text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">WhatsApp</h3>
+                    <p class="text-gray-600 mb-6">Quick questions and safety inquiries</p>
+                    <a href="https://wa.me/+12133179751" class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition">
+                        +1 213 317 9751
+                    </a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <i class="fab fa-telegram text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Telegram</h3>
+                    <p class="text-gray-600 mb-6">Detailed safety documentation</p>
+                    <a href="https://t.me/+19569221708" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        +1 956 922 1708
+                    </a>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-envelope text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Email</h3>
+                    <p class="text-gray-600 mb-6">Formal safety inquiries and documents</p>
+                    <a href="mailto:qinzhengzhanghao@gmail.com" class="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        qinzhengzhanghao@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
-
+    <!-- Footer -->
     <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
-        <div class="container">
+        <div class="container mx-auto px-4">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
                 <div>
                     <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
@@ -84,62 +590,28 @@ footer {
             
             <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
                 <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at JCI-accredited hospitals following international safety standards.</p>
+                <p style="margin-top: 10px; font-size: 12px;">Last updated: March 2026 | Safety protocols reviewed quarterly</p>
             </div>
         </div>
     </footer>
-</body>
-</html>
-</html>
 
-
-
-<section class="quality-fix-substantial">
-    
-</section>
-
-
-
-<section class="quality-fix-visual">
-    
-</section>
-    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
-                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
-                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
-                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
-                    <ul style="color: #cbd5e1;">
-                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
-                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
-                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- JavaScript for mobile menu -->
+    <script>
+        function toggleMobileMenu() {
+            var mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var mobileNav = document.getElementById('mobileNav');
+            var menuToggle = document.querySelector('.mobile-menu-toggle');
             
-            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
-                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
-            </div>
-        </div>
-    </footer>
+            if (!mobileNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
 </body>
-</html></html>
+</html>

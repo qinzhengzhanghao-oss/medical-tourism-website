@@ -31,7 +31,27 @@
     <meta name="google-site-verification" content="9QHwFPmpQEyT9k9jJUrIhzBXEtz94fs-tMRPB-NyG4w"></meta>
     
     <style>
-        .verification-step {
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            .doctor-grid { grid-template-columns: 1fr !important; }
+            .mobile-menu-toggle { display: block !important; }
+            .desktop-nav { display: none !important; }
+            h1 { font-size: 28px !important; }
+            h2 { font-size: 22px !important; }
+            img { max-width: 100%; height: auto; }
+            table { display: block; overflow-x: auto; }
+        }
+        @media (min-width: 769px) {
+            .mobile-menu-toggle { display: none !important; }
+            .desktop-nav { display: flex !important; }
+        }
+        .mobile-menu-toggle {
+            background: none; border: none; font-size: 24px; color: #333; cursor: pointer; padding: 10px;
+        }
+        button, .btn, a.btn {
+            min-height: 44px; min-width: 44px;
+            display: inline-flex; align-items: center; justify-content: center;
+        }        .verification-step {
             background: white;
             border-radius: 12px;
             padding: 25px;
@@ -95,7 +115,36 @@ footer {
 </script>
 </head>
 <body class="antialiased bg-gray-50">
-
+<nav class="bg-white shadow-lg py-4">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-user-md text-white"></i>
+                </div>
+                <div>
+                    <div class="font-bold text-xl text-gray-900">ChinaMedTour</div>
+                    <div class="text-sm text-gray-600">Doctor Verification</div>
+                </div>
+            </div>
+            <div class="desktop-nav space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
+                <a href="doctor-clean.html" class="text-blue-600 font-medium">Doctors</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobileNav" style="display: none;">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="doctor-clean.html">Doctors</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
 <div class="container mx-auto px-4 py-6">
     <a href="index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium mb-6">
         <i class="fas fa-arrow-left mr-3"></i>
@@ -405,7 +454,16 @@ footer {
             </div>
         </div>
     </footer>
-</body>
+<script>
+function toggleMobileMenu() {
+    var nav = document.getElementById("mobileNav");
+    if (nav.style.display === "block") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "block";
+    }
+}
+</script></body>
 </html>
 
 
@@ -426,5 +484,14 @@ footer {
 </main>
 
     
-</body>
+<script>
+function toggleMobileMenu() {
+    var nav = document.getElementById("mobileNav");
+    if (nav.style.display === "block") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "block";
+    }
+}
+</script></body>
 </html>    <footer class="main-footer">
