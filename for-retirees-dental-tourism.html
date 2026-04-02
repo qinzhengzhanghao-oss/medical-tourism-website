@@ -88,6 +88,93 @@
             }
         }
     </style>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
 </head>
 <body>
     <!-- 紧急医疗通道 -->
@@ -102,7 +189,7 @@
             <div>
                 <a href="services.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Services</a>
                 <a href="contact.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Contact</a>
-                <a href="https://wa.me/+12133179751" class="btn-primary" style="margin-left: 15px;">Free Consultation</a>
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="margin-left: 15px;">Free Consultation</a>
             </div>
         </div>
     </nav>
@@ -115,7 +202,7 @@
                 Specialized dental care solutions for retirees. Medicare-compatible treatments, 
                 senior-specific safety protocols, and complete travel support.
             </p>
-            <a href="#services" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">View Senior Services</a>
+            <a href="#services" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">View Senior Services</a>
         </div>
     </section>
     
@@ -135,7 +222,7 @@
                         healing capacity, and overall health conditions.
                     </p>
                     <div style="font-size: 20px; font-weight: 700; color: #10b981; margin-bottom: 15px;">From $850 per implant</div>
-                    <a href="dental-implant-cost-2026.html" class="btn-primary">View Details</a>
+                    <a href="dental-implant-cost-2026.html" class="btn-touch btn-primary">View Details</a>
                 </div>
                 
                 <!-- 牙冠和修复 -->
@@ -147,7 +234,7 @@
                         senior oral health needs and ease of maintenance.
                     </p>
                     <div style="font-size: 20px; font-weight: 700; color: #8b5cf6; margin-bottom: 15px;">From $300 per crown</div>
-                    <a href="dental-crowns-cost-china.html" class="btn-primary">View Details</a>
+                    <a href="dental-crowns-cost-china.html" class="btn-touch btn-primary">View Details</a>
                 </div>
                 
                 <!-- 全面口腔检查 -->
@@ -159,7 +246,7 @@
                         gum disease assessment, and treatment planning.
                     </p>
                     <div style="font-size: 20px; font-weight: 700; color: #f59e0b; margin-bottom: 15px;">$150 - $300</div>
-                    <a href="health-screening.html" class="btn-primary">View Details</a>
+                    <a href="health-screening.html" class="btn-touch btn-primary">View Details</a>
                 </div>
             </div>
         </section>
@@ -234,10 +321,10 @@
                 Our senior care coordinators understand the unique needs of retirees.
             </p>
             <div>
-                <a href="https://wa.me/+12133179751" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">
                     <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Senior Consultation
                 </a>
-                <a href="contact.html" class="btn-primary" style="background: #f59e0b; margin-left: 20px; padding: 16px 32px; font-size: 18px;">
+                <a href="contact.html" class="btn-touch btn-primary" style="background: #f59e0b; margin-left: 20px; padding: 16px 32px; font-size: 18px;">
                     Schedule Senior Call
                 </a>
             </div>

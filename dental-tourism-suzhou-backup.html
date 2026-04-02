@@ -27,6 +27,93 @@
         .mobile-nav { display: block; }
     }
     </style>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
 </head>
 <body>
     <!-- 紧急医疗通道（与服务页面完全一致） -->
@@ -43,7 +130,7 @@
                 <a href="dental-tourism-beijing.html" style="margin-left: 15px; color: #10b981; font-weight: 600; text-decoration: none;">Suzhou</a>
                 <a href="dental-tourism-shanghai.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Shanghai</a>
                 <a href="contact.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Contact</a>
-                <a href="https://wa.me/+12133179751" class="btn-primary" style="margin-left: 15px;">Suzhou Inquiry</a>
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="margin-left: 15px;">Suzhou Inquiry</a>
             </div>
         </div>
     </nav>
@@ -55,7 +142,7 @@
             <p style="font-size: 20px; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
                 World-class dental implant treatment in East China's garden city near Shanghai with Industry-experienced dental specialists at ISO9001-certified Grade 3A hospitals.
             </p> with extensive clinical experience and professional certification with extensive clinical experience and professional certification with extensive clinical experience and professional certification with extensive clinical experience and professional certification
-            <a href="#advantages" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">Suzhou Advantages</a>
+            <a href="#advantages" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">Suzhou Advantages</a>
         </div>
     </section>
     
@@ -176,10 +263,10 @@
                 Get complete information about dental implant treatment in Suzhou with Industry-experienced dental specialists at ISO9001-certified Grade 3A hospitals.
             </p> with extensive clinical experience and professional certification with extensive clinical experience and professional certification with extensive clinical experience and professional certification with extensive clinical experience and professional certification
             <div>
-                <a href="https://wa.me/+12133179751" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">
                     <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Suzhou Inquiry
                 </a>
-                <a href="dental-implant-cost-2026.html" class="btn-primary" style="background: #10b981; margin-left: 20px; padding: 16px 32px; font-size: 18px;">
+                <a href="dental-implant-cost-2026.html" class="btn-touch btn-primary" style="background: #10b981; margin-left: 20px; padding: 16px 32px; font-size: 18px;">
                     <i class="fas fa-dollar-sign" style="margin-right: 10px;"></i> View Prices
                 </a>
             </div>

@@ -27,6 +27,93 @@
         .mobile-nav { display: block; }
     }
     </style>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
 </head>
 <body>
     <div class="emergency-banner">🚨 Need Hospital Info? <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a></div>
@@ -39,7 +126,7 @@
                 <a href="doctor-credentials-verification.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Doctors</a>
                 <a href="hospital-facilities-tour.html" style="margin-left: 15px; color: #1e40af; font-weight: 600; text-decoration: none;">Hospitals</a>
                 <a href="contact.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Contact</a>
-                <a href="https://wa.me/+12133179751" class="btn-primary" style="margin-left: 15px;">Tour Request</a>
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="margin-left: 15px;">Tour Request</a>
             </div>
         </div>
     </nav>
@@ -164,7 +251,7 @@
             <p style="font-size: 18px; color: #4b5563; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
                 See our facilities through live video tour. Ask questions directly to hospital staff.
             </p>
-            <a href="https://wa.me/+12133179751" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">
+            <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">
                 <i class="fas fa-video" style="margin-right: 10px;"></i> Schedule Virtual Tour
             </a>
         </section>

@@ -116,6 +116,93 @@ footer {
         .mobile-nav { display: block; }
     }
     </style>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
 </head>
 <body class="antialiased bg-gray-50">
     <div class="container mx-auto px-4 py-12">
@@ -176,7 +263,7 @@ footer {
                                     <span class="font-bold text-blue-600">71-76%</span>
                                 </div>
                             </div>
-                            <button class="w-full mt-4 bg-blue-500 text-white py-3 rounded-lg font-bold hover:bg-blue-600 transition select-doctor-btn" data-specialty="dental">
+                            <button class="btn-touch w-full mt-4 bg-blue-500 text-white py-3 rounded-lg font-bold hover:bg-blue-600 transition select-doctor-btn" data-specialty="dental">
                                 Select Dental Specialist
                             </button>
                         </div>
@@ -205,7 +292,7 @@ footer {
                                     <span class="font-bold text-blue-600">56-57%</span>
                                 </div>
                             </div>
-                            <button class="w-full mt-4 bg-pink-500 text-white py-3 rounded-lg font-bold hover:bg-pink-600 transition select-doctor-btn" data-specialty="cosmetic">
+                            <button class="btn-touch w-full mt-4 bg-pink-500 text-white py-3 rounded-lg font-bold hover:bg-pink-600 transition select-doctor-btn" data-specialty="cosmetic">
                                 Select Cosmetic Surgeon
                             </button>
                         </div>
@@ -234,7 +321,7 @@ footer {
                                     <span class="font-bold text-blue-600">75%</span>
                                 </div>
                             </div>
-                            <button class="w-full mt-4 bg-green-500 text-white py-3 rounded-lg font-bold hover:bg-green-600 transition select-doctor-btn" data-specialty="health">
+                            <button class="btn-touch w-full mt-4 bg-green-500 text-white py-3 rounded-lg font-bold hover:bg-green-600 transition select-doctor-btn" data-specialty="health">
                                 Select Health Screening
                             </button>
                         </div>
@@ -283,10 +370,10 @@ footer {
                     </div>
                     
                     <div class="mt-8 flex justify-between">
-                        <button class="bg-gray-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-600 transition" id="backToStep1">
+                        <button class="btn-touch bg-gray-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-600 transition" id="backToStep1">
                             <i class="fas fa-arrow-left mr-2"></i> Back to Doctors
                         </button>
-                        <button class="bg-blue-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition" id="proceedToStep3">
+                        <button class="btn-touch bg-blue-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition" id="proceedToStep3">
                             Next: Contact Details <i class="fas fa-arrow-right ml-2"></i>
                         </button>
                     </div>
@@ -345,10 +432,10 @@ footer {
                             </div>
                             
                             <div class="flex justify-between">
-                                <button type="button" class="bg-gray-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-600 transition" id="backToStep2">
+                                <button type="button" class="btn-touch bg-gray-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-600 transition" id="backToStep2">
                                     <i class="fas fa-arrow-left mr-2"></i> Back to Time Selection
                                 </button>
-                                <button type="submit" class="bg-green-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-600 transition">
+                                <button type="submit" class="btn-touch bg-green-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-600 transition">
                                     <i class="fas fa-calendar-check mr-2"></i> Confirm Booking
                                 </button>
                             </div>

@@ -100,6 +100,93 @@ footer {
                 }
             }
         }</style>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
 </head>
 <body class="antialiased">
 <nav class="main-nav">
@@ -118,12 +205,12 @@ footer {
                 <a href="dental-implant-cost-2026.html" style="color: #374151; text-decoration: none; font-weight: 500;">2026 Pricing</a>
                 <a href="about.html" style="color: #374151; text-decoration: none; font-weight: 500;">About</a>
                 <a href="contact.html" style="color: #374151; text-decoration: none; font-weight: 500;">Contact</a>
-                <a href="https://wa.me/+12133179751" class="btn-primary">Free Consultation</a>
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary">Free Consultation</a>
             </div>
         </div>
         
         <!-- 汉堡菜单按钮（手机端显示） -->
-        <button class="mobile-menu-toggle" style="position: absolute; right: 20px; top: 15px; background: none; border: none; font-size: 24px; color: #374151; cursor: pointer; z-index: 1002;">☰</button>
+        <button class="btn-touch mobile-menu-toggle" style="position: absolute; right: 20px; top: 15px; background: none; border: none; font-size: 24px; color: #374151; cursor: pointer; z-index: 1002;">☰</button>
         
         <!-- 移动菜单（手机端显示） -->
         <div class="mobile-menu" style="display: none; width: 100%; background: white; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 10px; border-radius: 8px;">
@@ -187,8 +274,8 @@ footer {
         </ol>
         
         <div class="action-buttons">
-            <a href="https://wa.me/+12133179751" class="btn-whatsapp">📱 WhatsApp详细咨询</a>
-            <a href="contact.html" class="btn-contact">📧 预约视频验证</a>
+            <a href="https://wa.me/+12133179751" class="btn-touch btn-whatsapp">📱 WhatsApp详细咨询</a>
+            <a href="contact.html" class="btn-touch btn-contact">📧 预约视频验证</a>
         </div>
     </div>
 </section>

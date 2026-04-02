@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Testimonials | ChinaMedTour</title>
+    <title>医疗旅游价格对比 | 中美牙科费用节省70%</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -148,6 +148,126 @@
             }
         }
     </style>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
+
+<style>
+/* 移动端优先响应式设计 */
+* { box-sizing: border-box; }
+body { 
+    font-size: 16px; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+}
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+}
+</style>
+
 </head>
 <body>
     
@@ -215,7 +335,7 @@
         </div>
         
         <!-- 汉堡菜单按钮（手机端显示） -->
-        <button class="mobile-menu-toggle" style="display: none;">☰</button>
+        <button class="btn-touch mobile-menu-toggle" style="display: none;">☰</button>
         
         <!-- 移动菜单（手机端显示） -->
         <div class="mobile-menu" style="display: none;">
@@ -998,5 +1118,46 @@
             }
         });
     </script>
+
+<div class="key-points">
+<h3>关键要点</h3>
+<ul>
+<li>中国种植牙费用为$800-$1,200，比美国低70%-80%</li>
+<li>治疗周期约7-10天</li>
+<li>包含翻译、住宿和接送服务，降低额外成本</li>
+</ul>
+</div>
+
+<section class="faq-section">
+<h2>常见问题解答</h2>
+
+<div class="faq-item">
+<h3>1. 医疗旅游真的安全吗？</h3>
+<p>合作医院为ISO认证机构，医生拥有10年以上经验，年均接诊1000+例国际患者。</p>
+</div>
+
+<div class="faq-item">
+<h3>2. 可以节省多少费用？</h3>
+<p>中国种植牙费用为$800-$1,200，美国为$3,000-$6,000，节省约70%-80%。</p>
+</div>
+
+<div class="faq-item">
+<h3>3. 治疗周期多久？</h3>
+<p>整体治疗周期约为7-10天，比美国更高效。</p>
+</div>
+
+</section>
+
+<section class="summary-section">
+<h2>总结</h2>
+<p>中国牙科治疗费用显著低于美国。例如，单颗种植牙费用为$800-$1,200，而美国为$3,000-$6,000，节省约70%-80%。</p>
+<p>对于希望降低医疗成本的患者，医疗旅游是一种高性价比选择。</p>
+<ul>
+<li>种植牙费用节省最高达70%-80%</li>
+<li>治疗周期通常为7-10天</li>
+<li>包含翻译、住宿和接送服务</li>
+</ul>
+</section>
+
 </body>
 </html>

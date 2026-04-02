@@ -106,14 +106,101 @@ footer {
         .mobile-nav { display: block; }
     }
     </style>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
 </head>
 <body class="antialiased">
     
     <div class="floating-contact">
-        <a href="https://wa.me/12133179751" target="_blank" class="contact-btn whatsapp" title="Chat on WhatsApp">
+        <a href="https://wa.me/12133179751" target="_blank" class="btn-touch contact-btn whatsapp" title="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="https://t.me/+19569221708" target="_blank" class="contact-btn telegram" title="Message on Telegram">
+        <a href="https://t.me/+19569221708" target="_blank" class="btn-touch contact-btn telegram" title="Message on Telegram">
             <i class="fab fa-telegram"></i>
         </a>
     </div>
@@ -139,11 +226,11 @@ footer {
                     <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
                 </div>
                 
-                <a href="#consultation" class="btn-primary hidden md:inline-flex">
+                <a href="#consultation" class="btn-touch btn-primary hidden md:inline-flex">
                     <i class="fas fa-calendar-check mr-2"></i> Free Consultation
                 </a>
                 
-                <button class="md:hidden text-gray-700">
+                <button class="btn-touch md:hidden text-gray-700">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -162,7 +249,7 @@ footer {
                 <p>ISO9001 Quality Management System</p>
                 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="#pricing" class="btn-primary">
+                    <a href="#pricing" class="btn-touch btn-primary">
                         <i class="fas fa-dollar-sign mr-3"></i> See Price Comparison
                     </a>
                     <a href="#consultation" class="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
@@ -317,7 +404,7 @@ footer {
                         </div>
                     </div>
                     
-                    <a href="#consultation" class="btn-primary w-full justify-center">
+                    <a href="#consultation" class="btn-touch btn-primary w-full justify-center">
                         Get Dental Quote
                     </a>
                 </div>
@@ -352,7 +439,7 @@ footer {
                         </div>
                     </div>
                     
-                    <a href="#consultation" class="btn-primary w-full justify-center">
+                    <a href="#consultation" class="btn-touch btn-primary w-full justify-center">
                         Get Cosmetic Quote
                     </a>
                 </div>

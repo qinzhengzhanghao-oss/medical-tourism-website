@@ -27,6 +27,126 @@
         .mobile-nav { display: block; }
     }
     </style>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
+
+<style>
+/* 移动端优先响应式设计 */
+* { box-sizing: border-box; }
+body { 
+    font-size: 16px; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+}
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+}
+</style>
+
 </head>
 <body>
     <div class="emergency-banner">🚨 Dental Emergency? <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a></div>
@@ -39,7 +159,7 @@
                 <a href="dental-implant-cost-2026.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Pricing</a>
                 <a href="about.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">About</a>
                 <a href="contact.html" style="margin-left: 15px; color: #1e40af; font-weight: 600; text-decoration: none;">Contact</a>
-                <a href="https://wa.me/+12133179751" class="btn-primary" style="margin-left: 15px;">Free Consultation</a>
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="margin-left: 15px;">Free Consultation</a>
             </div>
         </div>
     </nav>
@@ -70,7 +190,7 @@
                         Fastest response. Send photos, get immediate answers.
                     </p>
                     <div style="font-size: 20px; font-weight: 700; color: #25d366; margin-bottom: 15px;">+1 213 317 9751</div>
-                    <a href="https://wa.me/+12133179751" class="btn-primary" style="background: #25d366;">Start Chat</a>
+                    <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="background: #25d366;">Start Chat</a>
                 </div>
                 
                 
@@ -83,7 +203,7 @@
                         Secure messaging. Send documents, get detailed info.
                     </p>
                     <div style="font-size: 20px; font-weight: 700; color: #0088cc; margin-bottom: 15px;">+1 956 922 1708</div>
-                    <a href="https://t.me/+19569221708" class="btn-primary" style="background: #0088cc;">Message Now</a>
+                    <a href="https://t.me/+19569221708" class="btn-touch btn-primary" style="background: #0088cc;">Message Now</a>
                 </div>
                 
                 
@@ -96,7 +216,7 @@
                         Detailed inquiries. Attach medical records, get comprehensive replies.
                     </p>
                     <div style="font-size: 18px; font-weight: 700; color: #ea4335; margin-bottom: 15px;">qinzhengzhanghao@gmail.com</div>
-                    <a href="mailto:qinzhengzhanghao@gmail.com" class="btn-primary" style="background: #ea4335;">Send Email</a>
+                    <a href="mailto:qinzhengzhanghao@gmail.com" class="btn-touch btn-primary" style="background: #ea4335;">Send Email</a>
                 </div>
             </div>
         </section>
@@ -134,7 +254,7 @@
             <p style="font-size: 18px; color: #7f1d1d; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
                 For dental emergencies, severe pain, or urgent medical questions, use our emergency hotline.
             </p>
-            <a href="https://wa.me/+12133179751" class="btn-primary" style="background: #dc2626; padding: 16px 32px; font-size: 18px;">
+            <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="background: #dc2626; padding: 16px 32px; font-size: 18px;">
                 <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Emergency Hotline: +1 213 317 9751
             </a>
         </section>
@@ -145,7 +265,7 @@
             <p style="font-size: 18px; color: #4b5563; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
                 Get personalized answers about dental implant costs, treatment options, and travel arrangements.
             </p>
-            <a href="https://wa.me/+12133179751" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">
+            <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">
                 <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Start Free WhatsApp Consultation
             </a>
         </section>
