@@ -930,7 +930,84 @@ body {
     </main>
     
     
-    <footer class="main-footer"> <div class="container"> <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;"> <div> <div style="display: flex; align-items: center; margin-bottom: 20px;"> <div style="font-size: 32px; color: white; margin-right: 10px;">🏥</div> <div style="font-weight: 700; font-size: 24px; color: white;">ChinaMedTour</div> <div style="font-size: 14px; color: #cbd5e0;">Medical Tourism Excellence</div> </div> </div> <p style="font-size: 14px; line-height: 1.6; color: #cbd5e0; margin-bottom: 20px;"> Connecting American patients with world-class dental and medical care in China. Save up to 80% on treatment costs with experienced dental specialists at ISO9001-certified Grade 3A hospitals. </p> </div> <div> <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3> <ul style="list-style: none;"> <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e0; text-decoration: none;">All Services</a></li> <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e0; text-decoration: none;">2026 Prices</a></li> <li style="margin-bottom: 10px;"><a href="experienced-dental-specialists-china.html" style="color: #cbd5e0; text-decoration: none;">Seasoned dental experts</a></li> <li style="margin-bottom: 10px;"><a href="iso9001-grade-3a-hospitals.html" style="color: #cbd5e0; text-decoration: none;">ISO9001 Grade 3A Hospitals</a></li> <li><a href="faq.html" style="color: #cbd5e0; text-decoration: none;">FAQ</a></li> </ul> </div> <div> <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Patient Resources</h3> <ul style="list-style: none;"> <li style="margin-bottom: 10px;"><a href="patient-rights-protection.html" style="color: #cbd5e0; text-decoration: none;">Patient Rights</a></li> <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e0; text-decoration: none;">Risk Disclosure</a></li> <li style="margin-bottom: 10px;"><a href="safety-protocols-standards.html" style="color: #cbd5e0; text-decoration: none;">Safety Protocols</a></li> <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e0; text-decoration: none;">Privacy Policy</a></li> <li><a href="terms-of-service.html" style="color: #cbd5e0; text-decoration: none;">Terms of Service</a></li> </ul> </div> <div> <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Us</h3> <div style="color: #cbd5e0; font-size: 14px; line-height: 1.8;"> <div style="margin-bottom: 10px;"> <strong>WhatsApp:</strong><br> <a href="https://wa.me/+12133179751" style="color: #10b981; text-decoration: none;">+1 213 317 9751</a> </div> <div style="margin-bottom: 10px;"> <strong>Telegram:</strong><br> Mon-Fri: 9:00 AM - 6:00 PM (PST) </div> </div> </div> </div> <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af; margin-top: 40px;"> <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p> <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p> </div> </div> <div class="security-badges"> <div class="security-item"> <span>Secure & Confidential</span> </div> <div class="security-item"> <span>SSL Encrypted</span> </div> <div class="security-item"> <span>Privacy Protected</span> </div> </div> </footer>
+    <footer class="main-footer">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+                
+                <div>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="font-size: 32px; color: white; margin-right: 10px;">🏥</div>
+                        <div style="font-weight: 700; font-size: 24px; color: white;">ChinaMedTour</div>
+                            <div style="font-size: 14px; color: #cbd5e0;">Medical Tourism Excellence</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 14px; line-height: 1.6; color: #cbd5e0; margin-bottom: 20px;">
+                        Connecting American patients with world-class dental and medical care in China. 
+                        Save up to 80% on treatment costs with experienced dental specialists at ISO9001-certified Grade 3A hospitals.
+                    </p>
+                </div>
+                
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e0; text-decoration: none;">All Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e0; text-decoration: none;">2026 Prices</a></li>
+                        <li style="margin-bottom: 10px;"><a href="experienced-dental-specialists-china.html" style="color: #cbd5e0; text-decoration: none;">Seasoned dental experts</a></li>
+                        <li style="margin-bottom: 10px;"><a href="iso9001-grade-3a-hospitals.html" style="color: #cbd5e0; text-decoration: none;">ISO9001 Grade 3A Hospitals</a></li>
+                        <li><a href="faq.html" style="color: #cbd5e0; text-decoration: none;">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Patient Resources</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="patient-rights-protection.html" style="color: #cbd5e0; text-decoration: none;">Patient Rights</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e0; text-decoration: none;">Risk Disclosure</a></li>
+                        <li style="margin-bottom: 10px;"><a href="safety-protocols-standards.html" style="color: #cbd5e0; text-decoration: none;">Safety Protocols</a></li>
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e0; text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" style="color: #cbd5e0; text-decoration: none;">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Us</h3>
+                    <div style="color: #cbd5e0; font-size: 14px; line-height: 1.8;">
+                        <div style="margin-bottom: 10px;">
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/+12133179751" style="color: #10b981; text-decoration: none;">+1 213 317 9751</a>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Telegram:</strong><br>
+                            Mon-Fri: 9:00 AM - 6:00 PM (PST)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af; margin-top: 40px;">
+                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
+                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+            </div>
+        </div>
+    
+    <div class="security-badges">
+      <div class="security-item">
+        
+        <span>Secure & Confidential</span>
+      </div>
+      <div class="security-item">
+        
+        <span>SSL Encrypted</span>
+      </div>
+      <div class="security-item">
+        
+        <span>Privacy Protected</span>
+      </div>
+    </div>
+</footer>
     
     
     <script>
@@ -993,22 +1070,23 @@ body {
 <div class="key-points">
 <h3>Key Takeaways</h3>
 <ul>
-<li>Dental Implant800-$1,200，70%-$800-$1,200，70%-80% savingsi>、Services，<7-10
+<li>Dental Implant800-$1,200，70%-$800-$1,200，70%-80%i>、Services，<7-10
 </div>
 
-<se, tio、，n">
-<h2>Fr, quently Asked Ques, ions</h2>
+<sectio、，n">
+<h2>Frequently Asked Questions</h2>
 
-<div class=, faq-item">
+<div class="faq-item">
 <h3>1. MedicalTourism？</h3>
 <p>O，10，1000+。</p>
 </1. ？ass="faq-item">
-<hISO，10，1000+。0, ，$, ,000-. 6,000，savings approximately70%-8, % , aving. </, >
+<hISO，10，1000+。00，$3,000-$6,000，savings approximately70%-80%。</p>
 </div>
 
-<di,  class="faq-item">2. ？？</h3>. <p>$800-$1,200，$3,000-$6,000，70%-80% sa$800-$1,200 (US: $3,0, 0-$6,000)n"><, 2>Summa. y</h2>
-<p>Dental3. ？$800-$1,200，7-10，。70%-80% savings</p>
-<p>Medic, l，Me, . calTour. sm。</p>
+<div class="faq-item">2. ？？</h3>
+<p>$800-$1,200，$3,000-$6,000，70%-80%。 class="summary-section"><h2>Summary</h2>
+<p>Dental3. ？$800-$1,200，7-10，。70%-80%。</p>
+<p>Medical，MedicalTourism。</p>
 <ul>
-<l, >Dental Implan. 70%-80% savings</l
-<li>。，$800-$1,200，$3,$80. , $1,200 (US:, $3,000-$6,000, ="emerg. ncy-cta" style="background: #f8，。 40px , .  border-radius: 10px; text-align70%-80% savingsh3>CConsult Now</h7-10Medical consultants provide free consultation and customized plans<、ref="contact.html" style="display: inline-block; background: #007bff; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold;">Free Consultation</a>
+<li>Dental Implant70%-80%</l
+<li>。，$800-$1,200，$3,000-$6,000，70%-80%。="emergency-cta" style="background: #f8，。 40px 0; border-radius: 10px; text-align70%-80%h3>Consult Now，70%Medical</h7-10Medical consultants provide free consultation and customized plans<、ref="contact.html" style="display: inline-block; background: #007bff; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold;">Free Consultation</a>

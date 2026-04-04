@@ -246,11 +246,15 @@ body {
 <body class="antialiased bg-gray-50">
     
     <nav class="main-nav" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
-        <div style="display: flex; align-items: center;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
+            
+            
+            <div style="display: flex; align-items: center;">
                 <div style="font-size: 24px; color: #1e40af; margin-right: 10px;">🏥</div>
                 <div>
                     <div style="font-weight: 700; font-size: 20px; color: #1e40af;">ChinaMedTour</div>
                     <div style="font-size: 12px; color: #6b7280;">Medical Tourism</div>
+                </div>
             </div>
             
             
@@ -292,7 +296,7 @@ body {
             </div>
             
             
-            <button class="btn-default">☰</button>
+            <button class="btn-touch mobile-menu-toggle" style="display: none; background: none; border: none; font-size: 24px; color: #374151; cursor: pointer; z-index: 1002;">☰</button>
         </div>
         
         
@@ -324,6 +328,7 @@ body {
                     <a href="#quality" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">Quality & Safety</a>
                     <a href="#process" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">Process & Timeline</a>
                 </div>
+            </div>
         </div>
 
         
@@ -332,18 +337,20 @@ body {
                 
                 
                 <div id="general" style="margin-bottom: 60px;">
-                    <h2 class="h2-standard" style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #1e40af; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb;">
+                    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #1e40af; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb;">
                         
                         General Questions
                     </h2>
                     
-                    <div class="faq-question" onclick="toggleAnswer(this)">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
                             
                             What is dental tourism?
                         </div>
                         <div class="faq-answer" style="display: none;">
                             Dental tourism involves traveling to another country for dental treatment, typically to access high-quality care at significantly lower costs. China has become a popular destination due to its advanced dental technology, experienced specialists, and cost savings of 60-80% compared to Western countries.
                         </div>
+                    </div>
                     
                     <div class="faq-item">
                         <div class="faq-question" onclick="toggleAnswer(this)">
@@ -368,7 +375,7 @@ body {
                 
                 
                 <div id="cost" style="margin-bottom: 60px;">
-                    <h2 class="h2-standard" style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #1e40af; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb;">
+                    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #1e40af; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb;">
                         
                         Cost & Pricing
                     </h2>
@@ -482,7 +489,7 @@ body {
                 
                 
                 <div style="background: linear-gradient(135deg, #10b981, #34d399); color: white; border-radius: 12px; padding: 40px; text-align: center; margin-top: 60px;">
-                    <h3 class="h3-standard" style="font-size: 28px; font-weight: 600; margin-bottom: 20px;">
+                    <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 20px;">
                         
                         Still Have Questions?
                     </h3>
@@ -503,7 +510,44 @@ body {
     </div>
 
     
-    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;"> <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;"> <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;"> <div> <h3 class="h3-standard" style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3> <ul style="color: #cbd5e1;"> <li style="margin-bottom: 10px;"> WhatsApp: +1 213 317 9751</li> <li style="margin-bottom: 10px;"> Telegram: +1 956 922 1708</li> <li style="margin-bottom: 10px;"> Email: qinzhengzhanghao@gmail.com</li> </ul> </div> <div> <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3> <ul style="color: #cbd5e1;"> <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li> <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li> <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li> <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li> </ul> </div> <div> <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3> <ul style="color: #cbd5e1;"> <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li> <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li> <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li> </ul> </div> </div> <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;"> <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p> <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p> </div> </div> </footer>
+    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"> WhatsApp: +1 213 317 9751</li>
+                        <li style="margin-bottom: 10px;"> Telegram: +1 956 922 1708</li>
+                        <li style="margin-bottom: 10px;"> Email: qinzhengzhanghao@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
+                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
+                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
+                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+            </div>
+        </div>
+    </footer>
 
     
     <script>
@@ -558,7 +602,7 @@ body {
                     
                     navItem.addEventListener('mouseleave', function() {
                         dropdown.style.display = 'none';
-           });
+                    });
                 }
             });
             
@@ -599,7 +643,7 @@ body {
     </script>
 
 <section class="emergency-cta" style="background: #f8f9fa; padding: 30px; margin: 40px 0; border-radius: 10px; text-align: center;">
-    <h3>CoConsult Now/h3>, 70%</p>
+    <h3>Consult Now，70%Medical</h3>，70%</p>
     <a hreyle="display: inline-block; background: #007bff; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold;">Read More</a>
 </section>
 
