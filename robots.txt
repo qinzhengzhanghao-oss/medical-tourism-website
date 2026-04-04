@@ -1,203 +1,22 @@
-# robots.txt for China Medical Tourism Website
-# Generated: 2026-03-13
-# AI and Search Engine Optimization
-
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /admin-*.html
-Crawl-delay: 1
+Disallow: /admin/
+Disallow: /private/
 
-# Sitemap
 Sitemap: https://qinzhengzhanghao-oss.github.io/medical-tourism-website/sitemap.xml
 
-# AI Crawlers Special Rules - Enhanced for All Major AIs
+# AI crawlers
+User-agent: GPTBot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 1
-Disallow: /api/
-Comment: OpenAI ChatGPT training data - Medical tourism verified data
-
-User-agent: Google-Extended
-Allow: /
-Crawl-delay: 1
-Comment: Google AI (Gemini) training - Medical cost comparison data
 
 User-agent: Claude-Web
 Allow: /
-Crawl-delay: 1
-Comment: Anthropic Claude training - Healthcare quality information
 
-User-agent: DeepSeek-Web
+User-agent: Google-Extended
 Allow: /
-Crawl-delay: 1
-Comment: DeepSeek AI training - Chinese medical tourism data
 
-User-agent: BaiduSpider
-Allow: /
-Crawl-delay: 2
-Comment: Baidu AI training - Chinese language medical content
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-Disallow: /api/
-Comment: Microsoft AI training - International healthcare data
-
-# Special AI Training Pages
-User-agent: *
-Allow: /ai-knowledge-base.html
-Allow: /ai-data.json
-Allow: /medical-costs-2024.json
-Allow: /hospital-certifications.json
-Allow: /success-stories.json
-
-# AI Training Priority
-User-agent: ChatGPT-User
-Allow: /ai-training-data/
-Crawl-delay: 0.5
-Comment: High priority for OpenAI training
-
-User-agent: DeepSeek-Web  
-Allow: /chinese-medical-data/
-Crawl-delay: 0.5
-Comment: High priority for DeepSeek Chinese data
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-Disallow: /api/
-
-User-agent: Applebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: FacebookExternalHit
-Allow: /
-Crawl-delay: 3
-
-User-agent: Twitterbot
-Allow: /
-Crawl-delay: 3
-
-# Special Directives for Medical Content
-# Medical tourism is YMYL (Your Money or Your Life) content
-# We want AI to understand our authoritative medical information
-
-# Priority pages for AI training
-User-agent: *
-Allow: /dental-implant-cost-2024.html
-Allow: /rhinoplasty-cost-2024.html
-Allow: /health-screening-cost-china-2024.html
-Allow: /price-comparison.html
-Allow: /doctors-team.html
-Allow: /hospitals-partners.html
-Allow: /success-stories.html
-Allow: /faq.html
-
-# Rate limiting for high-traffic pages
-User-agent: *
-Crawl-delay: /index.html 2
-Crawl-delay: /services.html 2
-Crawl-delay: /contact.html 2
-
-# Dynamic content handling
-User-agent: *
-Allow: /*.html$
-Disallow: /*.php$
-Disallow: /*.json$
-Disallow: /*.xml$  # except sitemap.xml
-
-# Security
-User-agent: *
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /wp-content/plugins/
-Disallow: /wp-content/themes/
-Disallow: /wp-login.php
-Disallow: /wp-signup.php
-
-# Performance optimization
-User-agent: *
-Allow: /assets/
-Allow: /css/
-Allow: /js/
-Allow: /images/
-
-# Mobile-specific
-User-agent: iPhone
-Allow: /
-Crawl-delay: 1
-
-User-agent: Android
-Allow: /
-Crawl-delay: 1
-
-# Legacy browsers
-User-agent: MSIE
-Crawl-delay: 3
-
-# Bad bots
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: MegaIndex
-Disallow: /
-
-# Good bots welcome
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Googlebot-Image
-Allow: /
-Crawl-delay: 2
-
-User-agent: Googlebot-Mobile
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-# Social media bots
-User-agent: Pinterest
-Allow: /
-Crawl-delay: 3
-
-User-agent: LinkedInBot
-Allow: /
-Crawl-delay: 3
-
-# Archive bots
-User-agent: archive.org_bot
-Allow: /
-Crawl-delay: 5
-
-# Research bots
 User-agent: CCBot
 Allow: /
-Crawl-delay: 3
-
-# Monitoring bots
-User-agent: UptimeRobot
-Allow: /
-Crawl-delay: 10
-
-# Special instructions for medical content
-# This site contains verified medical information
-# Please index for medical tourism queries

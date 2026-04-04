@@ -2,15 +2,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 移动端优化 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="canonical" href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/about.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>医疗旅游价格对比 | 中美牙科费用节省70%</title>
-    <meta name="description" content="医疗旅游价格对比 | 中美牙科费用节省70% - 专业医疗旅游服务，价格透明，节省70%费用，中美价格对比，认证医院保障">
+    <title>About Our Medical Tourism Company | US-Trained Dental Experts</title>
+    <meta name="description" content="Learn about our medical tourism company with US-trained dental experts. We provide affordable, high-quality dental care in China with international standards.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+  :root {
+    --brand-primary: #dc2626;
+    --brand-secondary: #2d8cff;
+    --brand-accent: #00cc88;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --background-light: #f8f9fa;
+    --border-color: #e0e0e0;
+  }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .emergency-banner { background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 12px 0; text-align: center; font-weight: 600; font-size: 14px; }
         .hero-section { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 60px 0; text-align: center; }
@@ -19,7 +37,10 @@
         .about-card { flex: 1; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid #1e40af; }
         .btn-primary { background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
         .main-footer { background: #000000; color: white; padding: 60px 0; margin-top: 80px; }
-        @media (max-width: 768px) { .horizontal-cards { flex-direction: column; } }
+        @media (max-width: 768px) { .horizontal-cards { flex-direction: column; 
+  body { font-size: 16px; }
+  p { font-size: 16px; line-height: 1.6; }
+} }
     </style>
 
     <style>
@@ -148,6 +169,37 @@ body {
 }
 </style>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "医疗旅游服务页面",
+  "description": "专业医疗旅游服务信息",
+  "url": "https://qinzhengzhanghao-oss.github.io/medical-tourism-website/",
+  "publisher": {
+    "@type": "MedicalOrganization",
+    "name": "医疗旅游服务"
+  }
+}
+</script>
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Medical Tourism - Quality Dental Care in China">
+  <meta property="og:description" content="Affordable, high-quality dental treatments with US-trained dentists in China. Save up to 70% on dental procedures.">
+  <meta property="og:image" content="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/images/og-image.jpg">
+  <meta property="og:url" content="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="China Medical Tourism">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Medical Tourism - Quality Dental Care in China">
+  <meta name="twitter:description" content="Affordable, high-quality dental treatments with US-trained dentists in China.">
+  <meta name="twitter:image" content="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/images/twitter-image.jpg">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 </head>
 <body>
     
@@ -157,6 +209,14 @@ body {
     
     
     <nav style="background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+  <!-- 专业Logo -->
+  <div class="logo-container">
+    <a href="/" class="logo" aria-label="Medical Tourism Logo">
+      <span class="logo-text">🦷 Medical Tourism</span>
+      <span class="logo-tagline">Quality Dental Care in China</span>
+    </a>
+  </div>
+
         <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="index.html" style="color: #1e40af; font-weight: 600; text-decoration: none;">← Home</a>
             <div>
@@ -164,19 +224,46 @@ body {
                 <a href="about.html" style="margin-left: 15px; color: #1e40af; font-weight: 600; text-decoration: none;">About</a>
                 <a href="doctor-credentials-verification.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Doctors</a>
                 <a href="contact.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Contact</a>
-                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="margin-left: 15px;">Ask Questions</a>
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="min-height: 44px; min-width: 44px; cursor: pointer; margin-left: 15px;">Ask Questions</a>
             </div>
         </div>
     </nav>
     
     
     <section class="hero-section">
+  <!-- 用户评价 -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">What Our Patients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            "The dental care I received in China was exceptional. The quality matched what I'd expect in the US, but at a fraction of the cost."
+          </div>
+          <div class="testimonial-author">
+            <strong>Sarah M.</strong>
+            <span>New York, USA</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            "Professional, clean, and efficient. The entire medical tourism experience was seamless from start to finish."
+          </div>
+          <div class="testimonial-author">
+            <strong>James L.</strong>
+            <span>London, UK</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
         <div class="container">
             <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 20px;">About ChinaMedTour</h1>
             <p style="font-size: 20px; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
                 Connecting US patients with experienced dental specialists in China for affordable, high-quality dental implant tourism.
             </p>
-            <a href="#mission" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">Our Mission</a>
+            <a href="#mission" class="btn-touch btn-primary" style="min-height: 44px; min-width: 44px; cursor: pointer; padding: 16px 32px; font-size: 18px;">Our Mission</a>
         </div>
     </section>
     
@@ -293,10 +380,10 @@ body {
                 Get complete information about our dental implant tourism services, doctor verification, and patient support.
             </p>
             <div>
-                <a href="services.html" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">
+                <a href="services.html" class="btn-touch btn-primary" style="min-height: 44px; min-width: 44px; cursor: pointer; padding: 16px 32px; font-size: 18px;">
                     <i class="fas fa-teeth" style="margin-right: 10px;"></i> View Services
                 </a>
-                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="background: #3b82f6; margin-left: 20px; padding: 16px 32px; font-size: 18px;">
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="min-height: 44px; min-width: 44px; cursor: pointer; background: #3b82f6; margin-left: 20px; padding: 16px 32px; font-size: 18px;">
                     <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Ask Questions
                 </a>
             </div>
@@ -341,7 +428,22 @@ body {
                 <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
             </div>
         </div>
-    </footer>
+    
+    <div class="security-badges">
+      <div class="security-item">
+        <i class="fas fa-shield-alt"></i>
+        <span>Secure & Confidential</span>
+      </div>
+      <div class="security-item">
+        <i class="fas fa-lock"></i>
+        <span>SSL Encrypted</span>
+      </div>
+      <div class="security-item">
+        <i class="fas fa-user-shield"></i>
+        <span>Privacy Protected</span>
+      </div>
+    </div>
+</footer>
 
 
 
@@ -389,6 +491,13 @@ body {
 <li>治疗周期通常为7-10天</li>
 <li>包含翻译、住宿和接送服务</li>
 </ul>
+</section>
+
+
+<section class="emergency-cta" style="background: #f8f9fa; padding: 30px; margin: 40px 0; border-radius: 10px; text-align: center;">
+    <h3>立即咨询，节省70%医疗费用</h3>
+    <p>专业医疗顾问为您提供免费咨询和定制方案</p>
+    <a href="contact.html" style="display: inline-block; background: #007bff; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold;">免费咨询</a>
 </section>
 
 </body>

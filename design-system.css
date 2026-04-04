@@ -479,3 +479,420 @@ body {
 @media (min-width: 1024px) {
   .lg\:block { display: block; }
   .lg\:hidden { display: none
+/* 可访问性改进 */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* 焦点状态 */
+a:focus, button:focus, input:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* 高对比度支持 */
+@media (prefers-contrast: high) {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    a {
+        color: #0000EE;
+    }
+}
+
+/* 减少动画 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 视觉信任度增强 */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--brand-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.logo-tagline {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* 安全标识 */
+.security-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.security-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.security-item i {
+  color: var(--brand-primary);
+  font-size: 1.25rem;
+}
+
+/* 用户评价 */
+.testimonials-section {
+  background: var(--background-light);
+  padding: 4rem 0;
+  margin: 3rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+.testimonial-content {
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--brand-primary);
+  opacity: 0.2;
+  position: absolute;
+  top: -1rem;
+  left: -0.5rem;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.testimonial-author strong {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.testimonial-author span {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* 专业认证标识 */
+.certifications {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.certification-badge {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.certification-badge i {
+  color: var(--brand-primary);
+  font-size: 1.25rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .security-badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certifications {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 内容可读性增强 */
+.content-structure {
+  margin-bottom: 2rem;
+}
+
+.content-title {
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.content-summary {
+  background: var(--background-light);
+  border-left: 4px solid var(--brand-primary);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.summary-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.summary-content {
+  flex: 1;
+}
+
+.summary-content strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* 段落优化 */
+p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* 列表优化 */
+ul, ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+/* 引用优化 */
+blockquote {
+  border-left: 3px solid var(--brand-primary);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* 响应式可读性 */
+@media (max-width: 768px) {
+  .content-title {
+    font-size: 1.75rem;
+  }
+  
+  .content-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  p {
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .content-summary {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* AI推荐优化样式 */
+.faq-preview {
+  background: var(--background-light);
+  padding: 3rem 0;
+  margin: 3rem 0;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+  color: var(--brand-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+}
+
+.faq-link {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.faq-link a {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.faq-link a:hover {
+  text-decoration: underline;
+}
+
+/* 权威信号 */
+.authority-signals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.authority-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.authority-item i {
+  color: var(--brand-primary);
+  font-size: 1.25rem;
+}
+
+.authority-item span {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* 社交证明 */
+.social-proof {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+  color: white;
+  padding: 4rem 0;
+  margin: 3rem 0;
+}
+
+.social-proof h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-grid blockquote {
+  background: rgba(255,255,255,0.1);
+  border-left: 4px solid white;
+  padding: 2rem;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.testimonial-grid cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .authority-signals {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .faq-item {
+    padding: 1rem;
+  }
+}
