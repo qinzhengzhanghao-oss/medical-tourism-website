@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/faq.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Tourism FAQ | Answers to Common Questions</title>
+    <meta name="description" content="Frequently asked questions about medical tourism in China. Learn about costs, quality, safety, and the booking process for dental treatments.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .faq-item { 
+            border-bottom: 1px solid #e5e7eb; 
+            padding: 20px 0; 
+        }
+        
+        .faq-question { 
+            font-weight: 600; 
+            color: #1e40af; 
+            cursor: pointer; 
+        }
+        
+        .faq-answer { 
+            padding-top: 12px; 
+            color: #4b5563; 
+            display: block !important;  /* 修复：让答案默认显示 */
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+        
+        /* FAQ内容区域样式 */
+        .faq-content {
+            position: relative;
+            z-index: 2;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: -40px;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .desktop-nav-links {
+                display: none !important;
+            }
+            
+            .mobile-menu-toggle {
+                display: block !important;
+            }
+            
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .faq-hero h1 {
+                font-size: 28px !important;
+            }
+            
+            .faq-hero p {
+                font-size: 16px !important;
+            }
+            
+            .faq-item {
+                padding: 15px 0;
+            }
+            
+            .faq-content {
+                margin-top: -20px;
+                border-radius: 0;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-menu-toggle {
+                display: none !important;
+            }
+            
+            .mobile-menu {
+                display: none !important;
+            }
+        }
+        
+        footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background: #1a202c;
+            color: white;
+            padding: 20px 0;
+            z-index: 1000;
+            margin-top: 80px;
+        }
+    </style>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMGGNLW8VH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GMGGNLW8VH');
+    </script>
+
+<style>
+/* 响应式设计基础 */
+* {
+    box-sizing: border-box;
+}
+
+/* 移动端优先 */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 容器响应式 */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 响应式网格 */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1 0 100%;
+    padding: 0 15px;
+}
+
+/* 媒体查询 - 平板 */
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+    .col { flex: 1 0 50%; }
+}
+
+/* 媒体查询 - 桌面 */
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+    .col { flex: 1 0 33.333%; }
+}
+
+/* 响应式图片 */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式表格 */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 触摸友好按钮 */
+.btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* 移动端导航优化 */
+.nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 防止移动端缩放问题 */
+input, select, textarea {
+    font-size: 16px; /* 防止iOS缩放 */
+}
+</style>
+
+
+<style>
+/* 移动端优先响应式设计 */
+* { box-sizing: border-box; }
+body { 
+    font-size: 16px; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+@media (min-width: 768px) {
+    body { font-size: 17px; }
+}
+@media (min-width: 992px) {
+    body { font-size: 18px; }
+}
+</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "医疗旅游服务页面",
+  "description": "专业医疗旅游服务信息",
+  "url": "https://qinzhengzhanghao-oss.github.io/medical-tourism-website/",
+  "publisher": {
+    "@type": "MedicalOrganization",
+    "name": "医疗旅游服务"
+  }
+}
+</script>
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+</head>
+<body>
+<body class="antialiased bg-gray-50">
+    <!-- 主导航 -->
+    <nav class="main-nav" style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
+            
+            <!-- 网站Logo -->
+            <div style="display: flex; align-items: center;">
+                <div style="font-size: 24px; color: #1e40af; margin-right: 10px;">🏥</div>
+                <div>
+                    <div style="font-weight: 700; font-size: 20px; color: #1e40af;">ChinaMedTour</div>
+                    <div style="font-size: 12px; color: #6b7280;">Medical Tourism</div>
+                </div>
+            </div>
+            
+            <!-- 桌面导航链接 -->
+            <div class="desktop-nav-links" style="display: flex; align-items: center; gap: 30px;">
+                <a href="index.html" style="color: #374151; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="services.html" style="color: #374151; text-decoration: none; font-weight: 500;">Services</a>
+                <a href="dental-implant-cost-2026.html" style="color: #374151; text-decoration: none; font-weight: 500;">Pricing</a>
+                
+                <!-- 城市导航 -->
+                <div style="position: relative;">
+                    <a href="dental-tourism-beijing.html" style="color: #374151; text-decoration: none; font-weight: 500;">Cities</a>
+                    <div style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; padding: 10px; min-width: 180px; display: none; z-index: 1001;">
+                        <a href="dental-tourism-beijing.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Beijing</a>
+                        <a href="dental-tourism-shanghai.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Shanghai</a>
+                        <a href="dental-tourism-guangzhou.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Guangzhou</a>
+                    </div>
+                </div>
+                
+                <!-- 职业导航 -->
+                <div style="position: relative;">
+                    <a href="for-teachers-educators.html" style="color: #374151; text-decoration: none; font-weight: 500;">Professions</a>
+                    <div style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; padding: 10px; min-width: 180px; display: none; z-index: 1001;">
+                        <a href="for-teachers-educators.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Teachers & Educators</a>
+                        <a href="tech-professionals.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Tech Professionals</a>
+                    </div>
+                </div>
+                
+                <!-- 案例研究导航 -->
+                <div style="position: relative;">
+                    <a href="patient-testimonials.html" style="color: #374151; text-decoration: none; font-weight: 500;">Case Studies</a>
+                    <div style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px; padding: 10px; min-width: 180px; display: none; z-index: 1001;">
+                        <a href="patient-testimonials.html" style="display: block; padding: 8px 12px; color: #374151; text-decoration: none;">Patient Testimonials</a>
+                    </div>
+                </div>
+                
+                <a href="about.html" style="color: #374151; text-decoration: none; font-weight: 500;">About</a>
+                <a href="contact.html" style="color: #374151; text-decoration: none; font-weight: 500;">Contact</a>
+                <a href="https://wa.me/+12133179751" class="btn-touch btn-primary">Free Consultation</a>
+            </div>
+            
+            <!-- 汉堡菜单按钮（手机端显示） -->
+            <button class="btn-touch mobile-menu-toggle" style="display: none; background: none; border: none; font-size: 24px; color: #374151; cursor: pointer; z-index: 1002;">☰</button>
+        </div>
+        
+        <!-- 移动菜单（手机端显示） -->
+        <div class="mobile-menu" style="display: none; width: 100%; background: white; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-radius: 8px;">
+            <a href="index.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Home</a>
+            <a href="services.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Services</a>
+            <a href="dental-implant-cost-2026.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Pricing</a>
+            <a href="dental-tourism-beijing.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Cities</a>
+            <a href="for-teachers-educators.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Professions</a>
+            <a href="patient-testimonials.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Case Studies</a>
+            <a href="about.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">About</a>
+            <a href="contact.html" style="display: block; padding: 12px 0; color: #374151; text-decoration: none; font-weight: 500; border-bottom: 1px solid #e5e7eb;">Contact</a>
+            <a href="https://wa.me/+12133179751" style="display: block; background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 16px; border-radius: 6px; text-align: center; margin-top: 15px; text-decoration: none; font-weight: 600;">Free Consultation</a>
+        </div>
+    </nav>
+
+    <!-- FAQ页面内容 -->
+    <div class="min-h-screen" style="position: relative; z-index: 1;">
+        <!-- FAQ头部 -->
+        <div class="faq-hero" style="background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; padding: 60px 0; text-align: center;">
+            <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 20px;">Frequently Asked Questions</h1>
+                <p style="font-size: 20px; max-width: 800px; margin: 0 auto 30px; opacity: 0.9;">
+                    Find answers to common questions about dental tourism in China
+                </p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="#general" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">General Questions</a>
+                    <a href="#cost" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">Cost & Pricing</a>
+                    <a href="#quality" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">Quality & Safety</a>
+                    <a href="#process" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none;">Process & Timeline</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ内容 -->
+        <div class="faq-content" style="padding: 60px 0;">
+            <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+                
+                <!-- 一般问题 -->
+                <div id="general" style="margin-bottom: 60px;">
+                    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #1e40af; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb;">
+                        <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
+                        General Questions
+                    </h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            What is dental tourism?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            Dental tourism involves traveling to another country for dental treatment, typically to access high-quality care at significantly lower costs. China has become a popular destination due to its advanced dental technology, experienced specialists, and cost savings of 60-80% compared to Western countries.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            Why choose China for dental treatment?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            China offers: 1) ISO9001-certified Grade 3A hospitals, 2) Experienced dental specialists with international training, 3) Advanced dental technology, 4) Cost savings of 60-80%, 5) Comprehensive service packages including travel arrangements, and 6) English-speaking support staff.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            Is dental treatment in China safe?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            Yes. All our partner hospitals are ISO9001-certified Grade 3A facilities, which is the highest hospital classification in China. Dentists are licensed specialists with extensive experience. We use sterilized equipment, follow international safety protocols, and provide comprehensive aftercare.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成本与价格 -->
+                <div id="cost" style="margin-bottom: 60px;">
+                    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #1e40af; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb;">
+                        <i class="fas fa-dollar-sign" style="margin-right: 10px;"></i>
+                        Cost & Pricing
+                    </h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            How much can I save with dental tourism in China?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            Patients typically save 60-80% compared to US prices. For example: Dental implants cost $800-$1,200 in China vs $3,000-$6,000 in the US. Full mouth restoration costs $8,000-$15,000 in China vs $30,000-$60,000 in the US. These savings include travel and accommodation costs.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            What is included in the quoted price?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            Our transparent pricing includes: 1) All dental procedures, 2) Hospital fees, 3) Specialist consultation, 4) Anesthesia and medications, 5) Follow-up appointments, 6) Basic travel coordination. Additional services like airport pickup, hotel accommodation, and translation are available as add-ons.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            Are there any hidden costs?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            No. We provide complete price transparency. You receive a detailed breakdown before committing. The only additional costs would be: 1) International flights, 2) Visa fees (if applicable), 3) Personal expenses, 4) Optional tourist activities. All medical costs are included in the quoted price.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 质量与安全 -->
+                <div id="quality" style="margin-bottom: 60px;">
+                    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #1e40af; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb;">
+                        <i class="fas fa-shield-alt" style="margin-right: 10px;"></i>
+                        Quality & Safety
+                    </h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            What qualifications do your dentists have?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            Our dentists are: 1) Licensed specialists with 10+ years experience, 2) Trained at top Chinese and international dental schools, 3) Members of Chinese Stomatological Association, 4) Regularly attend international dental conferences, 5) Specialized in specific areas (implants, orthodontics, etc.). You can verify credentials on our doctor profiles page.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            What safety standards are followed?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            We follow: 1) ISO9001 quality management standards, 2) CDC infection control guidelines, 3) Hospital-grade sterilization (autoclave), 4) Single-use instruments where applicable, 5) Digital X-rays with minimal radiation, 6) Comprehensive medical history review, 7) Allergy testing before anesthesia.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            What happens if there are complications?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            We provide: 1) 24/7 emergency support during your stay, 2) Free follow-up care for treatment-related issues, 3) Coordination with local medical facilities if needed, 4) Translation assistance for medical consultations, 5) Insurance claim support. Our complication rate is less than 2%, significantly lower than industry average.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 流程与时间 -->
+                <div id="process">
+                    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 30px; color: #1e40af; padding-bottom: 10px; border-bottom: 2px solid #e5e7eb;">
+                        <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i>
+                        Process & Timeline
+                    </h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            What is the typical treatment timeline?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            Standard timeline: 1) Consultation & planning (2-4 weeks before travel), 2) Travel to China (1-2 days), 3) Initial examination & preparation (1-2 days), 4) Main treatment procedures (3-7 days), 5) Recovery & follow-up (2-3 days), 6) Return travel. Complex cases may require multiple visits over 3-6 months.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            How do I start the process?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            Simple 5-step process: 1) Free online consultation (send dental records), 2) Receive treatment plan & quote, 3) Schedule dates & make travel arrangements, 4) Travel to China for treatment, 5) Follow-up care & support. We handle all logistics - you just need to show up for appointments.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <i class="fas fa-plus" style="margin-right: 10px;"></i>
+                            Do I need a visa for China?
+                        </div>
+                        <div class="faq-answer" style="display: none;">
+                            Most nationalities require a tourist visa (L visa). We provide: 1) Invitation letter from hospital, 2) Guidance on visa application, 3) Document checklist, 4) Support for medical visa if needed. Processing typically takes 4-10 business days. Some countries qualify for visa-free transit (72/144 hours).
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 联系咨询 -->
+                <div style="background: linear-gradient(135deg, #10b981, #34d399); color: white; border-radius: 12px; padding: 40px; text-align: center; margin-top: 60px;">
+                    <h3 style="font-size: 28px; font-weight: 600; margin-bottom: 20px;">
+                        <i class="fas fa-comments" style="margin-right: 10px;"></i>
+                        Still Have Questions?
+                    </h3>
+                    <p style="font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Contact our dental tourism specialists for personalized answers
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="background: white; color: #10b981; font-size: 18px; padding: 16px 32px;">
+                            <i class="fab fa-whatsapp" style="margin-right: 10px;"></i>WhatsApp Consultation
+                        </a>
+                        <a href="contact.html" class="btn-touch btn-primary" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; font-size: 18px; padding: 16px 32px;">
+                            <i class="fas fa-envelope" style="margin-right: 10px;"></i>Email Inquiry
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
+                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
+                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
+                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
+                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript控制 -->
+    <script>
+        // FAQ答案切换
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.style.display === 'none') {
+                answer.style.display = 'block';
+                icon.className = 'fas fa-minus';
+            } else {
+                answer.style.display = 'none';
+                icon.className = 'fas fa-plus';
+            }
+        }
+        
+        // 页面加载时初始化所有FAQ答案为显示状态
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqAnswers = document.querySelectorAll('.faq-answer');
+            faqAnswers.forEach(answer => {
+                answer.style.display = 'block';
+            });
+            
+            // 初始化所有图标为减号
+            const faqIcons = document.querySelectorAll('.faq-question i');
+            faqIcons.forEach(icon => {
+                icon.className = 'fas fa-minus';
+            });
+        });
+        
+        // 移动菜单控制
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const desktopNavLinks = document.querySelectorAll('.desktop-nav-links > div');
+            
+            // 移动菜单切换
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    if (mobileMenu.style.display === 'block') {
+                        mobileMenu.style.display = 'none';
+                        mobileMenuToggle.innerHTML = '☰';
+                    } else {
+                        mobileMenu.style.display = 'block';
+                        mobileMenuToggle.innerHTML = '✕';
+                    }
+                });
+            }
+            
+            // 桌面导航下拉菜单
+            desktopNavLinks.forEach(navItem => {
+                const dropdown = navItem.querySelector('div');
+                if (dropdown) {
+                    navItem.addEventListener('mouseenter', function() {
+                        dropdown.style.display = 'block';
+                    });
+                    
+                    navItem.addEventListener('mouseleave', function() {
+                        dropdown.style.display = 'none';
+                    });
+                }
+            });
+            
+            // 响应式检查
+            function checkResponsive() {
+                const isMobile = window.innerWidth <= 768;
+                const mobileToggle = document.querySelector('.mobile-menu-toggle');
+                const mobileMenu = document.querySelector('.mobile-menu');
+                
+                if (isMobile) {
+                    // 手机端：显示汉堡按钮，隐藏移动菜单
+                    if (mobileToggle) mobileToggle.style.display = 'block';
+                    if (mobileMenu) mobileMenu.style.display = 'none';
+                } else {
+                    // 桌面端：隐藏汉堡按钮和移动菜单
+                    if (mobileToggle) mobileToggle.style.display = 'none';
+                    if (mobileMenu) mobileMenu.style.display = 'none';
+                    mobileToggle.innerHTML = '☰';
+                }
+            }
+            
+            // 初始检查和窗口大小变化检查
+            checkResponsive();
+            window.addEventListener('resize', checkResponsive);
+            
+            // 平滑滚动到锚点
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#')) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+<section class="emergency-cta" style="background: #f8f9fa; padding: 30px; margin: 40px 0; border-radius: 10px; text-align: center;">
+    <h3>立即咨询，节省70%医疗费用</h3>
+    <p>专业医疗顾问为您提供免费咨询和定制方案</p>
+    <a href="contact.html" style="display: inline-block; background: #007bff; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold;">免费咨询</a>
+</section>
+
+</body>
+</body>
+</html>
