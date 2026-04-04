@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医疗旅游价格对比 | 中美牙科费用节省70%</title>
+    <meta name="description" content="医疗旅游价格对比 | 中美牙科费用节省70% - 专业医疗旅游服务，价格透明，节省70%费用，中美价格对比，认证医院保障">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .emergency-banner { background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 12px 0; text-align: center; font-weight: 600; font-size: 14px; }
+        .hero-section { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 60px 0; text-align: center; }
+        .section-title { text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 40px; color: #1e293b; }
+        .horizontal-cards { display: flex; justify-content: space-between; gap: 20px; margin: 40px 0; }
+        .about-card { flex: 1; background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; border-top: 4px solid #1e40af; }
+        .btn-primary { background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; }
+        .main-footer { background: #000000; color: white; padding: 60px 0; margin-top: 80px; }
+        @media (max-width: 768px) { .horizontal-cards { flex-direction: column; } }
+    </style>
+
+    <style>
+    @media (max-width: 768px) {
+        .desktop-nav { display: none; }
+        .mobile-nav { display: block; }
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="emergency-banner">
+        🚨 Need Information? <a href="https://wa.me/+12133179751" style="color: white; text-decoration: underline;">+1 213 317 9751</a>
+    </div>
+    
+    
+    <nav style="background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" style="color: #1e40af; font-weight: 600; text-decoration: none;">← Home</a>
+            <div>
+                <a href="services.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Services</a>
+                <a href="about.html" style="margin-left: 15px; color: #1e40af; font-weight: 600; text-decoration: none;">About</a>
+                <a href="doctor-credentials-verification.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Doctors</a>
+                <a href="contact.html" style="margin-left: 15px; color: #4b5563; text-decoration: none;">Contact</a>
+                <a href="https://wa.me/+12133179751" class="btn-primary" style="margin-left: 15px;">Ask Questions</a>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <section class="hero-section">
+        <div class="container">
+            <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 20px;">About ChinaMedTour</h1>
+            <p style="font-size: 20px; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Connecting US patients with experienced dental specialists in China for affordable, high-quality dental implant tourism.
+            </p>
+            <a href="#mission" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">Our Mission</a>
+        </div>
+    </section>
+    
+    <main class="container" style="padding: 40px 20px;">
+        
+        
+        <section id="mission">
+            <h2 class="section-title">Our Mission</h2>
+
+<section class="comparison-table">
+    <h3>中美牙科费用对比</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>治疗项目</th>
+                <th>中国费用 (USD)</th>
+                <th>美国费用 (USD)</th>
+                <th>节省比例</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>单颗种植牙</td>
+                <td>$800 - $1,200</td>
+                <td>$3,000 - $6,000</td>
+                <td>70-80%</td>
+            </tr>
+            <tr>
+                <td>全口种植牙</td>
+                <td>$12,000 - $18,000</td>
+                <td>$40,000 - $60,000</td>
+                <td>65-75%</td>
+            </tr>
+            <tr>
+                <td>牙冠</td>
+                <td>$200 - $400</td>
+                <td>$1,000 - $2,000</td>
+                <td>75-85%</td>
+            </tr>
+            <tr>
+                <td>根管治疗</td>
+                <td>$150 - $300</td>
+                <td>$1,000 - $1,500</td>
+                <td>80-85%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="table-note">* 以上为平均价格范围，具体费用因个人情况而异</p>
+<div class="key-points">
+    <h3>关键要点</h3>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+</section>
+
+
+            
+            <div class="horizontal-cards">
+                <div class="about-card" style="border-top-color: #10b981;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">🎯</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Affordable Quality</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        Make world-class dental implant treatment accessible and affordable for US patients through medical tourism to China.
+                    </p>
+                </div>
+                
+                <div class="about-card" style="border-top-color: #3b82f6;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">🛡️</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Safety First</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        Ensure patient safety through ISO9001-certified Grade 3A hospitals, experienced dental specialists, and comprehensive safety protocols.
+                    </p>
+                </div>
+                
+                <div class="about-card" style="border-top-color: #8b5cf6;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">🤝</div>
+                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 15px; color: #1e3a8a;">Complete Support</h3>
+                    <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                        Provide end-to-end support from consultation to treatment to recovery for a seamless medical tourism experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section style="margin: 80px 0;">
+            <h2 class="section-title">Why Choose ChinaMedTour</h2>
+            
+            <div style="background: #f0f9ff; padding: 60px; border-radius: 16px;">
+                <div style="display: flex; justify-content: space-between; gap: 30px; margin-top: 20px;">
+                    <div style="text-align: center; flex: 1;">
+                        <div style="font-size: 48px; color: #10b981; margin-bottom: 15px;">👨‍⚕️</div>
+                        <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 10px;">Seasoned dental experts</h3>
+                        <p style="color: #4b5563;">Dentists trained at UCLA, NYU, Harvard with US standards of care</p>
+                    </div>
+                    
+                    <div style="text-align: center; flex: 1;">
+                        <div style="font-size: 48px; color: #3b82f6; margin-bottom: 15px;">🏥</div>
+                        <h>ISO9001-Certified Grade 3A Hospitals</h>
+                        <p style="color: #4b5563;">Internationally accredited hospitals meeting highest safety standards</p>
+                    </div>
+                    
+                    <div style="text-align: center; flex: 1;">
+                        <div style="font-size: 48px; color: #8b5cf6; margin-bottom: 15px;">💰</div>
+                        <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 10px;">Cost Savings</h3>
+                        <p style="color: #4b5563;">Save 70-75% compared to US prices for same quality treatment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section style="text-align: center; margin: 80px 0;">
+            <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px; color: #1e293b;">Learn More About Our Services</h2>
+            <p style="font-size: 18px; color: #4b5563; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Get complete information about our dental implant tourism services, doctor verification, and patient support.
+            </p>
+            <div>
+                <a href="services.html" class="btn-primary" style="padding: 16px 32px; font-size: 18px;">
+                    <i class="fas fa-teeth" style="margin-right: 10px;"></i> View Services
+                </a>
+                <a href="https://wa.me/+12133179751" class="btn-primary" style="background: #3b82f6; margin-left: 20px; padding: 16px 32px; font-size: 18px;">
+                    <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Ask Questions
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    
+        <footer style="background: #000000; color: white; padding: 60px 0; margin-top: 80px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Information</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> WhatsApp: +1 213 317 9751</li>
+                        <li style="margin-bottom: 10px;"><i class="fab fa-telegram" style="margin-right: 10px;"></i> Telegram: +1 956 922 1708</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Email: qinzhengzhanghao@gmail.com</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Quick Links</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="services.html" style="color: #cbd5e1; text-decoration: none;">Our Services</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-implant-cost-2026.html" style="color: #cbd5e1; text-decoration: none;">Price Transparency</a></li>
+                        <li style="margin-bottom: 10px;"><a href="dental-tourism-beijing.html" style="color: #cbd5e1; text-decoration: none;">City Guides</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #cbd5e1; text-decoration: none;">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 20px; color: white;">Legal & Compliance</h3>
+                    <ul style="color: #cbd5e1;">
+                        <li style="margin-bottom: 10px;"><a href="privacy-policy.html" style="color: #cbd5e1; text-decoration: none;">Privacy Policy</a></li>
+                        <li style="margin-bottom: 10px;"><a href="terms-of-service.html" style="color: #cbd5e1; text-decoration: none;">Terms of Service</a></li>
+                        <li style="margin-bottom: 10px;"><a href="risk-disclosure-management.html" style="color: #cbd5e1; text-decoration: none;">Risk Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #374151; padding-top: 20px; text-align: center; color: #9ca3af;">
+                <p>© 2026 Medical Tourism China. All rights reserved. This website provides information about dental tourism services in China.</p>
+                <p style="margin-top: 10px; font-size: 14px;">Dental treatments are performed at ISO9001-certified Grade 3A hospitals by experienced dental specialists.</p>
+            </div>
+        </div>
+    </footer>
+
+
+<section class="faq-section">
+    <h2>常见问题解答</h2>
+    
+    <div class="faq-item">
+        <h3>1. 医疗旅游真的安全吗？</h3>
+        <p>是的，我们合作的医院均为ISO9001认证的3A级医院，拥有国际标准的医疗设备和专业的医疗团队。所有医生都有丰富的国际患者治疗经验。</p>
+    </div>
+    
+    <div class="faq-item">
+        <h3>2. 费用包含哪些项目？</h3>
+        <p>费用通常包含：治疗费用、医院住宿、翻译服务、机场接送。具体包含项目会根据治疗方案有所不同，我们会提供详细的费用明细。</p>
+    </div>
+    
+    <div class="faq-item">
+        <h3>3. 语言沟通有问题吗？</h3>
+        <p>我们提供专业的医疗翻译服务，确保您与医生的沟通无障碍。所有重要文件都会提供中英文版本。</p>
+    </div>
+    
+    <div class="faq-item">
+        <h3>4. 需要提前多久预约？</h3>
+        <p>建议提前1-2个月预约，以便我们有足够的时间安排医院、医生和您的行程。紧急情况可以加急处理。</p>
+    </div>
+    
+    <div class="faq-item">
+        <h3>5. 治疗后如何跟进？</h3>
+        <p>我们提供术后6个月的远程跟进服务，包括在线咨询和必要的复查安排。如有需要，我们也可以协助安排当地的牙医进行复查。</p>
+    </div>
+</section>
+
+
+<section class="summary-section">
+    <h2>总结</h2>
+    <p>综上所述，。。因此，。</p>
+    <ul>
+        <li>关键优势1：</li>
+        <li>关键优势2：</li>
+        <li>关键优势3：</li>
+    </ul>
+</section>
+
+<section class="faq-section">
+    <h2>常见问题解答</h2>
+    
+    <div class="faq-item">
+        <h3>1. </h3>
+        <p></p>
+    </div>
+    
+    <div class="faq-item">
+        <h3>2. </h3>
+        <p></p>
+    </div>
+    
+    <div class="faq-item">
+        <h3>3. </h3>
+        <p></p>
+    </div>
+</section>
+</body>
+</html>

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="canonical" href="https://qinzhengzhanghao-oss.github.io/medical-tourism-website/faq_comprehensive_test.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Comprehensive Test</title>
+    <title>常见问题 | 医疗旅游解答 | 安全、费用、流程</title>
+<meta name="description" content="医疗旅游常见问题解答，包括安全、费用、流程和成功案例。">
     
-    <!-- 测试1: 加载所有原资源 -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- 测试2: 添加诊断样式 -->
+    
     <style>
-        /* 诊断样式 */
         .diagnostic-border { border: 3px solid #ff0000 !important; }
         .diagnostic-bg { background-color: rgba(255, 0, 0, 0.1) !important; }
         .diagnostic-text { color: #ff0000 !important; font-weight: bold !important; }
         
-        /* 确保内容可见的备用样式 */
         .fallback-visible { 
             display: block !important;
             visibility: visible !important;
@@ -34,12 +34,10 @@
     </style>
 
 <style>
-/* 响应式设计基础 */
 * {
     box-sizing: border-box;
 }
 
-/* 移动端优先 */
 body {
     font-size: 16px;
     line-height: 1.6;
@@ -49,7 +47,6 @@ body {
     overflow-x: hidden;
 }
 
-/* 容器响应式 */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -57,7 +54,6 @@ body {
     padding: 0 15px;
 }
 
-/* 响应式网格 */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -69,32 +65,27 @@ body {
     padding: 0 15px;
 }
 
-/* 媒体查询 - 平板 */
 @media (min-width: 768px) {
     body { font-size: 17px; }
     .col { flex: 1 0 50%; }
 }
 
-/* 媒体查询 - 桌面 */
 @media (min-width: 992px) {
     body { font-size: 18px; }
     .col { flex: 1 0 33.333%; }
 }
 
-/* 响应式图片 */
 .img-responsive {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* 响应式表格 */
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-/* 触摸友好按钮 */
 .btn-touch {
     min-height: 44px;
     min-width: 44px;
@@ -102,7 +93,6 @@ body {
     font-size: 16px;
 }
 
-/* 移动端导航优化 */
 .nav-mobile {
     position: fixed;
     bottom: 0;
@@ -113,27 +103,25 @@ body {
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
 
-/* 防止移动端缩放问题 */
 input, select, textarea {
-    font-size: 16px; /* 防止iOS缩放 */
 }
 </style>
 
 </head>
 <body style="margin: 0; font-family: sans-serif;">
-    <!-- 诊断头部 -->
+    
     <div style="background: #f0f0f0; padding: 10px; border-bottom: 2px solid #ccc;">
         <h2 style="color: #333; margin: 0;">FAQ诊断测试页面</h2>
         <p style="color: #666; margin: 5px 0 0 0;">检查点: 1.Tailwind加载 2.内容显示 3.JS功能</p>
     </div>
     
-    <!-- 测试原结构 -->
+    
     <nav class="bg-white shadow-lg py-4 diagnostic-border">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-500 rounded-xl flex items-center justify-center">
-                        <i class="fas fa-heartbeat text-white"></i>
+                        
                     </div>
                     <div>
                         <div class="font-bold text-xl text-gray-900">ChinaMedTour</div>
@@ -148,7 +136,7 @@ input, select, textarea {
         </div>
     </nav>
     
-    <!-- 测试正文 -->
+    
     <main class="container mx-auto px-4 py-8 diagnostic-border diagnostic-bg">
         <h1 class="text-3xl font-bold text-gray-900 mb-6 diagnostic-text">Frequently Asked Questions (诊断测试)</h1>
         <div class="prose max-w-none fallback-visible">
@@ -159,7 +147,7 @@ input, select, textarea {
         </div>
     </main>
     
-    <!-- 诊断脚部 -->
+    
     <div style="background: #333; color: white; padding: 20px; margin-top: 40px;">
         <h3 style="color: #fff;">诊断结果区域</h3>
         <div id="diagnostic-results" style="background: #444; padding: 10px; border-radius: 5px;">
@@ -167,16 +155,14 @@ input, select, textarea {
         </div>
     </div>
     
-    <!-- 全面诊断脚本 -->
+    
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         console.log('=== FAQ诊断测试开始 ===');
         
-        // 检查Tailwind CSS
         const tailwindLoaded = typeof tailwind !== 'undefined';
         console.log('1. Tailwind CSS加载:', tailwindLoaded ? '✅ 已加载' : '❌ 未加载');
         
-        // 检查主要元素
         const checks = [
             { id: 'main', selector: 'main', name: '主要内容区域' },
             { id: 'h1', selector: 'h1', name: '标题' },
@@ -208,13 +194,11 @@ input, select, textarea {
         
         resultsHtml += '</ul>';
         
-        // 显示诊断结果
         document.getElementById('diagnostic-results').innerHTML = resultsHtml;
         
         console.log('=== FAQ诊断测试结束 ===');
     });
     
-    // 捕获所有错误
     window.addEventListener('error', function(e) {
         console.error('页面错误:', e.error);
         console.error('错误位置:', e.filename, ':', e.lineno, ':', e.colno);

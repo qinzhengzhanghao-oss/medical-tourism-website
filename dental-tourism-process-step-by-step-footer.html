@@ -3,7 +3,7 @@
             </div>
         </section>
         
-        <!-- 行动号召 -->
+        
         <section style="text-align: center; padding: 60px 0;">
             <div class="container">
                 <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px; color: #1e293b;">Ready to Start Your Dental Tourism Journey?</h2>
@@ -12,13 +12,13 @@
                     Our team will guide you through every step of the process.
                 </p>
                 <a href="https://wa.me/+12133179751" class="btn-touch btn-primary" style="padding: 16px 32px; font-size: 18px;">
-                    <i class="fas fa-calendar-alt" style="margin-right: 10px;"></i> Start Your Consultation
+                     Start Your Consultation
                 </a>
             </div>
         </section>
     </main>
     
-    <!-- 页脚 -->
+    
     <footer class="main-footer">
         <div class="container">
             <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
@@ -41,13 +41,13 @@
                 <div style="flex: 1; min-width: 200px;">
                     <h4 style="font-size: 16px; font-weight: 600; margin-bottom: 20px; color: white;">Contact Info</h4>
                     <p style="color: #d1d5db; margin-bottom: 10px;">
-                        <i class="fas fa-phone" style="margin-right: 10px;"></i> +1 213 317 9751
+                         +1 213 317 9751
                     </p>
                     <p style="color: #d1d5db; margin-bottom: 10px;">
-                        <i class="fas fa-envelope" style="margin-right: 10px;"></i> info@chinamedtour.com
+                         info@chinamedtour.com
                     </p>
                     <p style="color: #d1d5db;">
-                        <i class="fas fa-clock" style="margin-right: 10px;"></i> 24/7 Support
+                         24/7 Support
                     </p>
                 </div>
             </div>
@@ -67,11 +67,9 @@
             const mobileMenu = document.getElementById('mobileMenu');
             
             if (mobileMenuToggle && mobileMenu) {
-                // 切换移动菜单显示/隐藏
                 mobileMenuToggle.addEventListener('click', function() {
                     mobileMenu.classList.toggle('active');
                     
-                    // 切换汉堡菜单图标
                     const icon = mobileMenuToggle.querySelector('i');
                     if (mobileMenu.classList.contains('active')) {
                         icon.classList.remove('fa-bars');
@@ -82,7 +80,6 @@
                     }
                 });
                 
-                // 点击菜单链接后关闭菜单
                 const menuLinks = mobileMenu.querySelectorAll('a');
                 menuLinks.forEach(link => {
                     link.addEventListener('click', function() {
@@ -93,7 +90,6 @@
                     });
                 });
                 
-                // 检测窗口大小变化
                 window.addEventListener('resize', function() {
                     if (window.innerWidth > 768) {
                         mobileMenu.classList.remove('active');
@@ -108,7 +104,6 @@
 
 <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 下拉菜单控制
             const dropdowns = document.querySelectorAll('div[style*="position: relative"]');
             
             dropdowns.forEach(dropdown => {
@@ -133,7 +128,6 @@
                 }
             });
             
-            // 汉堡菜单控制
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const mobileMenu = document.querySelector('.mobile-menu');
             const desktopNav = document.querySelector('.main-nav .container > div:last-child');
@@ -167,7 +161,7 @@
         });
     </script>
 
-<!-- 内容增强 - 添加于 2026-04-01 01:03:43 -->
+
 
 <section style="margin: 40px 0; padding: 30px; background: #f8fafc; border-radius: 12px;">
     <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 20px; color: #1e293b;">内容增强部分</h2>
@@ -210,6 +204,6 @@
     </div>
 </section>
 
-<!-- 内容增强结束 -->
+
 </body>
 </html>

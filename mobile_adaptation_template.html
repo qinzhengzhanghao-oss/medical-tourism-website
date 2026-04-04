@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<!-- 
-移动端适配标准模板
-基于 index.html 的分析结果
-用于批量修复83个页面
--->
 
-<!-- ==================== CSS部分 ==================== -->
+
+
 <style>
 
 <style>
-/* 响应式设计基础 */
 * {
     box-sizing: border-box;
 }
 
-/* 移动端优先 */
 body {
     font-size: 16px;
     line-height: 1.6;
@@ -24,7 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-/* 容器响应式 */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -32,7 +25,6 @@ body {
     padding: 0 15px;
 }
 
-/* 响应式网格 */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -44,32 +36,27 @@ body {
     padding: 0 15px;
 }
 
-/* 媒体查询 - 平板 */
 @media (min-width: 768px) {
     body { font-size: 17px; }
     .col { flex: 1 0 50%; }
 }
 
-/* 媒体查询 - 桌面 */
 @media (min-width: 992px) {
     body { font-size: 18px; }
     .col { flex: 1 0 33.333%; }
 }
 
-/* 响应式图片 */
 .img-responsive {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* 响应式表格 */
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-/* 触摸友好按钮 */
 .btn-touch {
     min-height: 44px;
     min-width: 44px;
@@ -77,7 +64,6 @@ body {
     font-size: 16px;
 }
 
-/* 移动端导航优化 */
 .nav-mobile {
     position: fixed;
     bottom: 0;
@@ -88,21 +74,17 @@ body {
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
 
-/* 防止移动端缩放问题 */
 input, select, textarea {
-    font-size: 16px; /* 防止iOS缩放 */
 }
 </style>
 
 /* 移动端适配CSS（需要添加到每个页面的<style>
 
 <style>
-/* 响应式设计基础 */
 * {
     box-sizing: border-box;
 }
 
-/* 移动端优先 */
 body {
     font-size: 16px;
     line-height: 1.6;
@@ -112,7 +94,6 @@ body {
     overflow-x: hidden;
 }
 
-/* 容器响应式 */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -120,7 +101,6 @@ body {
     padding: 0 15px;
 }
 
-/* 响应式网格 */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -132,32 +112,27 @@ body {
     padding: 0 15px;
 }
 
-/* 媒体查询 - 平板 */
 @media (min-width: 768px) {
     body { font-size: 17px; }
     .col { flex: 1 0 50%; }
 }
 
-/* 媒体查询 - 桌面 */
 @media (min-width: 992px) {
     body { font-size: 18px; }
     .col { flex: 1 0 33.333%; }
 }
 
-/* 响应式图片 */
 .img-responsive {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* 响应式表格 */
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-/* 触摸友好按钮 */
 .btn-touch {
     min-height: 44px;
     min-width: 44px;
@@ -165,7 +140,6 @@ body {
     font-size: 16px;
 }
 
-/* 移动端导航优化 */
 .nav-mobile {
     position: fixed;
     bottom: 0;
@@ -176,9 +150,7 @@ body {
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
 
-/* 防止移动端缩放问题 */
 input, select, textarea {
-    font-size: 16px; /* 防止iOS缩放 */
 }
 </style>
 标签中） */
@@ -278,13 +250,13 @@ input, select, textarea {
 }
 </style>
 
-<!-- ==================== HTML部分 ==================== -->
-<!-- 需要添加到每个页面的导航栏中 -->
 
-<!-- 汉堡菜单按钮（放在导航栏内部，桌面导航之后） -->
+
+
+
 <button class="btn-touch mobile-menu-toggle">☰</button>
 
-<!-- 移动菜单（放在汉堡菜单按钮之后） -->
+
 <div class="mobile-menu">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -297,41 +269,34 @@ input, select, textarea {
     <a href="https://wa.me/+12133179751" style="display: block; background: linear-gradient(135deg, #10b981, #34d399); color: white; padding: 16px; border-radius: 6px; text-align: center; margin-top: 15px; text-decoration: none; font-weight: 600;">Free Consultation</a>
 </div>
 
-<!-- ==================== JavaScript部分 ==================== -->
+
 <!-- 需要添加到每个页面的</body>标签之前 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // 汉堡菜单控制
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     const desktopNav = document.querySelector('.main-nav .container > div:last-child');
     
     if (mobileMenuToggle && mobileMenu) {
-        // 根据屏幕宽度显示/隐藏相应元素
         function updateMenuVisibility() {
             if (window.innerWidth < 768) {
-                // 手机端：显示汉堡菜单，隐藏桌面导航
                 mobileMenuToggle.style.display = 'block';
                 if (desktopNav) desktopNav.style.display = 'none';
                 mobileMenu.style.display = 'none';
             } else {
-                // 桌面端：隐藏汉堡菜单，显示桌面导航
                 mobileMenuToggle.style.display = 'none';
                 if (desktopNav) desktopNav.style.display = 'flex';
                 mobileMenu.style.display = 'none';
             }
         }
         
-        // 初始检查和窗口大小变化时更新
         updateMenuVisibility();
         window.addEventListener('resize', updateMenuVisibility);
         
-        // 点击汉堡菜单切换移动菜单
         mobileMenuToggle.addEventListener('click', function() {
             mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
         });
         
-        // 点击移动菜单外的区域关闭菜单
         document.addEventListener('click', function(event) {
             if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
                 mobileMenu.style.display = 'none';
@@ -341,17 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- ==================== 检查清单 ==================== -->
-<!-- 
-修复完成后检查以下项目：
-1. ✅ 是否添加了移动端CSS媒体查询？
-2. ✅ 是否添加了汉堡菜单按钮（☰）？
-3. ✅ 是否添加了移动菜单？
-4. ✅ 是否添加了JavaScript控制代码？
-5. ✅ 手机端是否正常显示汉堡菜单？
-6. ✅ 桌面端是否正常显示桌面导航？
-7. ✅ 点击汉堡菜单是否能打开/关闭移动菜单？
-8. ✅ 移动菜单链接是否能正常点击？
-9. ✅ 桌面版布局是否受影响？
-10. ✅ 页面其他功能是否正常？
--->
+
+
+</html>
