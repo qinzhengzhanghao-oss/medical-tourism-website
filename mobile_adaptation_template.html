@@ -78,7 +78,7 @@ input, select, textarea {
 }
 </style>
 
-/* 移动端适配CSS（需要添加到每个页面的<style>
+/* CSS（<style>
 
 <style>
 * {
@@ -155,15 +155,18 @@ input, select, textarea {
 </style>
 标签中） */
 
-/* 移动端媒体查询（768px以下为手机端） */
+/* 移动
+） */
+
+/* （768px） */
 @media (max-width: 768px) {
-    /* 导航栏手机端优化 */
+    /*  */
     .main-nav .container {
         flex-wrap: wrap;
     }
     
     .main-nav .container > div:last-child {
-        display: none; /* 隐藏桌面导航，显示汉堡菜单 */
+        display: none; /* ， */
     }
     
     .mobile-menu-toggle {
@@ -206,7 +209,7 @@ input, select, textarea {
         border-bottom: none;
     }
     
-    /* 通用响应式调整 */
+    /*  */
     .pricing-horizontal,
     .medical-team-horizontal,
     .rights-horizontal {
@@ -222,39 +225,33 @@ input, select, textarea {
         font-size: 16px !important;
     }
     
-    /* 底部信息栏手机端优化 */
+    /*  */
     .main-footer .container > div:first-child {
         grid-template-columns: 1fr;
         gap: 30px;
     }
     
-    /* 通用容器内边距调整 */
+    /*  */
     .container {
         padding: 0 15px;
     }
     
-    /* 按钮大小调整 */
+    /*  */
     .btn-primary {
         padding: 12px 24px !important;
         font-size: 16px !important;
     }
 }
 
-/* 移动菜单基础样式（需要添加到页面中） */
+/* （） */
 .mobile-menu-toggle {
-    display: none; /* 默认隐藏，媒体查询中显示 */
+    display: none; /* ， */
 }
 
 .mobile-menu {
-    display: none; /* 默认隐藏，JS控制显示 */
+    display: none; /* ，JS */
 }
-</style>
-
-
-
-
-
-<button class="btn-touch mobile-menu-toggle">☰</button>
+button class="btn-touch mobile-menu-toggle">☰</button>
 
 
 <div class="mobile-menu">
@@ -273,7 +270,8 @@ input, select, textarea {
 <!-- 需要添加到每个页面的</body>标签之前 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenuToggle = document.que -->
+r('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
     const desktopNav = document.querySelector('.main-nav .container > div:last-child');
     
